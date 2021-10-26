@@ -9,14 +9,14 @@ module.exports = {
     extend: {
         colors:{
             "alert": colors.red[400],
-            "textHighlight": colors.lightBlue[300],
+            "textHighlight": "#539BF5",
             darkMode:{
-             primary: colors.gray[800],
-             secondary: colors.gray[900],
+             primary: "#22272E",
+             secondary: "#1C2128",
              medium: colors.gray[850],
-             light: colors.gray[600],
-             button: colors.amber[500],
-             accent: colors.amber[500],
+             light: "#2D333B",
+             button: "#373E47",
+             accent: "#373E47",
              text: colors.gray[200],
              textDark: colors.gray[400],
             },
