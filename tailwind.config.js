@@ -10,6 +10,7 @@ module.exports = {
         colors:{
             "alert": colors.red[400],
             "textHighlight": "#539BF5",
+            "success": "#347D39",
             darkMode:{
              primary: "#22272E",
              secondary: "#1C2128",

@@ -11,7 +11,7 @@
         <DropDown :elements="weekDays" @selectedIndex="handleIndexChange"></DropDown>
       </div>      
     </div>
-    <Button class="mt-5" :text="header" @click="submit" />
+    <Button class="mt-5" :text="header" type="success" @click="submit" />
   </div>
 </template>
 

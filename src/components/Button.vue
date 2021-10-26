@@ -11,7 +11,8 @@
       justify-evenly
     "
     :class="{
-      'bg-alert': type === 'alert',
+      'bg-alert': type === 'alert',      
+      'bg-success': type === 'success',
       'bg-lightMode-button dark:bg-darkMode-button': type === undefined,
     }"
   >

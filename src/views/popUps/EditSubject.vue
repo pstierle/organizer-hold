@@ -3,7 +3,7 @@
     <ManageSubject
       @submit="updateSubject"
       :clearInput="false"
-      header="Bearbeiten"
+      header="Bestätigen"
     />
   </div>
 </template>
