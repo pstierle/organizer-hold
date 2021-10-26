@@ -13,7 +13,7 @@ module.exports = {
             darkMode:{
              primary: "#22272E",
              secondary: "#1C2128",
-             medium: colors.gray[850],
+             medium: "#2D333B",
              light: "#2D333B",
              button: "#373E47",
              accent: "#373E47",

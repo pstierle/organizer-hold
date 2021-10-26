@@ -4,7 +4,7 @@
     v-if="subject != null"
   >
     <div class="header flex items-center justify-between text-center">
-      <p class="">
+      <p class="bg-lightMode-light dark:bg-darkMode-light p-2 rounded mt-2">
         {{ subject.name }}
       </p>
       <div class="flex justify-between w-40">
@@ -57,7 +57,7 @@
             <li
                 v-for="(sheet, index) in subject.exerciseSheets"
                 :key="index" 
-                class="border-b flex items-center justify-evenly mt-2 pb-2"
+                class="border-b-2 border-lightMode-light dark:border-darkMode-light flex items-center justify-evenly mt-2 pb-2"
               >
                 <p>Nr.{{sheet.number}}</p>
                   <div class="flex items-center justify-evenly w-32">
