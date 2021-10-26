@@ -89,6 +89,7 @@ export default {
 
 .subject-list {
   grid-area: subject-list;
+  height: 100%;
 }
 
 .subject {

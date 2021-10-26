@@ -47,8 +47,6 @@ class CalenderState extends Store<CalenderStore> {
                         const professor = node.childNodes[25].textContent || "";             
                         const shortName : string = name[0];
 
-                        console.log(name)
-                 
                         const newSubject: Subject = {
                             id: subjectStore.getSubjects().length + 1,
                             name: name,

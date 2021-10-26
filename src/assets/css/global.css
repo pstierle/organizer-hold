@@ -39,4 +39,8 @@ button{
     contrast(76%);
 }
 
+img:hover{
+  cursor: pointer;
+}
+
  

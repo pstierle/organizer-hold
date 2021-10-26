@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
       <!-- :class="{ focus: focused == true, unfocus: focused == false }" -->
     <!-- <div class="flex justify-center h-10">
       <img
@@ -15,33 +15,41 @@
         }"
       />
     </div> -->
-    <ul
-      class="text-center overflow-y-auto 
-      scrollbar-thin scrollbar-thumb-darkMode-light scrollbar-thumb-rounded scrollbar-track-rounded
-      "
-      @mouseenter="focused = true"
-      @mouseleave="focused = false"
+    <div 
+        class="
+        text-center 
+        overflow-y-scroll 
+        scrollbar-thin 
+        scrollbar-thumb-darkMode-light 
+        scrollbar-thumb-rounded 
+        scrollbar-track-rounded
+        "
     >
-      <li
-        v-for="(subject, index) in subjects"
-        :key="index"
-        class="mt-5 items-center flex justify-center w-full"
-        @click="selectSubject(subject)"
-        @mouseenter="hoveredSubjectID = subject.id"
-        @mouseleave="hoveredSubjectID = null"
+      <ul
+        @mouseenter="focused = true"
+        @mouseleave="focused = false"
       >
-        <div 
-          v-if="hoveredSubjectID === subject.id" 
-          class="text-xs absolute ml-56 bg-lightMode-accent dark:bg-darkMode-accent rounded p-2 w-40" 
-          :class="{ focusLabel: hoveredSubjectID === subject.id, unfocusLabel: hoveredSubjectID !== subject.id }"
+        <li
+          v-for="(subject, index) in subjects"
+          :key="index"
+          class="mt-5 items-center flex justify-center w-full"
+          @click="selectSubject(subject)"
+          @mouseenter="hoveredSubjectID = subject.id"
+          @mouseleave="hoveredSubjectID = null"
         >
-          <p>{{subject.name}}</p>
-        </div>
-        <div class="flex items-center justify-center w-12 h-12 circle bg-lightMode-primary dark:bg-darkMode-primary" :class="{ 'border-b-2 border-lightMode-accent dark:border-darkMode-accent': selectedSubjectID == subject.id}">
-          <p>{{subject.shortName}}</p>
-        </div>
-      </li>
-    </ul>
+          <div 
+            v-if="hoveredSubjectID === subject.id" 
+            class="text-xs absolute ml-56 bg-lightMode-accent dark:bg-darkMode-accent rounded p-2 w-40" 
+            :class="{ focusLabel: hoveredSubjectID === subject.id, unfocusLabel: hoveredSubjectID !== subject.id }"
+          >
+            <p>{{subject.name}}</p>
+          </div>
+          <div class="flex items-center justify-center w-12 h-12 circle bg-lightMode-primary dark:bg-darkMode-primary" :class="{ 'border-b-2 border-lightMode-accent dark:border-darkMode-accent': selectedSubjectID == subject.id}">
+            <p>{{subject.shortName}}</p>
+          </div>
+        </li>
+      </ul>      
+    </div>
     <div class="flex justify-around settings-container">
       <img
         src="../assets/img/settings.svg"
@@ -114,12 +122,24 @@ export default {
 </script>
 
 <style scoped>
-ul{
-  height: 94%;
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 50px;
+  gap: 0px 0px;
+  grid-template-areas: "list" "settings-container"; 
+}
+
+li:hover{
+  cursor: pointer;
+}
+
+.list{
+  grid-area: "list";
 }
 
 .settings-container{
-  height: 6%;
+  grid-area: "settings-container";
 }
 
 .focus {

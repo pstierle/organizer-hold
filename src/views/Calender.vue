@@ -1,5 +1,5 @@
 <template>
-    <div class="p-2 calender bg-lightMode-medium :dark:bg-darkMode-medium">
+    <div class="px-2 calender bg-lightMode-medium :dark:bg-darkMode-medium">
         <div class="main">
             <div class="flex items-center justify-evenly py-2">
               <DropDown :elements="weekDays" @selectedIndex="handleIndexChange"></DropDown>
@@ -95,7 +95,7 @@ export default {
 .calender {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 20px;
+  grid-template-rows: 1fr 50px;
   gap: 0px 0px;
   grid-template-areas: "main" "import-subject";
 }

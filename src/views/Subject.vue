@@ -53,7 +53,12 @@
             class="w-24 mt-4"
             @click="openPopUp('Übungsblatt hinzufügen')"
           />
-          <ul>
+          <ul class="
+              overflow-y-auto 
+              scrollbar-thin 
+              scrollbar-thumb-darkMode-light 
+              scrollbar-thumb-rounded 
+              scrollbar-track-rounded">
             <li
                 v-for="(sheet, index) in subject.exerciseSheets"
                 :key="index" 
