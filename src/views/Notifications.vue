@@ -32,8 +32,4 @@ export default {
 .container{
   z-index: -1;
 }
-
-ul{
-
-}
 </style>
