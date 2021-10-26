@@ -1,0 +1,62 @@
+<template>
+  <div style="position: relative">
+    <p
+      class="text-xs absolute bg-lightMode-accent dark:bg-darkMode-accent rounded px-1"
+      :class="{
+        '-mt-3': (focused == true) | (value != ''),
+        'mt-0': focused == false,
+      }"
+    >
+      {{ label }}
+    </p>
+    <input
+      class="
+      bg-lightMode-secondary 
+      dark:bg-darkMode-secondary
+        rounded
+        border-2 border-transparent
+        focus:outline-none
+        focus:border-4 focus:border-lightMode-accent
+        dark:focus:border-darkMode-accent
+        placeholder-gray-700
+        dark:placeholder-gray-200
+        p-1
+      "
+      :type="type"
+      :value="value"
+      @input="updateInput"
+      @focus="focused = true"
+      @blur="focused = false"
+    />
+  </div>
+</template>
+
+<script lang="ts">
+import { ref } from "vue";
+
+export default {
+  props: {
+    label: String,
+    type: String,
+    value: { type: [String, Number], default: null },
+  },
+  setup(props: any, context: any) {
+    const focused = ref<Boolean>(false);
+
+    function updateInput(event: any) {
+      context.emit("update:value", event.target.value);
+    }
+
+    return {
+      focused,
+      updateInput,
+    };
+  },
+};
+</script>
+
+<style scoped>
+p {
+  transition-duration: 200ms;
+}
+</style>
