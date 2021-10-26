@@ -55,6 +55,7 @@ import Button from "@/components/Button.vue";
 import Submission from "@/store/interfaces/submissions/Submission";
 import Input from "@/components/Input.vue";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
+import { notificationStore } from '@/store/notificationStore';
 
 export default {
   props: {
@@ -97,7 +98,7 @@ export default {
         const filePath : string = await (window as any).dialog.getSelectedFilePath(options);
         
         if(filePath === ""){
-          // TODO notification
+          notificationStore.sendNotification("Keine Datei ausgewählt!")
           return;
         }
 

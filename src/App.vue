@@ -6,21 +6,23 @@
       <Subject class="subject" :subject="selectedSubject" />
       <Calender class="calender" />
     </div>
-    <PopUp></PopUp>
+    <PopUp />
   </div>
 </template>
 
 <script lang="ts">
 import { onMounted, ref, watchEffect } from "vue";
+
 import Header from "@/views/Header.vue";
 import Subject from "@/views/Subject.vue";
-import SubjectList from "@/views/SubjectList.vue";
-import { subjectStore } from "@/store/subjectStore";
-import { userStore } from "@/store/userStore";
 import PopUp from "@/views/PopUp.vue";
 import Calender from "@/views/Calender.vue"
-import SubjectType from "@/store/interfaces/Subject";
+import SubjectList from "@/views/SubjectList.vue";
+
+import { subjectStore } from "@/store/subjectStore";
+import { userStore } from "@/store/userStore";
 import { calenderStore } from '@/store/calenderStore';
+import SubjectType from "@/store/interfaces/Subject";
 
 export default {
   components: {
@@ -28,7 +30,7 @@ export default {
     Subject,
     SubjectList,
     PopUp,
-    Calender
+    Calender,
   },
   setup() {
     const selectedSubject = ref<SubjectType | undefined>(undefined);
@@ -70,6 +72,7 @@ export default {
   grid-template-columns: 1fr;
   grid-template-rows: 30px 1fr;
   grid-template-areas: "header" "main";
+  overflow-x: hidden;
 }
 
 .header {

@@ -1,7 +1,9 @@
+import { calenderStore } from "./calenderStore";
 import {Store} from "./interfaces/Store";
 import Subject from "./interfaces/Subject"
 import Submission from "./interfaces/submissions/Submission";
 import SubmissionType from "./interfaces/submissions/SubmissionType";
+import { notificationStore } from "./notificationStore";
 import { userStore } from "./userStore";
 
 const fs = (window as any).fs;
@@ -30,8 +32,7 @@ class SubjectState extends Store<SubjectStore> {
 
     addSubject(subject : Subject) {
         if(this.containsProperty(subject)){
-            // TODO -- Notofication
-            console.log("same property!")
+            notificationStore.sendNotification("Dieser Name existiert bereits!")
         }else{
             this.state.subjects.push(subject);
             this.saveSubjects();
@@ -234,8 +235,7 @@ class SubjectState extends Store<SubjectStore> {
         })
 
         if(sheetExists){
-            // TODO notification
-            console.log("sheet exists..")  
+            notificationStore.sendNotification("Diese Nummer existiert bereits!")
         }else{
             this.state.subjects.forEach((subject) => {
                 if(this.state.selectedSubjectID === subject.id){

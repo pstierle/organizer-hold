@@ -135,6 +135,7 @@
 
       <div v-if="openTab === 'Termine'"></div>
     </div>
+    <Notifications />
   </div>
 </template>
 
@@ -146,10 +147,13 @@ import Button from "@/components/Button.vue";
 import { userStore } from "@/store/userStore";
 import PopUps from "@/store/interfaces/PopUps";
 import SubmissionType from '@/store/interfaces/submissions/SubmissionType';
+import { notificationStore } from '@/store/notificationStore';
+import Notifications from "@/views/Notifications.vue"
 
 export default {
   components: {
     Button,
+    Notifications
   },
   props: {
     subject: {
