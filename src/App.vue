@@ -70,8 +70,6 @@ export default {
   grid-template-columns: 1fr;
   grid-template-rows: 30px 1fr;
   grid-template-areas: "header" "main";
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 .header {
@@ -85,11 +83,17 @@ export default {
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: "subject-list subject calender";
+  overflow-x: hidden;
 }
 
 .subject-list {
   grid-area: subject-list;
   height: 100%;
+  overflow: scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 .subject {

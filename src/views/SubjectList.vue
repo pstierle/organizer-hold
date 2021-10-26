@@ -136,6 +136,7 @@ li:hover{
 
 .list{
   grid-area: "list";
+  min-height: 300px;
 }
 
 .settings-container{

@@ -96,6 +96,11 @@ export default {
     async function add() {
         const filePath : string = await (window as any).dialog.getSelectedFilePath(options);
         
+        if(filePath === ""){
+          // TODO notification
+          return;
+        }
+
         const fileName: string = filePath
             .replace(/^.*[\\\/]/, "")
             .split(".")
@@ -181,12 +186,12 @@ export default {
 
     
       const result = await (window as any).pdf.create(pathArray, destinationPath);
+
       if(!result){
         console.log("failed!")
       }else{
         subjectStore.addSubmission(props.submissionType, destinationPath, name, type, "null");
       }
-
     }
 
     function deleteSelectedSubjects() : void{
