@@ -1,6 +1,7 @@
 <template>
   <div
     class="
+      container
       rounded
       outline-none
       px-2
@@ -51,7 +52,7 @@
       class="w-5 pr-1"
       v-if="icon === 'Unticked'"
     />
-    <p class="text-center select-none">{{ text }}</p>
+    <p class="text-center select-none" v-if="text != ''">{{ text }}</p>
   </div>
 </template>
 
@@ -80,6 +81,10 @@ export default {
 </script>
 
 <style scoped>
+.container:hover{
+  cursor: pointer;
+}
+
 div:hover {
   transform: scale(1.05);
   transition-duration: 200ms;
