@@ -7,8 +7,8 @@
       </p>  
     </div>    
     <div class="flex items-center justify-evenly w-24">
-      <button class="w-1/3 text-xl text-center" @click="minimize">-</button>
-      <button class="w-1/3 text-xl text-center" @click="maximize">□</button>
+      <button class="w-1/3 text-xl text-center hover:bg-lightMode-light dark:hover:bg-darkMode-light" @click="minimize">-</button>
+      <button class="w-1/3 text-xl text-center hover:bg-lightMode-light dark:hover:bg-darkMode-light" @click="maximize">□</button>
       <button class="w-1/3 text-xl text-center hover:bg-alert" @click="close">x</button>
     </div>
   </div>
