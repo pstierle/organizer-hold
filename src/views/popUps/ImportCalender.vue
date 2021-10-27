@@ -5,27 +5,36 @@
 </template>
 
 <script lang="ts">
-import Button from "@/components/Button.vue"
+import Button from "@/components/Button.vue";
 import { calenderStore } from "@/store/calenderStore";
+import { notificationStore } from "@/store/notificationStore";
 
 export default {
-  components:{
-    Button
+  components: {
+    Button,
   },
   setup() {
     const options = {
-        title: "Kalender Importieren",
-        properties: ["openFile"],
-        buttonLabel: "Festlegen",
-      };
+      title: "Kalender Importieren",
+      properties: ["openFile"],
+      buttonLabel: "Festlegen",
+    };
 
     async function add() {
-      const filePath : string = await (window as any).dialog.getSelectedFilePath(options);
-      calenderStore.saveCalender(filePath)
+      const filePath: string = await (window as any).dialog.getSelectedFilePath(
+        options
+      );
+
+      if (!filePath) {
+        notificationStore.sendNotification("Keine Datei ausgewählt!");
+        return;
+      }
+
+      calenderStore.saveCalender(filePath);
     }
 
     return {
-        add
+      add,
     };
   },
 };
