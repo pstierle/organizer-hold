@@ -6,8 +6,8 @@
           header
           flex
           justify-between
-        bg-lightMode-secondary 
-        dark:bg-darkMode-secondary
+          bg-lightMode-secondary
+          dark:bg-darkMode-secondary
           p-1
           rounded-t
         "
@@ -45,7 +45,8 @@
         </div>
         <div v-if="openPopUp === 'Kalender Importieren'">
           <ImportCalender />
-        </div><div
+        </div>
+        <div
           v-if="
             openPopUp === 'Abgabe' ||
             openPopUp === 'Lösungen' ||
@@ -69,7 +70,7 @@ import DeleteSubject from "@/views/popUps/DeleteSubject.vue";
 import AddExcerciseSheet from "@/views/popUps/AddExcerciseSheet.vue";
 import ImportCalender from "@/views/popUps/ImportCalender.vue";
 import Submission from "@/views/popUps/Submission.vue";
-import EditSubject from './popUps/EditSubject.vue';
+import EditSubject from "./popUps/EditSubject.vue";
 
 export default {
   components: {
@@ -79,7 +80,7 @@ export default {
     AddExcerciseSheet,
     Submission,
     ImportCalender,
-    EditSubject
+    EditSubject,
   },
   setup() {
     const openPopUp = ref<PopUps | undefined>(userStore.getOpenPopUp());
@@ -89,7 +90,6 @@ export default {
     watchEffect(() => {
       darkMode.value = userStore.darkMode();
       openPopUp.value = userStore.getOpenPopUp();
-      console.log(openPopUp.value)
     });
 
     function close() {
@@ -108,7 +108,7 @@ export default {
 
 <style scoped>
 .pop-up {
-  position: absolute!important;
+  position: absolute !important;
   background-color: rgba(0, 0, 0, 0.548);
   backdrop-filter: blur(1px);
   width: 100%;
