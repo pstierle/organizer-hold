@@ -1,28 +1,29 @@
 <template>
   <div class="window bg-lightMode-secondary dark:bg-darkMode-secondary">
-    <Header class="header bg-lightMode-secondary dark:bg-darkMode-secondary" />
+    <Header class="header" />
     <div class="main">
-      <SubjectList class="subject-list bg-lightMode-secondary dark:bg-darkMode-secondary z-10" />
-      <Subject class="subject" :subject="selectedSubject" />
+      <SubjectList class="subject-list" />
+      <Subject class="subject" />
       <Calender class="calender" />
     </div>
     <PopUp />
+    <Notifications />
   </div>
 </template>
 
 <script lang="ts">
-import { onMounted, ref, watchEffect } from "vue";
+import { onMounted } from "vue";
 
 import Header from "@/views/Header.vue";
 import Subject from "@/views/Subject.vue";
 import PopUp from "@/views/PopUp.vue";
-import Calender from "@/views/Calender.vue"
+import Calender from "@/views/Calender.vue";
+import Notifications from "@/views/Notifications.vue";
 import SubjectList from "@/views/SubjectList.vue";
 
 import { subjectStore } from "@/store/subjectStore";
 import { userStore } from "@/store/userStore";
-import { calenderStore } from '@/store/calenderStore';
-import SubjectType from "@/store/interfaces/Subject";
+import { calenderStore } from "@/store/calenderStore";
 
 export default {
   components: {
@@ -31,14 +32,9 @@ export default {
     SubjectList,
     PopUp,
     Calender,
+    Notifications,
   },
   setup() {
-    const selectedSubject = ref<SubjectType | undefined>(undefined);
-
-    watchEffect(() => {
-      selectedSubject.value = subjectStore.getSelectedSubject();
-    });
-
     onMounted(() => {
       subjectStore.preload();
       userStore.preload();
@@ -56,9 +52,7 @@ export default {
       });
     }
 
-    return {
-      selectedSubject,
-    };
+    return {};
   },
 };
 </script>

@@ -36,29 +36,10 @@
       Proffessor: {{ subject.professor }}
     </p>
     <div class="mt-1 main pt-3 pb-3">
-      <div class="flex items-center w-1/3 justify-between">
-        <p
-          :class="{
-            'border-b-2 border-lightMode-accent dark:border-darkMode-accent':
-              openTab === 'Übungsblätter',
-          }"
-          class="text-xl"
-          @click="openTab = 'Übungsblätter'"
-        >
-          Übungsblätter
-        </p>
-        <p
-          :class="{
-            'border-b-2 border-lightMode-accent dark:border-darkMode-accent':
-              openTab === 'Termine',
-          }"
-          class="text-xl"
-          @click="openTab = 'Termine'"
-        >
-          Termine
-        </p>
-      </div>
-      <div v-if="openTab === 'Übungsblätter'">
+      <p class="border-b-2 border-lightMode-accent dark:border-darkMode-accent">
+        Übungsblätter
+      </p>
+      <div>
         <div>
           <Button
             text="Hinzufügen"
@@ -194,40 +175,31 @@
           </ul>
         </div>
       </div>
-
-      <div v-if="openTab === 'Termine'"></div>
     </div>
-    <Notifications />
   </div>
 </template>
 
 <script lang="ts">
 import { subjectStore } from "@/store/subjectStore";
-import Subject from "@/store/interfaces/Subject";
-import { PropType, ref, watchEffect } from "vue";
+import { ref, watchEffect } from "vue";
 import Button from "@/components/Button.vue";
 import { userStore } from "@/store/userStore";
 import PopUps from "@/store/interfaces/PopUps";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
-import Notifications from "@/views/Notifications.vue";
+import Subject from "@/store/interfaces/Subject";
 
 export default {
   components: {
     Button,
-    Notifications,
   },
-  props: {
-    subject: {
-      require: true,
-      type: Object as PropType<Subject | undefined>,
-    },
-  },
+  props: {},
   setup() {
-    const openTab = ref<String>("Übungsblätter");
     const darkMode = ref<Boolean>(userStore.darkMode());
+    const subject = ref<Subject>();
 
     watchEffect(() => {
       darkMode.value = userStore.darkMode();
+      subject.value = subjectStore.getSelectedSubject();
     });
 
     function openPopUp(popUp: PopUps, sheetNumber: Number = 0) {
@@ -257,8 +229,8 @@ export default {
     }
 
     return {
-      openTab,
       darkMode,
+      subject,
       openPopUp,
       toogleDone,
       getSubmissionCount,
