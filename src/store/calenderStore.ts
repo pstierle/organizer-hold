@@ -76,6 +76,10 @@ class CalenderState extends Store<CalenderStore> {
         return new Date().getDay();
     }
 
+    getDayIndex(day: string) : number{
+        return WeekDays.indexOf(day);
+    }
+
     setSelectedDay(day : string) : void{
         this.state.selectedDay = day;
     }    

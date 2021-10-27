@@ -14,6 +14,7 @@
       <div class="flex items-center justify-evenly mt-3">
         <p>Tag</p>
         <DropDown
+          :selected="subjectWeekDayIndex"
           :elements="weekDays"
           @selectedIndex="handleIndexChange"
         ></DropDown>
@@ -30,6 +31,7 @@ import DropDown from "@/components/DropDown.vue";
 import { onMounted, ref } from "vue";
 import { subjectStore } from "@/store/subjectStore";
 import WeekDays from "@/store/interfaces/WeekDays";
+import { calenderStore } from "@/store/calenderStore";
 
 export default {
   components: {
@@ -50,6 +52,7 @@ export default {
     const end = ref<string>("");
     const location = ref<string>("");
     const professor = ref<string>("");
+    const subjectWeekDayIndex = ref<number>(0);
 
     onMounted(() => {
       if (!props.clearInput) {
@@ -61,6 +64,10 @@ export default {
           end.value = selectedSubject.end;
           location.value = selectedSubject.location;
           professor.value = selectedSubject.professor;
+          subjectWeekDayIndex.value = calenderStore.getDayIndex(
+            selectedSubject.weekDay
+          );
+          console.log(subjectWeekDayIndex.value);
         }
       }
     });
@@ -98,6 +105,7 @@ export default {
       end,
       location,
       professor,
+      subjectWeekDayIndex,
       submit,
       handleIndexChange,
     };
