@@ -5,11 +5,19 @@
       <Input class="mt-5" type="time" label="Start" v-model:value="start" />
       <Input class="mt-5" type="time" label="Ende" v-model:value="end" />
       <Input class="mt-5" type="text" label="Ort" v-model:value="location" />
-      <Input class="mt-5" type="text" label="Professor" v-model:value="professor" />
+      <Input
+        class="mt-5"
+        type="text"
+        label="Professor"
+        v-model:value="professor"
+      />
       <div class="flex items-center justify-evenly mt-3">
         <p>Tag</p>
-        <DropDown :elements="weekDays" @selectedIndex="handleIndexChange"></DropDown>
-      </div>      
+        <DropDown
+          :elements="weekDays"
+          @selectedIndex="handleIndexChange"
+        ></DropDown>
+      </div>
     </div>
     <Button class="mt-5" :text="header" type="success" @click="submit" />
   </div>
@@ -21,14 +29,13 @@ import Input from "@/components/Input.vue";
 import DropDown from "@/components/DropDown.vue";
 import { onMounted, ref } from "vue";
 import { subjectStore } from "@/store/subjectStore";
-import ParsedWeekDays from '@/store/interfaces/ParsedWeekDays';
-import WeekDays from '@/store/interfaces/WeekDays';
+import WeekDays from "@/store/interfaces/WeekDays";
 
 export default {
   components: {
     Input,
     Button,
-    DropDown
+    DropDown,
   },
   props: {
     header: String,
@@ -37,7 +44,7 @@ export default {
   emits: ["submit"],
   setup(props: any, context: any) {
     const name = ref<string | null>("");
-    const weekDays = ref<Array<string>>(ParsedWeekDays);
+    const weekDays = ref<Array<string>>(WeekDays);
     const weekDay = ref<string>("");
     const start = ref<string>("");
     const end = ref<string>("");
@@ -58,7 +65,7 @@ export default {
       }
     });
 
-    function handleIndexChange(index : any){
+    function handleIndexChange(index: any) {
       weekDay.value = WeekDays[index];
     }
 
@@ -66,13 +73,14 @@ export default {
       if (name.value === "") {
         return;
       } else {
-        context.emit("submit", 
-          name.value, 
-          weekDay.value, 
-          start.value, 
-          end.value, 
-          location.value, 
-          professor.value, 
+        context.emit(
+          "submit",
+          name.value,
+          weekDay.value,
+          start.value,
+          end.value,
+          location.value,
+          professor.value
         );
         name.value = "";
         weekDay.value = "";
@@ -91,7 +99,7 @@ export default {
       location,
       professor,
       submit,
-      handleIndexChange
+      handleIndexChange,
     };
   },
 };

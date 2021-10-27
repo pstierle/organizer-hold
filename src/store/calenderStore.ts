@@ -38,7 +38,7 @@ class CalenderState extends Store<CalenderStore> {
                 doc.firstChild?.childNodes.forEach(node => {
                     if(node.childNodes.length > 0){
 
-                        const weekDay = node.childNodes[1].textContent || "";
+                        let weekDay = node.childNodes[1].textContent || "";
                         const start = node.childNodes[5].textContent || "";
                         const end = node.childNodes[7].textContent || "";
                         const length = node.childNodes[9].textContent || "";
@@ -46,6 +46,8 @@ class CalenderState extends Store<CalenderStore> {
                         const location = node.childNodes[19].textContent || "";
                         const professor = node.childNodes[25].textContent || "";             
                         const shortName : string = name[0];
+
+                        weekDay = helperFunction.formatWeekDay(weekDay);
 
                         const newSubject: Subject = {
                             id: subjectStore.getSubjects().length + 1,
@@ -67,8 +69,12 @@ class CalenderState extends Store<CalenderStore> {
     }
 
     preload(){
-        this.state.selectedDay = WeekDays[new Date().getDay()];
+        this.state.selectedDay = WeekDays[this.getCurrentDayIndex()];
     };
+
+    getCurrentDayIndex() : number{
+        return new Date().getDay();
+    }
 
     setSelectedDay(day : string) : void{
         this.state.selectedDay = day;

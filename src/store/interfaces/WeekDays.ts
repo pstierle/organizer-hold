@@ -1,11 +1,11 @@
 const WeekDays = [
-    "SO",
-    "MO",
-    "DI",
-    "MI",
-    "DO",
-    "FR",
-    "SA",
+    "Sonntag",
+    "Montag",
+    "Dienstag",
+    "Mittwoch",
+    "Donnerstag",
+    "Freitag",
+    "Samstag",
 ];
 
 export default WeekDays;
