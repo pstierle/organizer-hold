@@ -1,0 +1,2115 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1'?>
+<ROWSET>
+   <ROW NUM="1">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>21.10.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="2">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>21.10.2021</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="3">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>21.10.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="4">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>22.10.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="5">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>25.10.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="6">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>25.10.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="7">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>26.10.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="8">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>27.10.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="9">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>27.10.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>Hertrampf Ulrich</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Fragestunde - es werden Fragen zur Vorlesung behandelt.</ANMERKUNG>
+   </ROW>
+   <ROW NUM="10">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>27.10.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="11">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>28.10.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="12">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>28.10.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="13">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>29.10.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="14">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>01.11.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800105</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 10</LV_GRUPPE>
+      <ORT>Online--Live-Termin</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG>Termin wird noch verlegt - Ankündigung folgt</ANMERKUNG>
+   </ROW>
+   <ROW NUM="15">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>02.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="16">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>03.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="17">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>03.11.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="18">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>04.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="19">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>04.11.2021</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="20">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>04.11.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="21">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>05.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="22">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>08.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="23">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>08.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="24">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>09.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="25">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>10.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="26">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>10.11.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>Hertrampf Ulrich</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Fragestunde - es werden Fragen zur Vorlesung behandelt.</ANMERKUNG>
+   </ROW>
+   <ROW NUM="27">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>10.11.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="28">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>11.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="29">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>11.11.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="30">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>12.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="31">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>15.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="32">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>15.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="33">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>15.11.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800105</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 10</LV_GRUPPE>
+      <ORT>Online--Live-Termin</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="34">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>16.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="35">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>17.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="36">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>17.11.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>informatik-dozenten PLAN4819</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Ergänzung - es werden zusätzliche Beispiele und Erläuterungen zur Vorlesung bearbeitet. (Es steht noch nicht fest, ob diese Ergänzungs-Termine stattfinden können.)</ANMERKUNG>
+   </ROW>
+   <ROW NUM="37">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>17.11.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="38">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>18.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="39">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>18.11.2021</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="40">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>18.11.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="41">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>19.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="42">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>22.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="43">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>22.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="44">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>23.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="45">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>24.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="46">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>24.11.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>Hertrampf Ulrich</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Fragestunde - es werden Fragen zur Vorlesung behandelt.</ANMERKUNG>
+   </ROW>
+   <ROW NUM="47">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>24.11.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="48">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>25.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="49">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>25.11.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="50">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>26.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="51">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>29.11.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="52">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>29.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="53">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>29.11.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800105</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 10</LV_GRUPPE>
+      <ORT>Online--Live-Termin</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="54">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>30.11.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="55">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>01.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="56">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>01.12.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>informatik-dozenten PLAN4819</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Ergänzung - es werden zusätzliche Beispiele und Erläuterungen zur Vorlesung bearbeitet. (Es steht noch nicht fest, ob diese Ergänzungs-Termine stattfinden können.)</ANMERKUNG>
+   </ROW>
+   <ROW NUM="57">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>01.12.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="58">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>02.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="59">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>02.12.2021</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="60">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>02.12.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="61">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>03.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="62">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>06.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="63">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>06.12.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="64">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>07.12.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="65">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>08.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="66">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>08.12.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>Hertrampf Ulrich</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Fragestunde - es werden Fragen zur Vorlesung behandelt.</ANMERKUNG>
+   </ROW>
+   <ROW NUM="67">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>08.12.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="68">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>09.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="69">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>09.12.2021</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="70">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>09.12.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="71">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>10.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="72">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>13.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="73">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>13.12.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="74">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>13.12.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800105</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 10</LV_GRUPPE>
+      <ORT>Online--Live-Termin</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="75">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>14.12.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="76">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>15.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="77">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>15.12.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>informatik-dozenten PLAN4819</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Ergänzung - es werden zusätzliche Beispiele und Erläuterungen zur Vorlesung bearbeitet. (Es steht noch nicht fest, ob diese Ergänzungs-Termine stattfinden können.)</ANMERKUNG>
+   </ROW>
+   <ROW NUM="78">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>15.12.2021</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="79">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>16.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="80">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>16.12.2021</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="81">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>16.12.2021</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="82">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>17.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="83">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>20.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="84">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>20.12.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="85">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>21.12.2021</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="86">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>22.12.2021</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="87">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>22.12.2021</DATUM>
+      <VON>11:30</VON>
+      <BIS>13:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800109</LV_NUMMER>
+      <TITEL>Ergänzungen zu Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Universität 38 - V 38.01 (UN38/EG/V 38.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON>Hertrampf Ulrich</VORTRAGENDER_KONTAKTPERSON>
+      <ANMERKUNG>Fragestunde - es werden Fragen zur Vorlesung behandelt.</ANMERKUNG>
+   </ROW>
+   <ROW NUM="88">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>10.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="89">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>10.01.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="90">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>10.01.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800105</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 10</LV_GRUPPE>
+      <ORT>Online--Live-Termin</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="91">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>11.01.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="92">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>12.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="93">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>12.01.2022</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="94">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>13.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="95">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>13.01.2022</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="96">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>13.01.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="97">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>14.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="98">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>17.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="99">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>17.01.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="100">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>18.01.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="101">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>19.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="102">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>19.01.2022</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="103">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>20.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="104">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>20.01.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="105">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>21.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="106">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>24.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="107">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>24.01.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="108">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>24.01.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800105</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 10</LV_GRUPPE>
+      <ORT>Online--Live-Termin</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="109">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>25.01.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="110">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>26.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="111">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>26.01.2022</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="112">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>27.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="113">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>27.01.2022</DATUM>
+      <VON>15:45</VON>
+      <BIS>17:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="114">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>27.01.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="115">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>28.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="116">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>31.01.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="117">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>31.01.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="118">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>01.02.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="119">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>02.02.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="120">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>02.02.2022</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="121">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>03.02.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="122">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>03.02.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="123">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>04.02.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="124">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>07.02.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="125">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>07.02.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300101</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Gruppenübungen)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 02</LV_GRUPPE>
+      <ORT>U 32.226 (UN32/01/U 32.226)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="126">
+      <WOCHENTAG>MO</WOCHENTAG>
+      <DATUM>07.02.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800105</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Gruppe 10</LV_GRUPPE>
+      <ORT>Online--Live-Termin</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="127">
+      <WOCHENTAG>DI</WOCHENTAG>
+      <DATUM>08.02.2022</DATUM>
+      <VON>09:45</VON>
+      <BIS>11:15</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300000</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 47 - V 47.01 (PF47/EG/V 47.01)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="128">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>09.02.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700800</LV_NUMMER>
+      <TITEL>Wissenschaftliche Methoden in der Informatik</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="129">
+      <WOCHENTAG>MI</WOCHENTAG>
+      <DATUM>09.02.2022</DATUM>
+      <VON>14:00</VON>
+      <BIS>15:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020800100</LV_NUMMER>
+      <TITEL>Theoretische Informatik I (Formale Sprachen und Automatentheorie)</TITEL>
+      <LV_ART>VO</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online--Selbststudium</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="130">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>10.02.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>021580000</LV_NUMMER>
+      <TITEL>Software-Praktikum</TITEL>
+      <LV_ART>UE</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="131">
+      <WOCHENTAG>DO</WOCHENTAG>
+      <DATUM>10.02.2022</DATUM>
+      <VON>17:30</VON>
+      <BIS>19:00</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>010300100</LV_NUMMER>
+      <TITEL>Mathematik 1 für inf, swt, msv (Vortragsübung)</TITEL>
+      <LV_ART>ZV</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>PWR 07 - V 7.02 (PF07/EG/V 7.02)</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+   <ROW NUM="132">
+      <WOCHENTAG>FR</WOCHENTAG>
+      <DATUM>11.02.2022</DATUM>
+      <VON>08:00</VON>
+      <BIS>09:30</BIS>
+      <DAUER_IN_MINUTEN>90</DAUER_IN_MINUTEN>
+      <LV_NUMMER>020700200</LV_NUMMER>
+      <TITEL>Programmentwicklung II</TITEL>
+      <LV_ART>VU</LV_ART>
+      <LV_GRUPPE>Standardgruppe</LV_GRUPPE>
+      <ORT>Online</ORT>
+      <EREIGNIS_TYP>Abhaltung</EREIGNIS_TYP>
+      <TERMIN_TYP>fix</TERMIN_TYP>
+      <VORTRAGENDER_KONTAKTPERSON NULL="TRUE"/>
+      <ANMERKUNG NULL="TRUE"/>
+   </ROW>
+</ROWSET>
