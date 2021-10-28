@@ -24,8 +24,8 @@ async function createWindow() {
     webPreferences: {
       preload: preload,
       contextIsolation: true,
-      nodeIntegration: false,
-      enableRemoteModule: true, // for json-storage
+      nodeIntegration: true,
+      enableRemoteModule: true,
     }
   })
 
