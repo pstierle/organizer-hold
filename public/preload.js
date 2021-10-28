@@ -5,6 +5,7 @@ const app = remote.app;
 const currentWindow = remote.getCurrentWindow();
 const path = require("path")
 const fs = require("fs");
+var PDFDocument = require('pdfkit');
 
 contextBridge.exposeInMainWorld(
   'WIN',
@@ -37,19 +38,22 @@ contextBridge.exposeInMainWorld(
 contextBridge.exposeInMainWorld(
   'pdf',
   {
-    create: async (pathArray, destinationPath) => {
-      // const doc = new PDFDocument();
+    create: (pathArray, destinationPath) => {
+      var doc = new PDFDocument();    
 
-      // pathArray.forEach(async (path) => {
-      //    doc.image(path, 0, 0, {
-      //      width: 100,
-      //      height: 100, 
-      //    }) 
-      // })
-        
-      // doc.pipe(fs.createWriteStream(destinationPath));
+      for(let i = 0; i < pathArray.length; i++){
+        doc.image(pathArray[i], {
+          fit: [doc.page.width, doc.page.height],
+          x: 0,
+          y: 0
+        });
+        if(pathArray.length - i > 1) doc.addPage();
+      }
 
-      return false;
+      doc.pipe(fs.createWriteStream(destinationPath));
+      doc.end();   
+
+      return true;
     }
   }
 )

@@ -9,8 +9,8 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 declare const __static: string;
 
 const preload = (process.env.NODE_ENV === 'development') ?
-  path.resolve(__static, '..', 'public', 'preload.ts') : 
-  path.resolve(__static, 'preload.ts');  
+  path.resolve(__static, '..', 'public', 'preload.js') : 
+  path.resolve(__static, 'preload.js');  
 
 protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } }

@@ -214,10 +214,7 @@ export default {
         pathArray.push(entry.path);
       });
 
-      const result = await (window as any).pdf.create(
-        pathArray,
-        destinationPath
-      );
+      const result = (window as any).pdf.create(pathArray, destinationPath);
 
       if (!result) {
         console.log("failed!");
