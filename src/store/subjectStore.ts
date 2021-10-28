@@ -169,6 +169,7 @@ class SubjectState extends Store<SubjectStore> {
     deleteSumbission(submissionID : Number) : void{
         for(let i = 0; i < this.state.submissions.length; i++){
             if(submissionID === this.state.submissions[i].submissionID){
+                (window as any).fs.deleteFile(this.state.submissions[i].path);
                 this.state.submissions.splice(i, 1);
                 break;
             }

@@ -136,6 +136,11 @@ contextBridge.exposeInMainWorld(
         const fileSizeInMegabytes = fileSizeInBytes / (1024*1024);
         return fileSizeInMegabytes.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
       },
+      deleteFile: (path) => {
+        fs.unlink(path, (err) => {
+          if(err) throw err;
+        })
+      },
       copyFile: (filePath, destinationPath) => {
         fs.copyFile(filePath, destinationPath, (err) => {
           if (err) throw err;
