@@ -22,13 +22,13 @@ module.exports = {
              textDark: colors.gray[400],
             },
             lightMode:{
-              primary: colors.blueGray[400],
-              secondary: colors.blueGray[500],
-              light: colors.blueGray[200],
-              button: colors.amber[400],
-              accent: colors.amber[400],
+              primary: colors.gray[300],
+              secondary: colors.gray[400],
+              light: colors.gray[400],
+              button: colors.gray[400],
+              accent: colors.gray[400],
               text: colors.gray[800],
-              textDark: colors.gray[700],
+              textDark: colors.gray[600],
             }
         }
     },
