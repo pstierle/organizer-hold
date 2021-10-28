@@ -247,6 +247,10 @@ class SubjectState extends Store<SubjectStore> {
                         dueDate: sheetDueDate,
                         subjectName: subject.name
                     })
+
+                    subject.exerciseSheets.sort((a, b) => {
+                        return String(a.number).localeCompare(String(b.number));
+                    });
                 }
             })
 
