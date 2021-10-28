@@ -38,7 +38,7 @@ contextBridge.exposeInMainWorld(
 contextBridge.exposeInMainWorld(
   'pdf',
   {
-    create: (pathArray, destinationPath) => {
+    create: async (pathArray, destinationPath) => {
       var doc = new PDFDocument();    
 
       for(let i = 0; i < pathArray.length; i++){
@@ -129,6 +129,12 @@ contextBridge.exposeInMainWorld(
         fs.rename(oldPath, newPath, (err) => {
             if (err) throw err;
         })
+      },
+      getFileSize: (path) => {
+        const stats = fs.statSync(path)
+        const fileSizeInBytes = stats.size;
+        const fileSizeInMegabytes = fileSizeInBytes / (1024*1024);
+        return fileSizeInMegabytes.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
       },
       copyFile: (filePath, destinationPath) => {
         fs.copyFile(filePath, destinationPath, (err) => {

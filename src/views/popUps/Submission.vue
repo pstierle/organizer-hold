@@ -33,7 +33,7 @@
           </td>
           <td class="p-2 whitespace-nowrap">{{ submission.fileName }}</td>
           <td class="p-2 whitespace-nowrap">.{{ submission.format }}</td>
-          <td class="p-2 whitespace-nowrap">{{ submission.size }}</td>
+          <td class="p-2 whitespace-nowrap">{{ submission.size }}MB</td>
           <td class="p-2 whitespace-nowrap">
             <Button text="Öffnen" @click="openFile(submission)" />
           </td>
@@ -142,7 +142,7 @@ export default {
         destinationPath,
         fileName,
         fileType,
-        "null"
+        (window as any).fs.getFileSize(filePath)
       );
 
       (window as any).fs.copyFile(filePath, destinationPath);
@@ -214,7 +214,10 @@ export default {
         pathArray.push(entry.path);
       });
 
-      const result = (window as any).pdf.create(pathArray, destinationPath);
+      const result = await (window as any).pdf.create(
+        pathArray,
+        destinationPath
+      );
 
       if (!result) {
         console.log("failed!");
@@ -224,7 +227,7 @@ export default {
           destinationPath,
           name,
           type,
-          "null"
+          (window as any).fs.getFileSize(destinationPath)
         );
       }
     }
