@@ -21,7 +21,7 @@
       <Button
         class="w-24 mt-6 mb-6"
         text="Hinzufügen"
-        icon="Plus"
+        icon="plus"
         @click="add"
       />
     </div>
@@ -50,8 +50,6 @@ export default {
         helperFunction.formatDate(sheetDueDate.value)
       );
     }
-
-
 
     return {
       add,

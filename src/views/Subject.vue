@@ -21,12 +21,12 @@
           class="lg:w-5/12 w-5/6"
           text="Bearbeiten"
           @click="openPopUp('Bearbeiten')"
-          icon="Edit"
+          icon="edit"
         ></Button>
         <Button
           class="lg:w-5/12 w-5/6"
           type="alert"
-          icon="Bin"
+          icon="bin"
           text="Löschen"
           @click="openPopUp('Löschen')"
         ></Button>
@@ -43,7 +43,7 @@
         <div>
           <Button
             text="Hinzufügen"
-            icon="Plus"
+            icon="plus"
             class="w-24 mt-4"
             @click="openPopUp('Übungsblatt hinzufügen')"
           />
@@ -86,11 +86,9 @@
                     Anzahl: {{ getSubmissionCount("Abgabe", sheet.number) }}
                   </p>
                 </div>
-                <img
-                  src="../assets/img/magnifying-glass.svg"
-                  alt="settings"
-                  :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
-                  class="w-4 icon"
+                <Icon
+                  icon="magnifying-glass"
+                  class="w-4"
                   @click="openPopUp('Abgabe', sheet.number)"
                 />
               </div>
@@ -110,11 +108,9 @@
                     Anzahl: {{ getSubmissionCount("Korrektur", sheet.number) }}
                   </p>
                 </div>
-                <img
-                  src="../assets/img/magnifying-glass.svg"
-                  alt="settings"
-                  :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
-                  class="w-4 icon"
+                <Icon
+                  icon="magnifying-glass"
+                  class="w-4"
                   @click="openPopUp('Korrektur', sheet.number)"
                 />
               </div>
@@ -134,11 +130,9 @@
                     Anzahl: {{ getSubmissionCount("Lösungen", sheet.number) }}
                   </p>
                 </div>
-                <img
-                  src="../assets/img/magnifying-glass.svg"
-                  alt="settings"
-                  :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
-                  class="w-4 icon"
+                <Icon
+                  icon="magnifying-glass"
+                  class="w-4"
                   @click="openPopUp('Lösungen', sheet.number)"
                 />
               </div>
@@ -162,12 +156,12 @@
                 </div>
                 <Button
                   @click="toogleDone(sheet.number)"
-                  icon="Ticked"
+                  icon="ticked"
                   v-if="sheet.done"
                 />
                 <Button
                   @click="toogleDone(sheet.number)"
-                  icon="Unticked"
+                  icon="unticked"
                   v-else
                 />
               </div>
@@ -187,18 +181,18 @@ import { userStore } from "@/store/userStore";
 import PopUps from "@/store/interfaces/PopUps";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
 import Subject from "@/store/interfaces/Subject";
+import Icon from "@/components/Icon.vue";
 
 export default {
   components: {
     Button,
+    Icon,
   },
   props: {},
   setup() {
-    const darkMode = ref<Boolean>(userStore.darkMode());
     const subject = ref<Subject>();
 
     watchEffect(() => {
-      darkMode.value = userStore.darkMode();
       subject.value = subjectStore.getSelectedSubject();
     });
 
@@ -229,7 +223,6 @@ export default {
     }
 
     return {
-      darkMode,
       subject,
       openPopUp,
       toogleDone,

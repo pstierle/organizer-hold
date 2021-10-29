@@ -67,7 +67,6 @@ export default {
           subjectWeekDayIndex.value = calenderStore.getDayIndex(
             selectedSubject.weekDay
           );
-          console.log(subjectWeekDayIndex.value);
         }
       }
     });

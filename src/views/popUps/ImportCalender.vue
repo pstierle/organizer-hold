@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <Button class="w-32" text="Datei auswählen" icon="Plus" @click="add" />
+    <Button class="w-32" text="Datei auswählen" icon="plus" @click="add" />
   </div>
 </template>
 

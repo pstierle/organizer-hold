@@ -13,19 +13,7 @@
         "
       >
         <p class="text-xl">{{ openPopUp }}</p>
-        <img
-          :class="{
-            'light-icon': !darkMode,
-            'dark-icon': darkMode,
-            'close-hover': closeHover === true,
-          }"
-          src="@/assets/img/close.svg"
-          alt="close"
-          class="w-6"
-          @click="close"
-          @mouseover="closeHover = true"
-          @mouseleave="closeHover = false"
-        />
+        <Icon icon="close" class="w-6 hover:close-hover" @click="close" />
       </div>
       <div class="main p-2">
         <div v-if="openPopUp === 'Einstellungen'">
@@ -71,6 +59,7 @@ import AddExcerciseSheet from "@/views/popUps/AddExcerciseSheet.vue";
 import ImportCalender from "@/views/popUps/ImportCalender.vue";
 import Submission from "@/views/popUps/Submission.vue";
 import EditSubject from "./popUps/EditSubject.vue";
+import Icon from "@/components/Icon.vue";
 
 export default {
   components: {
@@ -81,14 +70,12 @@ export default {
     Submission,
     ImportCalender,
     EditSubject,
+    Icon,
   },
   setup() {
     const openPopUp = ref<PopUps | undefined>(userStore.getOpenPopUp());
-    const darkMode = ref<Boolean>(userStore.darkMode());
-    const closeHover = ref<Boolean>(false);
 
     watchEffect(() => {
-      darkMode.value = userStore.darkMode();
       openPopUp.value = userStore.getOpenPopUp();
     });
 
@@ -98,8 +85,6 @@ export default {
 
     return {
       openPopUp,
-      darkMode,
-      closeHover,
       close,
     };
   },

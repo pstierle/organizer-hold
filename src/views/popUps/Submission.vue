@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Button class="w-32" text="Datei Hinzufügen" icon="Plus" @click="add" />
+    <Button class="w-32" text="Datei Hinzufügen" icon="plus" @click="add" />
     <table class="table-fixed">
       <thead>
         <tr>
@@ -21,13 +21,13 @@
             <Button
               v-if="selected(submission)"
               @click="addToSelected(submission)"
-              icon="Ticked"
+              icon="ticked"
               text="Auswählen"
             />
             <Button
               v-if="!selected(submission)"
               @click="addToSelected(submission)"
-              icon="Unticked"
+              icon="unticked"
               text="Auswählen"
             />
           </td>
@@ -82,7 +82,6 @@ export default {
     Input,
   },
   setup(props: any) {
-    const darkMode = ref<Boolean>(userStore.darkMode());
     const submissions = ref<Array<Submission>>([]);
     const selectedSubmissions = ref<Array<Submission>>([]);
     const onlyContainsImages = ref<boolean>(true);
@@ -103,11 +102,9 @@ export default {
             submission.exerciseSheetNumber ===
               userStore.getSelectedSheetNumber()
         );
-      darkMode.value = userStore.darkMode();
     });
 
     watchEffect(() => {
-      darkMode.value = userStore.darkMode();
       submissions.value = subjectStore
         .getSubmissions()
         .filter((submission) => submission.type === props.submissionType);
@@ -246,7 +243,6 @@ export default {
       concatToPdf,
       deleteSelectedSubjects,
       submissions,
-      darkMode,
       selectedSubmissions,
       onlyContainsImages,
     };

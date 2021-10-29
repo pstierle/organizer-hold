@@ -1,28 +1,22 @@
 <template>
   <img
-    :src="src"
-    :alt="alt"
+    :src="require(`@/assets/img/${icon}.svg`)"
+    :alt="icon"
     :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
-    class="icon"
   />
 </template>
 
 <script lang="ts">
 import { ref } from "@vue/reactivity";
-import { onMounted, watchEffect } from "@vue/runtime-core";
+import { watchEffect } from "@vue/runtime-core";
 import { userStore } from "@/store/userStore";
 export default {
   props: {
-    src: String,
-    alt: String,
+    icon: String,
   },
 
   setup() {
     const darkMode = ref<Boolean>(userStore.darkMode());
-
-    onMounted(() => {
-      console.log(require("@/assets/img/right.svg"));
-    });
 
     watchEffect(() => {
       darkMode.value = userStore.darkMode();

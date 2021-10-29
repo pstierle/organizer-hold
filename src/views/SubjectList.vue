@@ -1,34 +1,16 @@
 <template>
   <div class="container">
-      <!-- :class="{ focus: focused == true, unfocus: focused == false }" -->
-    <!-- <div class="flex justify-center h-10">
-      <img
-        src="../assets/img/right.svg"
-        alt="menu"
-        class="w-6 icon arrow"
-        :class="{
-          'light-icon': !darkMode,
-          'dark-icon': darkMode,
-          rotateLeft: focused == true && !darkMode,
-          rotateLeftDark: focused == true && darkMode == true,
-          rotateRight: focused == false,
-        }"
-      />
-    </div> -->
-    <div 
-        class="
-        text-center 
-        overflow-y-scroll 
-        scrollbar-thin 
-        scrollbar-thumb-darkMode-light 
-        scrollbar-thumb-rounded 
+    <div
+      class="
+        text-center
+        overflow-y-scroll
+        scrollbar-thin
+        scrollbar-thumb-darkMode-light
+        scrollbar-thumb-rounded
         scrollbar-track-rounded
-        "
+      "
     >
-      <ul
-        @mouseenter="focused = true"
-        @mouseleave="focused = false"
-      >
+      <ul @mouseenter="focused = true" @mouseleave="focused = false">
         <li
           v-for="(subject, index) in subjects"
           :key="index"
@@ -37,60 +19,76 @@
           @mouseenter="hoveredSubjectID = subject.id"
           @mouseleave="hoveredSubjectID = null"
         >
-          <div 
-            v-if="hoveredSubjectID === subject.id" 
-            class="text-xs absolute ml-56 bg-lightMode-accent dark:bg-darkMode-accent rounded p-2 w-40" 
-            :class="{ focusLabel: hoveredSubjectID === subject.id, unfocusLabel: hoveredSubjectID !== subject.id }"
+          <div
+            v-if="hoveredSubjectID === subject.id"
+            class="
+              text-xs
+              absolute
+              ml-56
+              bg-lightMode-accent
+              dark:bg-darkMode-accent
+              rounded
+              p-2
+              w-40
+            "
+            :class="{
+              focusLabel: hoveredSubjectID === subject.id,
+              unfocusLabel: hoveredSubjectID !== subject.id,
+            }"
           >
-            <p>{{subject.name}}</p>
+            <p>{{ subject.name }}</p>
           </div>
-          <div class="flex items-center justify-center w-12 h-12 circle bg-lightMode-primary dark:bg-darkMode-primary" :class="{ 'border-b-2 border-lightMode-accent dark:border-darkMode-accent': selectedSubjectID == subject.id}">
-            <p>{{subject.shortName}}</p>
+          <div
+            class="
+              flex
+              items-center
+              justify-center
+              w-12
+              h-12
+              circle
+              bg-lightMode-primary
+              dark:bg-darkMode-primary
+            "
+            :class="{
+              'border-b-2 border-lightMode-accent dark:border-darkMode-accent':
+                selectedSubjectID == subject.id,
+            }"
+          >
+            <p>{{ subject.shortName }}</p>
           </div>
         </li>
-      </ul>      
+      </ul>
     </div>
     <div class="flex justify-around settings-container">
-      <img
-        src="../assets/img/settings.svg"
-        alt="settings"
-        :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
-        class="w-6 icon"
-        @click="openSettings()"
-      />
-      <img
-        src="../assets/img/plus.svg"
-        alt="settings"
-        :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
-        class="w-6 icon"
-        @click="openAddSubject()"
-      />
+      <Icon icon="settings" class="w-6" @click="openSettings()" />
+      <Icon icon="plus" class="w-6" @click="openAddSubject()" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Subject from "@/store/interfaces/Subject";
+import Icon from "@/components/Icon.vue";
 import { onMounted, ref, watchEffect } from "@vue/runtime-core";
 import { subjectStore } from "@/store/subjectStore";
 import { userStore } from "@/store/userStore";
 
 export default {
+  components: {
+    Icon,
+  },
   setup() {
     const subjects = ref<Array<Subject>>();
     const selectedSubjectID = ref<Number>();
     const focused = ref<Boolean>(false);
-    const darkMode = ref<Boolean>(false);
     const hoveredSubjectID = ref<number | null>(null);
 
     onMounted(() => {
-      darkMode.value = userStore.darkMode();
       subjects.value = subjectStore.getSubjects();
       selectedSubjectID.value = subjectStore.getSelectedSubjectID();
     });
 
     watchEffect(() => {
-      darkMode.value = userStore.darkMode();
       subjects.value = subjectStore.getSubjects();
       selectedSubjectID.value = subjectStore.getSelectedSubjectID();
     });
@@ -111,7 +109,6 @@ export default {
       subjects,
       selectedSubjectID,
       focused,
-      darkMode,
       hoveredSubjectID,
       openSettings,
       selectSubject,
@@ -122,24 +119,24 @@ export default {
 </script>
 
 <style scoped>
-.container{
+.container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 50px;
   gap: 0px 0px;
-  grid-template-areas: "list" "settings-container"; 
+  grid-template-areas: "list" "settings-container";
 }
 
-li:hover{
+li:hover {
   cursor: pointer;
 }
 
-.list{
+.list {
   grid-area: "list";
   min-height: 300px;
 }
 
-.settings-container{
+.settings-container {
   grid-area: "settings-container";
 }
 
@@ -230,7 +227,7 @@ li:hover{
 }
 
 @keyframes fadeOutLabel {
-from {
+  from {
     opacity: 100;
   }
   to {
@@ -238,7 +235,7 @@ from {
   }
 }
 
-.circle{
+.circle {
   border-radius: 50%;
 }
 </style>

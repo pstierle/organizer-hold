@@ -37,13 +37,7 @@
     </div>
     <div class="import-calender flex items-center justify-between">
       <p>Kalender Importieren</p>
-      <img
-        src="../assets/img/plus.svg"
-        alt="settings"
-        :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
-        class="w-6 icon"
-        @click="openImportCalender"
-      />
+      <Icon icon="plus" class="w-6" @click="openImportCalender" />
     </div>
   </div>
 </template>
@@ -58,26 +52,25 @@ import { calenderStore } from "@/store/calenderStore";
 import ExcerciseSheet from "@/store/interfaces/ExcerciseSheet";
 import DropDown from "@/components/DropDown.vue";
 import WeekDays from "@/store/interfaces/WeekDays";
+import Icon from "@/components/Icon.vue";
 
 export default {
   components: {
     DropDown,
+    Icon,
   },
   setup() {
-    const darkMode = ref<Boolean>(false);
     const eventsToday = ref<Array<Subject>>([]);
     const exerciseSheetsToday = ref<Array<ExcerciseSheet>>([]);
     const weekDays = ref<Array<string>>(WeekDays);
     const currentDayIndex = ref<number>(calenderStore.getCurrentDayIndex());
 
     onMounted(() => {
-      darkMode.value = userStore.darkMode();
       eventsToday.value = calenderStore.getEventsToday();
       exerciseSheetsToday.value = calenderStore.getExerciseSheetsToday();
     });
 
     watchEffect(() => {
-      darkMode.value = userStore.darkMode();
       eventsToday.value = calenderStore.getEventsToday();
       exerciseSheetsToday.value = calenderStore.getExerciseSheetsToday();
     });
@@ -93,7 +86,6 @@ export default {
     return {
       openImportCalender,
       handleIndexChange,
-      darkMode,
       eventsToday,
       exerciseSheetsToday,
       weekDays,
