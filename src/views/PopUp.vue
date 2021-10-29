@@ -13,7 +13,14 @@
         "
       >
         <p class="text-xl">{{ openPopUp }}</p>
-        <Icon icon="close" class="w-6 hover:close-hover" @click="close" />
+        <Icon
+          icon="close"
+          class="w-6"
+          @click="close"
+          @mouseover="closeHover = true"
+          @mouseout="closeHover = false"
+          :class="{ 'close-hover': closeHover }"
+        />
       </div>
       <div class="main p-2">
         <div v-if="openPopUp === 'Einstellungen'">
@@ -74,17 +81,20 @@ export default {
   },
   setup() {
     const openPopUp = ref<PopUps | undefined>(userStore.getOpenPopUp());
+    const closeHover = ref<boolean>(false);
 
     watchEffect(() => {
       openPopUp.value = userStore.getOpenPopUp();
     });
 
     function close() {
+      closeHover.value = false;
       userStore.setOpenPopUp(null);
     }
 
     return {
       openPopUp,
+      closeHover,
       close,
     };
   },
