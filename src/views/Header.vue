@@ -1,6 +1,9 @@
 <template>
   <div class="header flex items-center justify-between">
-    <p class="pl-2 dragabble flex items-center w-24">
+    <p
+      class="pl-2 dragabble flex items-center w-24"
+      :class="{ 'w-full': !nextSubject }"
+    >
       Organizer <span class="text-xs pl-2">version(0.0.1)</span>
     </p>
     <p
