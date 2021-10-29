@@ -18,7 +18,7 @@
     }"
   >
     <Icon :icon="icon" class="w-4 pr-1" v-if="icon" />
-    <p class="text-center select-none" v-if="text">{{ text }}</p>
+    <p class="text-center select-none w-full" v-if="text">{{ text }}</p>
   </div>
 </template>
 
