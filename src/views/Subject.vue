@@ -36,7 +36,13 @@
       Proffessor: {{ subject.professor }}
     </p>
     <div class="mt-1 main pt-3 pb-3">
-      <p class="border-b-2 border-lightMode-accent dark:border-darkMode-accent">
+      <p
+        class="
+          p-2
+          border-b-2 border-lightMode-accent
+          dark:border-darkMode-accent
+        "
+      >
         Übungsblätter
       </p>
       <div>
@@ -235,5 +241,7 @@ export default {
 <style scoped>
 .subject-container {
   min-width: 450px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 </style>
