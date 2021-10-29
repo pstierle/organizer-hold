@@ -1,28 +1,57 @@
 <template>
   <div class="header flex items-center justify-between">
-    <div class="dragabble w-full">
-      <p class="pl-2">Organizer <span class="text-xs">version(0.0.1)</span></p>
-      <p class="text-alert text-xs" v-if="nextSubject">
-        Nächster Termin: {{ nextSubject.start }} - Fach: {{ nextSubject.name }}
-      </p>  
-    </div>    
+    <p class="pl-2 dragabble flex items-center w-24">
+      Organizer <span class="text-xs pl-2">version(0.0.1)</span>
+    </p>
+    <p
+      class="text-alert text-xs dragabble w-full text-center"
+      v-if="nextSubject"
+    >
+      Nächster Termin: {{ nextSubject.start }} - Fach: {{ nextSubject.name }}
+    </p>
     <div class="flex items-center justify-evenly w-24">
-      <button class="w-1/3 text-xl text-center hover:bg-lightMode-light dark:hover:bg-darkMode-light" @click="minimize">-</button>
-      <button class="w-1/3 text-xl text-center hover:bg-lightMode-light dark:hover:bg-darkMode-light" @click="maximize">□</button>
-      <button class="w-1/3 text-xl text-center hover:bg-alert" @click="close">x</button>
+      <button
+        class="
+          w-1/3
+          text-xl text-center
+          hover:bg-lightMode-light
+          dark:hover:bg-darkMode-light
+        "
+        @click="minimize"
+      >
+        -
+      </button>
+      <button
+        class="
+          w-1/3
+          text-xl text-center
+          hover:bg-lightMode-light
+          dark:hover:bg-darkMode-light
+        "
+        @click="maximize"
+      >
+        □
+      </button>
+      <button class="w-1/3 text-xl text-center hover:bg-alert" @click="close">
+        x
+      </button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from "@vue/runtime-core";
+import { ref, onMounted, watchEffect } from "@vue/runtime-core";
 import Subject from "@/store/interfaces/Subject";
-import { calenderStore } from '@/store/calenderStore';
+import { calenderStore } from "@/store/calenderStore";
 
 export default {
   setup() {
     const version = ref<String>();
     const nextSubject = ref<Subject | null>(calenderStore.getNextEvent());
+
+    watchEffect(() => {
+      nextSubject.value = calenderStore.getNextEvent();
+    });
 
     function close() {
       (window as any).WIN.close();
@@ -35,8 +64,7 @@ export default {
     }
 
     onMounted(() => {
-        version.value = (window as any).app.getVersion();
-
+      version.value = (window as any).app.getVersion();
     });
 
     return {

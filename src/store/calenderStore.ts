@@ -7,10 +7,6 @@ import WeekDays from "./interfaces/WeekDays";
 import { subjectStore } from "./subjectStore";
 
 const fs = (window as any).fs;
-const appPath = (window as any).app.getPath();
-const path = (window as any).path;
-
-const calenderDataPath = path.join(appPath, 'userdata', 'calender.xml');
 
 export default interface CalenderStore extends Object {
     fileType: CalenderTypes,
