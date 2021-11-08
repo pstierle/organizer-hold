@@ -21,6 +21,7 @@ async function createWindow() {
     width: 1000,
     height: 600,
     frame: false,
+    transparent: true,
     webPreferences: {
       preload: preload,
       contextIsolation: true,

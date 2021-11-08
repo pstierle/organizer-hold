@@ -67,6 +67,8 @@ export default {
   grid-template-rows: 30px 1fr;
   grid-template-areas: "header" "main";
   overflow-x: hidden;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
 }
 
 .header {
