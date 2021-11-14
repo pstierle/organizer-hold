@@ -20,7 +20,7 @@ module.exports = {
              primary: "#22272E",
              secondary: "#1C2128",
              medium: "#2D333B",
-             light: "#2D333B",
+             light: "#2D333B", 
              button: "#373E47",
              accent: "#373E47",
              text: colors.gray[200],

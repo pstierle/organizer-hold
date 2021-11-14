@@ -13,6 +13,7 @@ export default interface UserStore extends Object {
     darkMode: Boolean,
     openPopUp: PopUps | undefined,
     selectedSheetNumber: Number,
+    studentID: string | undefined,
 }
 
 class UserState extends Store<UserStore> {
@@ -22,6 +23,7 @@ class UserState extends Store<UserStore> {
             openPopUp: null,
             darkMode: false,
             selectedSheetNumber: 0,
+            studentID: undefined
         };
     }
 
@@ -36,6 +38,11 @@ class UserState extends Store<UserStore> {
 
     getSelectedSheetNumber() : Number{
         return this.state.selectedSheetNumber;
+    }
+
+    setStudentID(id: string | undefined) : void{
+        this.state.studentID = id;
+        this.saveUser();
     }
 
     // onstart create user.json
@@ -56,6 +63,7 @@ class UserState extends Store<UserStore> {
         const parsedData : UserStore = JSON.parse(userdata);
         this.state.darkMode = parsedData.darkMode;
         this.state.username = parsedData.username;
+        this.state.studentID = parsedData.studentID;
         this.checkDarkMode();      
     }
 
