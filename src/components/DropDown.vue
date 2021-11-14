@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown">
-    <Button @click="open = !open" :text="getSelectedElement()" />
+    <Button @click="openDropDown" :text="getSelectedElement()" />
     <ul
       v-if="open"
       class="absolute bg-lightMode-primary dark:bg-darkMode-primary rounded"
@@ -33,7 +33,7 @@ export default {
     Button,
   },
   props: {
-    elements: Array as PropType<Array<string>>,
+    elements: { type: Array as PropType<Array<string>>, required: true },
     selected: Number,
   },
 
@@ -47,7 +47,6 @@ export default {
     });
 
     function selectElement(index: number): void {
-      open.value = false;
       selectedIndex.value = index;
       context.emit("selectedIndex", selectedIndex.value);
     }
@@ -57,12 +56,33 @@ export default {
       return props.elements[selectedIndex.value];
     }
 
+    function openDropDown() {
+      document.body.addEventListener("click", checkClick);
+      open.value = true;
+      firstClick = false;
+    }
+
+    let firstClick = false;
+
+    function checkClick(event: MouseEvent) {
+      console.log("checking click");
+
+      if (firstClick) {
+        open.value = false;
+        document.body.removeEventListener("click", checkClick);
+        firstClick = false;
+      }
+
+      firstClick = true;
+    }
+
     return {
       selectedIndex,
       open,
       hoveredElement,
       selectElement,
       getSelectedElement,
+      openDropDown,
     };
   },
 };
