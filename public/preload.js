@@ -42,11 +42,19 @@ contextBridge.exposeInMainWorld(
       var doc = new PDFDocument();    
 
       for(let i = 0; i < pathArray.length; i++){
+        const stats = fs.statSync(pathArray[i])
+        const width = stats.size.width;
+        const height = stats.size.height;
+
         doc.image(pathArray[i], {
-          fit: [doc.page.width, doc.page.height],
+          fit: [width, height],
           x: 0,
           y: 0
         });
+
+        doc.page.width = width;
+        doc.page.height = height;
+
         if(pathArray.length - i > 1) doc.addPage();
       }
 

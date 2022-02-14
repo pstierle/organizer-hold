@@ -1,6 +1,6 @@
 <template>
-  <div
-    class="
+	<div
+		class="
       container
       rounded
       outline-none
@@ -11,43 +11,34 @@
       items-center
       justify-between
     "
-    :class="{
-      'bg-alert': type === 'alert',
-      'bg-success': type === 'success',
-      'bg-lightMode-button dark:bg-darkMode-button': !type,
-    }"
-  >
-    <Icon :icon="icon" class="w-4 pr-1" v-if="icon" />
-    <p class="text-center select-none w-full" v-if="text">{{ text }}</p>
-  </div>
+		:class="{
+			'bg-alert': type === 'alert',
+			'bg-success': type === 'success',
+			'bg-lightMode-button dark:bg-darkMode-button': !type
+		}"
+	>
+		<Icon :icon="icon" class="w-4 pr-1" v-if="icon" />
+		<p class="text-center select-none w-full" v-if="text">{{ text }}</p>
+	</div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Icon from "@/components/Icon.vue";
 
-export default {
-  components: {
-    Icon,
-  },
-  props: {
-    type: String,
-    text: String,
-    icon: String,
-  },
-
-  setup() {
-    return {};
-  },
-};
+defineProps<{
+	type?: string;
+	text?: string;
+	icon?: string;
+}>();
 </script>
 
 <style scoped>
 .container:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 div:hover {
-  transform: scale(1.05);
-  transition-duration: 200ms;
+	transform: scale(1.05);
+	transition-duration: 200ms;
 }
 </style>

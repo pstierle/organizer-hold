@@ -5,13 +5,10 @@ export abstract class Store<T extends Object> {
 
     constructor() {
         const data = this.data();
-        this.setup(data);
         this.state = reactive(data) as T;
     }
 
     protected abstract data(): T
-
-    protected setup(data: T): void {}
 
     public getState(): T {
         return readonly(this.state) as T

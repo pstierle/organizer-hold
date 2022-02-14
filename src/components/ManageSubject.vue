@@ -1,30 +1,30 @@
 <template>
-  <div>
-    <div>
-      <Input class="mt-5" type="text" label="Name" v-model:value="name" />
-      <Input class="mt-5" type="time" label="Start" v-model:value="start" />
-      <Input class="mt-5" type="time" label="Ende" v-model:value="end" />
-      <Input class="mt-5" type="text" label="Ort" v-model:value="location" />
-      <Input
-        class="mt-5"
-        type="text"
-        label="Professor"
-        v-model:value="professor"
-      />
-      <div class="flex items-center justify-evenly mt-3">
-        <p>Tag</p>
-        <DropDown
-          :selected="subjectWeekDayIndex"
-          :elements="weekDays"
-          @selectedIndex="handleIndexChange"
-        ></DropDown>
-      </div>
-    </div>
-    <Button class="mt-5" :text="header" type="success" @click="submit" />
-  </div>
+	<div>
+		<div>
+			<Input class="mt-5" type="text" label="Name" v-model:value="name" />
+			<Input class="mt-5" type="time" label="Start" v-model:value="start" />
+			<Input class="mt-5" type="time" label="Ende" v-model:value="end" />
+			<Input class="mt-5" type="text" label="Ort" v-model:value="location" />
+			<Input
+				class="mt-5"
+				type="text"
+				label="Professor"
+				v-model:value="professor"
+			/>
+			<div class="flex items-center justify-evenly mt-3">
+				<p>Tag</p>
+				<DropDown
+					:selected="subjectWeekDayIndex"
+					:elements="weekDays"
+					@selectedIndex="handleIndexChange"
+				></DropDown>
+			</div>
+		</div>
+		<Button class="mt-5" :text="header" type="success" @click="submit" />
+	</div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Button from "@/components/Button.vue";
 import Input from "@/components/Input.vue";
 import DropDown from "@/components/DropDown.vue";
@@ -33,84 +33,64 @@ import { subjectStore } from "@/store/subjectStore";
 import WeekDays from "@/store/interfaces/WeekDays";
 import { calenderStore } from "@/store/calenderStore";
 
-export default {
-  components: {
-    Input,
-    Button,
-    DropDown,
-  },
-  props: {
-    header: String,
-    clearInput: Boolean,
-  },
-  emits: ["submit"],
-  setup(props: any, context: any) {
-    const name = ref<string | null>("");
-    const weekDays = ref<Array<string>>(WeekDays);
-    const weekDay = ref<string>("");
-    const start = ref<string>("");
-    const end = ref<string>("");
-    const location = ref<string>("");
-    const professor = ref<string>("");
-    const subjectWeekDayIndex = ref<number>(0);
+const props = defineProps<{
+	header: string;
+	clearInput: boolean;
+}>();
 
-    onMounted(() => {
-      if (!props.clearInput) {
-        const selectedSubject = subjectStore.getSelectedSubject();
-        if (selectedSubject) {
-          name.value = selectedSubject.name;
-          weekDay.value = selectedSubject.weekDay;
-          start.value = selectedSubject.start;
-          end.value = selectedSubject.end;
-          location.value = selectedSubject.location;
-          professor.value = selectedSubject.professor;
-          subjectWeekDayIndex.value = calenderStore.getDayIndex(
-            selectedSubject.weekDay
-          );
-        }
-      }
-    });
+const emit = defineEmits(["submit"]);
 
-    function handleIndexChange(index: any) {
-      weekDay.value = WeekDays[index];
-    }
+const name = ref<string | null>("");
+const weekDays = ref<Array<string>>(WeekDays);
+const weekDay = ref<string>("");
+const start = ref<string>("");
+const end = ref<string>("");
+const location = ref<string>("");
+const professor = ref<string>("");
+const subjectWeekDayIndex = ref<number>(0);
 
-    function submit() {
-      if (name.value === "") {
-        return;
-      } else {
-        context.emit(
-          "submit",
-          name.value,
-          weekDay.value,
-          start.value,
-          end.value,
-          location.value,
-          professor.value
-        );
-        name.value = "";
-        weekDay.value = "";
-        start.value = "";
-        end.value = "";
-        location.value = "";
-        professor.value = "";
-      }
-    }
+onMounted(() => {
+	if (!props.clearInput) {
+		const selectedSubject = subjectStore.getSelectedSubject();
+		if (selectedSubject) {
+			name.value = selectedSubject.name;
+			weekDay.value = selectedSubject.weekDay;
+			start.value = selectedSubject.start;
+			end.value = selectedSubject.end;
+			location.value = selectedSubject.location;
+			professor.value = selectedSubject.professor;
+			subjectWeekDayIndex.value = calenderStore.getDayIndex(
+				selectedSubject.weekDay
+			);
+		}
+	}
+});
 
-    return {
-      name,
-      weekDays,
-      start,
-      end,
-      location,
-      professor,
-      subjectWeekDayIndex,
-      submit,
-      handleIndexChange,
-    };
-  },
-};
+function handleIndexChange(index: any) {
+	weekDay.value = WeekDays[index];
+}
+
+function submit() {
+	if (name.value === "") {
+		return;
+	} else {
+		emit(
+			"submit",
+			name.value,
+			weekDay.value,
+			start.value,
+			end.value,
+			location.value,
+			professor.value
+		);
+		name.value = "";
+		weekDay.value = "";
+		start.value = "";
+		end.value = "";
+		location.value = "";
+		professor.value = "";
+	}
+}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

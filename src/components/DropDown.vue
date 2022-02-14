@@ -1,95 +1,81 @@
 <template>
-  <div class="dropdown">
-    <Button @click="openDropDown" :text="getSelectedElement()" />
-    <ul
-      v-if="open"
-      class="absolute bg-lightMode-primary dark:bg-darkMode-primary rounded"
-    >
-      <li
-        class="p-2 text-xs rounded"
-        v-for="(element, index) in elements"
-        :key="index"
-        @click="selectElement(index)"
-        @mouseover="hoveredElement = index"
-        @mouseleave="hoveredElement = null"
-        :class="{
-          'bg-lightMode-accent dark:bg-darkMode-accent':
-            hoveredElement === index || selectedIndex === index,
-        }"
-      >
-        {{ element }}
-      </li>
-    </ul>
-  </div>
+	<div class="dropdown">
+		<Button @click="openDropDown" :text="getSelectedElement()" />
+		<ul
+			v-if="open"
+			class="absolute bg-lightMode-primary dark:bg-darkMode-primary rounded"
+		>
+			<li
+				class="p-2 text-xs rounded"
+				v-for="(element, index) in elements"
+				:key="index"
+				@click="selectElement(index)"
+				@mouseover="hoveredElement = index"
+				@mouseleave="hoveredElement = null"
+				:class="{
+					'bg-lightMode-accent dark:bg-darkMode-accent':
+						hoveredElement === index || selectedIndex === index
+				}"
+			>
+				{{ element }}
+			</li>
+		</ul>
+	</div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { ref } from "@vue/reactivity";
-import { onMounted, PropType } from "vue";
+import { onMounted } from "vue";
 import Button from "@/components/Button.vue";
 
-export default {
-  components: {
-    Button,
-  },
-  props: {
-    elements: { type: Array as PropType<Array<string>>, required: true },
-    selected: Number,
-  },
+const props = defineProps<{
+	elements: string[];
+	selected: number;
+}>();
 
-  setup(props: any, context: any) {
-    const selectedIndex = ref<number>(0);
-    const open = ref<Boolean>(false);
-    const hoveredElement = ref<number | null>(null);
+const emit = defineEmits(["selectedIndex"]);
 
-    onMounted(() => {
-      if (props.selected) selectedIndex.value = props.selected;
-    });
+const selectedIndex = ref<number>(0);
+const open = ref<boolean>(false);
+const hoveredElement = ref<number | null>(null);
 
-    function selectElement(index: number): void {
-      selectedIndex.value = index;
-      context.emit("selectedIndex", selectedIndex.value);
-    }
+onMounted(() => {
+	if (props.selected) selectedIndex.value = props.selected;
+});
 
-    function getSelectedElement(): string | undefined {
-      if (!props.elements) return undefined;
-      return props.elements[selectedIndex.value];
-    }
+function selectElement(index: number): void {
+	selectedIndex.value = index;
+	emit("selectedIndex", selectedIndex.value);
+}
 
-    function openDropDown() {
-      document.body.addEventListener("click", checkClick);
-      open.value = true;
-      firstClick = false;
-    }
+function getSelectedElement(): string | undefined {
+	if (!props.elements) return undefined;
+	return props.elements[selectedIndex.value];
+}
 
-    let firstClick = false;
+function openDropDown() {
+	document.body.addEventListener("click", checkClick);
+	open.value = true;
+	firstClick = false;
+}
 
-    function checkClick(event: MouseEvent) {
-      console.log("checking click");
+let firstClick = false;
 
-      if (firstClick) {
-        open.value = false;
-        document.body.removeEventListener("click", checkClick);
-        firstClick = false;
-      }
+function checkClick(event: MouseEvent) {
+	console.log("checking click");
 
-      firstClick = true;
-    }
+	if (firstClick) {
+		open.value = false;
+		document.body.removeEventListener("click", checkClick);
+		firstClick = false;
+	}
 
-    return {
-      selectedIndex,
-      open,
-      hoveredElement,
-      selectElement,
-      getSelectedElement,
-      openDropDown,
-    };
-  },
-};
+	firstClick = true;
+}
 </script>
 
 <style scoped>
 .dropdown {
-  position: relative;
+	position: relative;
 }
 </style>
