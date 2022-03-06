@@ -1,7 +1,7 @@
 <template>
-	<div class="">
-		<Button class="w-32" text="Datei auswählen" icon="plus" @click="add" />
-	</div>
+  <div class="">
+    <Button class="w-32" text="Datei auswählen" icon="plus" @click="add" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -10,22 +10,22 @@ import { calenderStore } from "@/store/calenderStore";
 import { notificationStore } from "@/store/notificationStore";
 
 const options = {
-	title: "Kalender Importieren",
-	properties: ["openFile"],
-	buttonLabel: "Festlegen"
+  title: "Kalender Importieren",
+  properties: ["openFile"],
+  buttonLabel: "Festlegen",
 };
 
 async function add() {
-	const filePath: string = await (window as any).dialog.getSelectedFilePath(
-		options
-	);
+  const filePath: string = await (window as any).dialog.getSelectedFilePath(
+    options
+  );
 
-	if (!filePath) {
-		notificationStore.sendNotification("Keine Datei ausgewählt!");
-		return;
-	}
+  if (!filePath) {
+    notificationStore.sendNotification("Keine Datei ausgewählt!");
+    return;
+  }
 
-	calenderStore.saveCalender(filePath);
+  calenderStore.saveCalender(filePath);
 }
 </script>
 

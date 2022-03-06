@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { onMounted } from "vue";
 
 import Header from "@/views/Header.vue";
@@ -22,39 +22,18 @@ import Notifications from "@/views/Notifications.vue";
 import SubjectList from "@/views/SubjectList.vue";
 
 import { subjectStore } from "@/store/subjectStore";
-import { userStore } from "@/store/userStore";
 import { calenderStore } from "@/store/calenderStore";
 
-export default {
-  components: {
-    Header,
-    Subject,
-    SubjectList,
-    PopUp,
-    Calender,
-    Notifications,
-  },
-  setup() {
-    onMounted(() => {
-      subjectStore.preload();
-      userStore.preload();
-      calenderStore.preload();
-      subjectStore.loadSubjects();
-      userStore.loadUser();
-      setTextColor();
-    });
-
-    function setTextColor() {
-      const elements = document.querySelectorAll("body *");
-      elements.forEach((element) => {
-        element.classList.add("text-lightMode-text");
-        element.classList.add("dark:text-darkMode-text");
-      });
-    }
-
-    return {};
-  },
-};
+onMounted(() => {
+  subjectStore.preload();
+  calenderStore.preload();
+  subjectStore.loadSubjects();
+  const elements = document.querySelectorAll("body *");
+  elements.forEach((element) => {
+    element.classList.add("text-lightMode-text");
+    element.classList.add("dark:text-darkMode-text");
+  });
+});
 </script>
 
 <style scoped>

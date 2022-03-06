@@ -1,7 +1,7 @@
 <template>
-	<div class="container">
-		<div
-			class="
+  <div class="container">
+    <div
+      class="
         text-center
         overflow-y-scroll
         scrollbar-thin
@@ -9,19 +9,19 @@
         scrollbar-thumb-rounded
         scrollbar-track-rounded
       "
-		>
-			<ul @mouseenter="focused = true" @mouseleave="focused = false">
-				<li
-					v-for="(subject, index) in subjects"
-					:key="index"
-					class="mt-5 items-center flex justify-center w-full"
-					@click="selectSubject(subject)"
-					@mouseenter="hoveredSubjectID = subject.id"
-					@mouseleave="hoveredSubjectID = null"
-				>
-					<div
-						v-if="hoveredSubjectID === subject.id"
-						class="
+    >
+      <ul @mouseenter="focused = true" @mouseleave="focused = false">
+        <li
+          v-for="(subject, index) in subjects"
+          :key="index"
+          class="mt-5 items-center flex justify-center w-full"
+          @click="selectSubject(subject)"
+          @mouseenter="hoveredSubjectID = subject.id"
+          @mouseleave="hoveredSubjectID = null"
+        >
+          <div
+            v-if="hoveredSubjectID === subject.id"
+            class="
               text-xs
               absolute
               ml-56
@@ -31,15 +31,15 @@
               p-2
               w-40
             "
-						:class="{
-							focusLabel: hoveredSubjectID === subject.id,
-							unfocusLabel: hoveredSubjectID !== subject.id
-						}"
-					>
-						<p>{{ subject.name }}</p>
-					</div>
-					<div
-						class="
+            :class="{
+              focusLabel: hoveredSubjectID === subject.id,
+              unfocusLabel: hoveredSubjectID !== subject.id,
+            }"
+          >
+            <p>{{ subject.name }}</p>
+          </div>
+          <div
+            class="
               flex
               items-center
               justify-center
@@ -49,21 +49,21 @@
               bg-lightMode-primary
               dark:bg-darkMode-primary
             "
-						:class="{
-							'border-b-2 border-lightMode-accent dark:border-darkMode-accent':
-								selectedSubjectID == subject.id
-						}"
-					>
-						<p>{{ subject.shortName }}</p>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="flex justify-around settings-container">
-			<Icon icon="settings" class="w-6" @click="openSettings()" />
-			<Icon icon="plus" class="w-6" @click="openAddSubject()" />
-		</div>
-	</div>
+            :class="{
+              'border-b-2 border-lightMode-accent dark:border-darkMode-accent':
+                selectedSubjectID == subject.id,
+            }"
+          >
+            <p>{{ subject.shortName }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="flex justify-around settings-container">
+      <Icon icon="settings" class="w-6" @click="openPopUp = 'Einstellungen'" />
+      <Icon icon="plus" class="w-6" @click="openPopUp = 'Fach hinzufügen'" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -71,154 +71,146 @@ import Subject from "@/store/interfaces/Subject";
 import Icon from "@/components/Icon.vue";
 import { onMounted, ref, watchEffect } from "@vue/runtime-core";
 import { subjectStore } from "@/store/subjectStore";
-import { userStore } from "@/store/userStore";
+import { useSettings } from "@/store/useSettings";
 
 const subjects = ref<Array<Subject>>();
 const selectedSubjectID = ref<number>();
-const focused = ref<boolean>(false);
 const hoveredSubjectID = ref<number | null>(null);
+const focused = ref(false);
+
+const { openPopUp } = useSettings();
 
 onMounted(() => {
-	subjects.value = subjectStore.getSubjects();
-	selectedSubjectID.value = subjectStore.getSelectedSubjectID();
+  subjects.value = subjectStore.getSubjects();
 });
 
 watchEffect(() => {
-	subjects.value = subjectStore.getSubjects();
-	selectedSubjectID.value = subjectStore.getSelectedSubjectID();
+  subjects.value = subjectStore.getSubjects();
 });
 
-function openSettings() {
-	userStore.setOpenPopUp("Einstellungen");
-}
-
 function selectSubject(subject: Subject) {
-	subjectStore.setSelectedSubjectID(subject.id);
-}
-
-function openAddSubject() {
-	userStore.setOpenPopUp("Fach hinzufügen");
+  subjectStore.setSelectedSubjectID(subject.id);
 }
 </script>
 
 <style scoped>
 .container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 50px;
-	gap: 0px 0px;
-	grid-template-areas: "list" "settings-container";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 50px;
+  gap: 0px 0px;
+  grid-template-areas: "list" "settings-container";
 }
 
 li:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .list {
-	grid-area: "list";
-	min-height: 300px;
+  grid-area: "list";
+  min-height: 300px;
 }
 
 .settings-container {
-	grid-area: "settings-container";
+  grid-area: "settings-container";
 }
 
 .focus {
-	animation: fadeIn 200ms forwards;
+  animation: fadeIn 200ms forwards;
 }
 
 .unfocus {
-	animation: fadeOut 200ms forwards;
+  animation: fadeOut 200ms forwards;
 }
 
 .focusLabel {
-	animation: fadeInLabel 400ms forwards;
+  animation: fadeInLabel 400ms forwards;
 }
 
 .unfocusLabel {
-	animation: fadeOutLabel 400ms forwards;
+  animation: fadeOutLabel 400ms forwards;
 }
 
 .rotateRight {
-	animation: rotateRight 250ms forwards;
+  animation: rotateRight 250ms forwards;
 }
 
 .rotateLeft {
-	animation: rotateLeft 250ms forwards;
+  animation: rotateLeft 250ms forwards;
 }
 
 .rotateLeftDark {
-	animation: rotateLeftDark 250ms forwards;
+  animation: rotateLeftDark 250ms forwards;
 }
 
 @keyframes rotateRight {
-	from {
-		transform: rotate(-180deg);
-	}
-	to {
-		transform: rotate(0deg);
-	}
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes rotateLeft {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(-180deg);
-		filter: invert(79%) sepia(81%) saturate(3254%) hue-rotate(341deg)
-			brightness(109%) contrast(97%);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+    filter: invert(79%) sepia(81%) saturate(3254%) hue-rotate(341deg)
+      brightness(109%) contrast(97%);
+  }
 }
 
 @keyframes rotateLeftDark {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(-180deg);
-		filter: invert(36%) sepia(47%) saturate(2637%) hue-rotate(238deg)
-			brightness(99%) contrast(95%);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+    filter: invert(36%) sepia(47%) saturate(2637%) hue-rotate(238deg)
+      brightness(99%) contrast(95%);
+  }
 }
 
 @keyframes fadeIn {
-	from {
-		width: 70px;
-	}
-	to {
-		width: 90px;
-	}
+  from {
+    width: 70px;
+  }
+  to {
+    width: 90px;
+  }
 }
 
 @keyframes fadeOut {
-	from {
-		width: 90px;
-	}
-	to {
-		width: 70px;
-	}
+  from {
+    width: 90px;
+  }
+  to {
+    width: 70px;
+  }
 }
 
 @keyframes fadeInLabel {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 100;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
 
 @keyframes fadeOutLabel {
-	from {
-		opacity: 100;
-	}
-	to {
-		opacity: 0;
-	}
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .circle {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 </style>
