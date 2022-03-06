@@ -1,11 +1,12 @@
+import { useNotifications } from "./useNotifications";
 import { useSettings } from "./useSettings";
 import { Store } from "./interfaces/Store";
 import Subject from "./interfaces/Subject";
 import Submission from "./interfaces/submissions/Submission";
 import SubmissionType from "./interfaces/submissions/SubmissionType";
-import { notificationStore } from "./notificationStore";
 
 const { selectedSheetNumber, openPopUp } = useSettings();
+const { sendNotification } = useNotifications();
 
 const fs = (window as any).fs;
 const appPath = (window as any).app.getPath();
@@ -33,7 +34,7 @@ class SubjectState extends Store<SubjectStore> {
 
   addSubject(subject: Subject) {
     if (this.containsProperty(subject)) {
-      notificationStore.sendNotification("Dieser Name existiert bereits!");
+      sendNotification("Dieser Name existiert bereits!");
     } else {
       this.state.subjects.push(subject);
       this.saveSubjects();
@@ -260,7 +261,7 @@ class SubjectState extends Store<SubjectStore> {
     });
 
     if (sheetExists) {
-      notificationStore.sendNotification("Diese Nummer existiert bereits!");
+      sendNotification("Diese Nummer existiert bereits!");
     } else {
       this.state.subjects.forEach((subject) => {
         if (this.state.selectedSubjectID === subject.id) {

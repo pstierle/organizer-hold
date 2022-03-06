@@ -66,8 +66,10 @@ import { subjectStore } from "@/store/subjectStore";
 import Button from "@/components/Button.vue";
 import Submission from "@/store/interfaces/submissions/Submission";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
-import { notificationStore } from "@/store/notificationStore";
 import { useSettings } from "@/store/useSettings";
+import { useNotifications } from "@/store/useNotifications";
+
+const { sendNotification } = useNotifications();
 
 const props = defineProps<{
   submissionType: SubmissionType;
@@ -107,7 +109,7 @@ async function add() {
   );
 
   if (filePath === "") {
-    notificationStore.sendNotification("Keine Datei ausgewählt!");
+    sendNotification("Keine Datei ausgewählt!");
     return;
   }
 

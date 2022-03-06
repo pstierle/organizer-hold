@@ -6,21 +6,15 @@
       :key="index"
     >
       <p>{{ notification.text }}</p>
-      <p>{{ notification.reason }}</p>
+      <p>{{ notification?.reason }}</p>
     </li>
   </ul>
 </template>
 
 <script lang="ts" setup>
-import { ref, watchEffect } from "vue";
-import Notification from "@/store/interfaces/Notification";
-import { notificationStore } from "@/store/notificationStore";
+import { useNotifications } from "@/store/useNotifications";
 
-const notifications = ref<Notification[]>([]);
-
-watchEffect(() => {
-  notifications.value = notificationStore.getNotifications();
-});
+const { notifications } = useNotifications();
 </script>
 
 <style scoped>
