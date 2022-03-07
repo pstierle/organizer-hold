@@ -4,12 +4,12 @@
       Das Fach
       <span
         class="border-b-2 border-lightMode-accent dark:border-darkMode-accent"
-        >{{ selectedSubject.name }}</span
+        >{{ selectedSubject?.name }}</span
       >
       dauerhaft löschen?
     </p>
     <Button
-      @click="deleteSubject"
+      @click="deleteSelectedSubject"
       class="w-1/5"
       text="LÖSCHEN"
       icon="bin"
@@ -19,18 +19,10 @@
 </template>
 
 <script lang="ts" setup>
-import { subjectStore } from "@/store/subjectStore";
-import { onMounted, ref } from "vue";
 import Button from "@/components/Button.vue";
-const selectedSubject = ref();
+import { useSubjects } from "@/store/useSubjects";
 
-onMounted(() => {
-  selectedSubject.value = subjectStore.getSelectedSubject();
-});
-
-function deleteSubject() {
-  subjectStore.deleteSelectedSubject();
-}
+const { selectedSubject, deleteSelectedSubject } = useSubjects();
 </script>
 
 <style scoped></style>

@@ -3,7 +3,7 @@ import Notification from "./interfaces/Notification";
 
 const notifications = ref<Notification[]>([]);
 
-export const useNotifications = () => {
+export function useNotifications() {
   const sendNotification = (text: string, reason?: string) => {
     notifications.value.push({ text: text, reason });
     setTimeout(() => {
@@ -15,4 +15,4 @@ export const useNotifications = () => {
     notifications,
     sendNotification,
   };
-};
+}

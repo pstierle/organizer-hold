@@ -1,3 +1,3 @@
-type SubmissionType = "Abgabe" | "Korrektur" | "Lösungen" ;
+type SubmissionType = "Abgabe" | "Korrektur" | "Lösungen";
 
 export default SubmissionType;

@@ -9,8 +9,11 @@
 </template>
 
 <script lang="ts" setup>
-import { subjectStore } from "@/store/subjectStore";
 import ManageSubject from "@/components/ManageSubject.vue";
+import { useSubjects } from "@/store/useSubjects";
+
+const { updateSelectedSubject } = useSubjects();
+
 function updateSubject(
   name: string,
   weekDay: string,
@@ -19,14 +22,7 @@ function updateSubject(
   location: string,
   professor: string
 ) {
-  subjectStore.updateSelectedSubject(
-    name,
-    weekDay,
-    start,
-    end,
-    location,
-    professor
-  );
+  updateSelectedSubject(name, weekDay, start, end, location, professor);
 }
 </script>
 

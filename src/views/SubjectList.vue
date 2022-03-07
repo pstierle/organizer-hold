@@ -15,7 +15,7 @@
           v-for="(subject, index) in subjects"
           :key="index"
           class="mt-5 items-center flex justify-center w-full"
-          @click="selectSubject(subject)"
+          @click="selectedSubject = subject"
           @mouseenter="hoveredSubjectID = subject.id"
           @mouseleave="hoveredSubjectID = null"
         >
@@ -51,7 +51,7 @@
             "
             :class="{
               'border-b-2 border-lightMode-accent dark:border-darkMode-accent':
-                selectedSubjectID == subject.id,
+                selectedSubject?.id == subject.id,
             }"
           >
             <p>{{ subject.shortName }}</p>
@@ -67,30 +67,17 @@
 </template>
 
 <script lang="ts" setup>
-import Subject from "@/store/interfaces/Subject";
 import Icon from "@/components/Icon.vue";
-import { onMounted, ref, watchEffect } from "@vue/runtime-core";
-import { subjectStore } from "@/store/subjectStore";
+import { ref } from "@vue/runtime-core";
 import { useSettings } from "@/store/useSettings";
+import { useSubjects } from "@/store/useSubjects";
 
-const subjects = ref<Array<Subject>>();
-const selectedSubjectID = ref<number>();
+const { selectedSubject, subjects } = useSubjects();
+
 const hoveredSubjectID = ref<number | null>(null);
 const focused = ref(false);
 
 const { openPopUp } = useSettings();
-
-onMounted(() => {
-  subjects.value = subjectStore.getSubjects();
-});
-
-watchEffect(() => {
-  subjects.value = subjectStore.getSubjects();
-});
-
-function selectSubject(subject: Subject) {
-  subjectStore.setSelectedSubjectID(subject.id);
-}
 </script>
 
 <style scoped>

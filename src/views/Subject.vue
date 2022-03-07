@@ -1,7 +1,7 @@
 <template>
   <div
     class="subject-container p-3 bg-lightMode-primary dark:bg-darkMode-primary"
-    v-if="subject != null"
+    v-if="selectedSubject"
   >
     <div class="header flex items-center justify-between text-center w-full">
       <p
@@ -14,7 +14,7 @@
           w-7/12
         "
       >
-        {{ subject.name }}
+        {{ selectedSubject?.name }}
       </p>
       <div class="lg:flex-row flex-col flex justify-evenly w-4/12 items-center">
         <Button
@@ -32,8 +32,8 @@
         ></Button>
       </div>
     </div>
-    <p class="mt-3" v-if="subject.professor != ''">
-      Proffessor: {{ subject.professor }}
+    <p class="mt-3" v-if="selectedSubject?.professor != ''">
+      Proffessor: {{ selectedSubject?.professor }}
     </p>
     <div class="mt-1 main pt-3 pb-3">
       <p
@@ -63,7 +63,7 @@
             "
           >
             <li
-              v-for="(sheet, index) in subject.exerciseSheets"
+              v-for="(sheet, index) in selectedSubject?.exerciseSheets"
               :key="index"
               class="
                 border-b-2 border-lightMode-light
@@ -156,16 +156,15 @@
 </template>
 
 <script lang="ts" setup>
-import { subjectStore } from "@/store/subjectStore";
-import { ref, watchEffect } from "vue";
+import { ref } from "vue";
 import Button from "@/components/Button.vue";
-import Subject from "@/store/interfaces/Subject";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";
 import PopUps from "@/store/interfaces/PopUps";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
+import { useSubjects } from "@/store/useSubjects";
 
-const subject = ref<Subject>();
+const { selectedSubject, toogleDone, submissions } = useSubjects();
 
 const { openPopUp, selectedSheetNumber } = useSettings();
 
@@ -181,23 +180,15 @@ const sheetData = ref<{ type: PopUps }[]>([
   },
 ]);
 
-watchEffect(() => {
-  subject.value = subjectStore.getSelectedSubject();
-});
-
-function toogleDone(sheetNumber: number): void {
-  subjectStore.toogleDone(sheetNumber);
-}
-
 function getSubmissionCount(
   submissionType: SubmissionType,
   sheetNumber: number
 ): number {
   let count: number = 0;
-  subjectStore.getState().submissions.forEach((submission) => {
+  submissions.value.forEach((submission) => {
     if (
       submission.type === submissionType &&
-      submission.subjectID === subjectStore.getSelectedSubjectID() &&
+      submission.subjectID === selectedSubject.value?.id &&
       submission.exerciseSheetNumber === sheetNumber
     ) {
       count++;

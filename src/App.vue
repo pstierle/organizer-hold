@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from "vue";
+import { onMounted, watch } from "vue";
 
 import Header from "@/views/Header.vue";
 import Subject from "@/views/Subject.vue";
@@ -20,18 +20,39 @@ import PopUp from "@/views/PopUp.vue";
 import Calender from "@/views/Calender.vue";
 import Notifications from "@/views/Notifications.vue";
 import SubjectList from "@/views/SubjectList.vue";
+import { useSubjects } from "./store/useSubjects";
+import { usePath } from "./store/usePath";
 
-import { subjectStore } from "@/store/subjectStore";
+const { preload, subjects, submissions, loading, loadSaved } = useSubjects();
+const { subjectPath, submissionPath } = usePath();
 
-onMounted(() => {
-  subjectStore.preload();
-  subjectStore.loadSubjects();
+onMounted(async () => {
+  await preload();
   const elements = document.querySelectorAll("body *");
   elements.forEach((element) => {
     element.classList.add("text-lightMode-text");
     element.classList.add("dark:text-darkMode-text");
   });
 });
+
+watch(
+  [submissions, subjects],
+  async () => {
+    loading.value = true;
+    await window.fs.writeFileSync(
+      subjectPath,
+      JSON.stringify(subjects.value, null, 4)
+    );
+    await window.fs.writeFileSync(
+      submissionPath,
+      JSON.stringify(submissions.value, null, 4)
+    );
+    loading.value = false;
+  },
+  {
+    deep: true,
+  }
+);
 </script>
 
 <style scoped>

@@ -13,7 +13,7 @@
       </thead>
       <tbody>
         <tr
-          v-for="(submission, index) in submissions"
+          v-for="(submission, index) in subjectSubmissions"
           :key="index"
           class="border-b-2"
         >
@@ -61,22 +61,28 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, PropType, ref, watchEffect } from "vue";
-import { subjectStore } from "@/store/subjectStore";
+import { onMounted, ref, watchEffect } from "vue";
 import Button from "@/components/Button.vue";
 import Submission from "@/store/interfaces/submissions/Submission";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
 import { useSettings } from "@/store/useSettings";
 import { useNotifications } from "@/store/useNotifications";
+import { useSubjects } from "@/store/useSubjects";
 
+const {
+  submissions,
+  selectedSubject,
+  addSubmission,
+  deleteSubmission,
+} = useSubjects();
 const { sendNotification } = useNotifications();
 
 const props = defineProps<{
   submissionType: SubmissionType;
 }>();
 
-const submissions = ref<Array<Submission>>([]);
 const selectedSubmissions = ref<Array<Submission>>([]);
+const subjectSubmissions = ref<Array<Submission>>([]);
 const onlyContainsImages = ref<boolean>(true);
 const { selectedSheetNumber } = useSettings();
 
@@ -87,20 +93,18 @@ const options = {
 };
 
 onMounted(() => {
-  submissions.value = subjectStore
-    .getSubmissions()
-    .filter(
-      (submission) =>
-        submission.type === props.submissionType &&
-        submission.subjectID === subjectStore.getSelectedSubjectID() &&
-        submission.exerciseSheetNumber === selectedSheetNumber.value
-    );
+  subjectSubmissions.value = submissions.value.filter(
+    (submission) =>
+      submission.type === props.submissionType &&
+      submission.subjectID === selectedSubject.value?.id &&
+      submission.exerciseSheetNumber === selectedSheetNumber.value
+  );
 });
 
 watchEffect(() => {
-  submissions.value = subjectStore
-    .getSubmissions()
-    .filter((submission) => submission.type === props.submissionType);
+  subjectSubmissions.value = submissions.value.filter(
+    (submission) => submission.type === props.submissionType
+  );
 });
 
 async function add() {
@@ -122,12 +126,12 @@ async function add() {
   let fileType: string = filePath.split(".").pop() || "";
 
   const destinationPath = (window as any).path.join(
-    subjectStore.getSelectedSubject()?.folderPath,
+    selectedSubject.value?.folderPath,
     props.submissionType,
     `${fileName}.${fileType}`
   );
 
-  subjectStore.addSubmission(
+  addSubmission(
     props.submissionType,
     destinationPath,
     fileName,
@@ -193,7 +197,7 @@ async function concatToPdf() {
   let pathArray: any[] = [];
 
   const destinationPath = (window as any).path.join(
-    subjectStore.getSelectedSubject()?.folderPath,
+    selectedSubject.value?.folderPath,
     props.submissionType,
     `${name}.${type}`
   );
@@ -207,7 +211,7 @@ async function concatToPdf() {
   if (!result) {
     console.log("failed!");
   } else {
-    subjectStore.addSubmission(
+    addSubmission(
       props.submissionType,
       destinationPath,
       name,
@@ -219,7 +223,7 @@ async function concatToPdf() {
 
 function deleteSelectedSubjects(): void {
   selectedSubmissions.value.forEach((entry) => {
-    subjectStore.deleteSumbission(entry.submissionID);
+    deleteSubmission(entry.submissionID);
   });
 }
 </script>

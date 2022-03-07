@@ -7,7 +7,7 @@ const selectedSheetNumber = ref<number>(0);
 const username = ref<string>("");
 const openPopUp = ref<PopUps | null>(null);
 
-export const useSettings = () => {
+export function useSettings() {
   const toogleDarkMode = () => {
     darkMode.value = !darkMode.value;
     let appMode = document.querySelector("html")?.classList;
@@ -23,4 +23,4 @@ export const useSettings = () => {
     openPopUp,
     selectedSheetNumber,
   };
-};
+}
