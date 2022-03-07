@@ -1,27 +1,27 @@
 <template>
-	<div>
-		<div>
-			<Input class="mt-5" type="text" label="Name" v-model:value="name" />
-			<Input class="mt-5" type="time" label="Start" v-model:value="start" />
-			<Input class="mt-5" type="time" label="Ende" v-model:value="end" />
-			<Input class="mt-5" type="text" label="Ort" v-model:value="location" />
-			<Input
-				class="mt-5"
-				type="text"
-				label="Professor"
-				v-model:value="professor"
-			/>
-			<div class="flex items-center justify-evenly mt-3">
-				<p>Tag</p>
-				<DropDown
-					:selected="subjectWeekDayIndex"
-					:elements="weekDays"
-					@selectedIndex="handleIndexChange"
-				></DropDown>
-			</div>
-		</div>
-		<Button class="mt-5" :text="header" type="success" @click="submit" />
-	</div>
+  <div>
+    <div>
+      <Input class="mt-5" type="text" label="Name" v-model:value="name" />
+      <Input class="mt-5" type="time" label="Start" v-model:value="start" />
+      <Input class="mt-5" type="time" label="Ende" v-model:value="end" />
+      <Input class="mt-5" type="text" label="Ort" v-model:value="location" />
+      <Input
+        class="mt-5"
+        type="text"
+        label="Professor"
+        v-model:value="professor"
+      />
+      <div class="flex items-center justify-evenly mt-3">
+        <p>Tag</p>
+        <DropDown
+          :selected="subjectWeekDayIndex"
+          :elements="weekDays"
+          @selectedIndex="handleIndexChange"
+        ></DropDown>
+      </div>
+    </div>
+    <Button class="mt-5" :text="header" type="success" @click="submit" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -31,14 +31,16 @@ import DropDown from "@/components/DropDown.vue";
 import { onMounted, ref } from "vue";
 import { subjectStore } from "@/store/subjectStore";
 import WeekDays from "@/store/interfaces/WeekDays";
-import { calenderStore } from "@/store/calenderStore";
+import { useCalender } from "@/store/useCalender";
 
 const props = defineProps<{
-	header: string;
-	clearInput: boolean;
+  header: string;
+  clearInput: boolean;
 }>();
 
 const emit = defineEmits(["submit"]);
+
+const { getDayIndex } = useCalender();
 
 const name = ref<string | null>("");
 const weekDays = ref<Array<string>>(WeekDays);
@@ -50,46 +52,44 @@ const professor = ref<string>("");
 const subjectWeekDayIndex = ref<number>(0);
 
 onMounted(() => {
-	if (!props.clearInput) {
-		const selectedSubject = subjectStore.getSelectedSubject();
-		if (selectedSubject) {
-			name.value = selectedSubject.name;
-			weekDay.value = selectedSubject.weekDay;
-			start.value = selectedSubject.start;
-			end.value = selectedSubject.end;
-			location.value = selectedSubject.location;
-			professor.value = selectedSubject.professor;
-			subjectWeekDayIndex.value = calenderStore.getDayIndex(
-				selectedSubject.weekDay
-			);
-		}
-	}
+  if (!props.clearInput) {
+    const selectedSubject = subjectStore.getSelectedSubject();
+    if (selectedSubject) {
+      name.value = selectedSubject.name;
+      weekDay.value = selectedSubject.weekDay;
+      start.value = selectedSubject.start;
+      end.value = selectedSubject.end;
+      location.value = selectedSubject.location;
+      professor.value = selectedSubject.professor;
+      subjectWeekDayIndex.value = getDayIndex(selectedSubject.weekDay);
+    }
+  }
 });
 
 function handleIndexChange(index: any) {
-	weekDay.value = WeekDays[index];
+  weekDay.value = WeekDays[index];
 }
 
 function submit() {
-	if (name.value === "") {
-		return;
-	} else {
-		emit(
-			"submit",
-			name.value,
-			weekDay.value,
-			start.value,
-			end.value,
-			location.value,
-			professor.value
-		);
-		name.value = "";
-		weekDay.value = "";
-		start.value = "";
-		end.value = "";
-		location.value = "";
-		professor.value = "";
-	}
+  if (name.value === "") {
+    return;
+  } else {
+    emit(
+      "submit",
+      name.value,
+      weekDay.value,
+      start.value,
+      end.value,
+      location.value,
+      professor.value
+    );
+    name.value = "";
+    weekDay.value = "";
+    start.value = "";
+    end.value = "";
+    location.value = "";
+    professor.value = "";
+  }
 }
 </script>
 

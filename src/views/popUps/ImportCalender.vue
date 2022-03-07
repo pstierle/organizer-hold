@@ -6,10 +6,11 @@
 
 <script lang="ts" setup>
 import Button from "@/components/Button.vue";
-import { calenderStore } from "@/store/calenderStore";
+import { useCalender } from "@/store/useCalender";
 import { useNotifications } from "@/store/useNotifications";
 
 const { sendNotification } = useNotifications();
+const { importCalender } = useCalender();
 const options = {
   title: "Kalender Importieren",
   properties: ["openFile"],
@@ -26,7 +27,7 @@ async function add() {
     return;
   }
 
-  calenderStore.saveCalender(filePath);
+  importCalender(filePath);
 }
 </script>
 

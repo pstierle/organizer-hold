@@ -22,11 +22,9 @@ import Notifications from "@/views/Notifications.vue";
 import SubjectList from "@/views/SubjectList.vue";
 
 import { subjectStore } from "@/store/subjectStore";
-import { calenderStore } from "@/store/calenderStore";
 
 onMounted(() => {
   subjectStore.preload();
-  calenderStore.preload();
   subjectStore.loadSubjects();
   const elements = document.querySelectorAll("body *");
   elements.forEach((element) => {

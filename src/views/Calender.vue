@@ -3,7 +3,7 @@
     <div class="main">
       <div class="flex items-center justify-evenly py-2">
         <DropDown
-          :selected="currentDayIndex"
+          :selected="new Date().getDay()"
           :elements="weekDays"
           @selectedIndex="handleIndexChange"
         ></DropDown>
@@ -47,33 +47,20 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watchEffect, onMounted } from "vue";
-import Subject from "@/store/interfaces/Subject";
-import { calenderStore } from "@/store/calenderStore";
-import ExcerciseSheet from "@/store/interfaces/ExcerciseSheet";
+import { ref } from "vue";
 import DropDown from "@/components/DropDown.vue";
 import WeekDays from "@/store/interfaces/WeekDays";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";
+import { useCalender } from "@/store/useCalender";
 
-const eventsToday = ref<Array<Subject>>([]);
-const exerciseSheetsToday = ref<Array<ExcerciseSheet>>([]);
 const weekDays = ref<Array<string>>(WeekDays);
-const currentDayIndex = ref<number>(calenderStore.getCurrentDayIndex());
 const { openPopUp } = useSettings();
 
-onMounted(() => {
-  eventsToday.value = calenderStore.getEventsToday();
-  exerciseSheetsToday.value = calenderStore.getExerciseSheetsToday();
-});
-
-watchEffect(() => {
-  eventsToday.value = calenderStore.getEventsToday();
-  exerciseSheetsToday.value = calenderStore.getExerciseSheetsToday();
-});
+const { selectedDay, eventsToday, exerciseSheetsToday } = useCalender();
 
 function handleIndexChange(index: any) {
-  calenderStore.setSelectedDay(WeekDays[index]);
+  selectedDay.value = WeekDays[index];
 }
 </script>
 

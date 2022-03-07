@@ -2,15 +2,16 @@
   <div class="header flex items-center justify-between">
     <p
       class="pl-2 dragabble flex items-center w-24"
-      :class="{ 'w-full': !nextSubject }"
+      :class="{ 'w-full': !getNextEvent() }"
     >
       Organizer <span class="text-xs pl-2">version(0.0.1)</span>
     </p>
     <p
       class="text-alert text-xs dragabble w-full text-center"
-      v-if="nextSubject"
+      v-if="getNextEvent()"
     >
-      Nächster Termin: {{ nextSubject.start }} - Fach: {{ nextSubject.name }}
+      Nächster Termin: {{ getNextEvent().start }} - Fach:
+      {{ getNextEvent().name }}
     </p>
     <div class="flex items-center justify-evenly w-24">
       <button
@@ -43,16 +44,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, watchEffect } from "@vue/runtime-core";
-import Subject from "@/store/interfaces/Subject";
-import { calenderStore } from "@/store/calenderStore";
+import { useCalender } from "@/store/useCalender";
+import { ref, onMounted } from "@vue/runtime-core";
 
 const version = ref<String>();
-const nextSubject = ref<Subject | null>(calenderStore.getNextEvent());
 
-watchEffect(() => {
-  nextSubject.value = calenderStore.getNextEvent();
-});
+const { getNextEvent } = useCalender();
 
 function close() {
   (window as any).WIN.close();
