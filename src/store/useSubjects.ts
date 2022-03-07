@@ -71,7 +71,6 @@ export function useSubjects() {
     const subject: Subject = {
       id: subjects.value.length + 1,
       name: name,
-      shortName: name[0],
       exerciseSheets: [],
       folderPath: getSubjectPath(name),
       weekDay: weekDay,

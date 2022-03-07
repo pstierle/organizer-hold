@@ -54,7 +54,7 @@
                 selectedSubject?.id == subject.id,
             }"
           >
-            <p>{{ subject.shortName }}</p>
+            <p class="truncate">{{ subject.name }}</p>
           </div>
         </li>
       </ul>

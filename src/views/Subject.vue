@@ -86,7 +86,7 @@
                   <p
                     v-if="
                       getSubmissionCount(
-                        SubmissionType(data.type),
+                        data.type as SubmissionType,
                         sheet.number
                       ) <= 0
                     "
