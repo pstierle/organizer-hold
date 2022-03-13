@@ -8,7 +8,9 @@
     >
       Organizer <span class="text-xs pl-2">version(0.0.1)</span>
     </p>
-    <button @click="reload">reload</button>
+    <button @click="reload" v-if="env === 'development'" class="text-xs">
+      reload
+    </button>
     <p
       class="text-alert text-xs dragabble w-full text-center"
       v-if="getNextEvent()"
@@ -49,6 +51,7 @@
 <script lang="ts" setup>
 import { useCalender } from "@/store/useCalender";
 import { ref, onMounted } from "@vue/runtime-core";
+import { computed } from "vue";
 
 const version = ref<String>();
 
@@ -66,6 +69,8 @@ function maximize() {
 function reload() {
   (window as any).WIN.reload();
 }
+
+const env = computed(() => process.env.NODE_ENV);
 
 onMounted(() => {
   version.value = (window as any).app.getVersion();

@@ -12,8 +12,6 @@ const submissionPath = window.path.join(
 );
 const documentPath = window.path.join(appPath, "userdata", "documents");
 
-const { selectedSubject } = useSubjects();
-
 export function usePath() {
   const getSubjectPath = (name?: string) => {
     return window.path.join(documentPath, name);
