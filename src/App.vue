@@ -75,7 +75,7 @@ watch(
 .main {
   grid-template: main;
   display: grid;
-  grid-template-columns: 150px 1fr 300px;
+  grid-template-columns: 150px 1fr 250px;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: "subject-list subject calender";
