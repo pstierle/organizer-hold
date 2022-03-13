@@ -9,10 +9,11 @@
         @click="selectElement(index)"
         @mouseover="hoveredElement = index"
         @mouseleave="hoveredElement = null"
-        :class="{
-          'bg-gray-300 dark:bg-gray-800':
-            hoveredElement === index || selectedIndex === index,
-        }"
+        :class="
+          hoveredElement === index || selectedIndex === index
+            ? 'bg-gray-300 dark:bg-gray-800'
+            : ''
+        "
       >
         {{ element }}
       </li>

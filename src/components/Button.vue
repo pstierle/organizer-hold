@@ -11,11 +11,13 @@
       items-center
       justify-between
     "
-    :class="{
-      'bg-red-400': type === 'alert',
-      'bg-green-500': type === 'success',
-      'bg-gray-300 dark:bg-gray-800': !type,
-    }"
+    :class="
+      type === 'alert'
+        ? 'bg-red-400'
+        : type === 'success'
+        ? 'bg-green-500'
+        : 'bg-gray-300 dark:bg-gray-800'
+    "
   >
     <Icon :icon="icon" class="w-4 pr-1" v-if="icon" />
     <p class="text-center select-none w-full" v-if="text">{{ text }}</p>
