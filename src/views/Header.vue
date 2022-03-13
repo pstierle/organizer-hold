@@ -6,6 +6,7 @@
     >
       Organizer <span class="text-xs pl-2">version(0.0.1)</span>
     </p>
+    <button @click="reload">reload</button>
     <p
       class="text-alert text-xs dragabble w-full text-center"
       v-if="getNextEvent()"
@@ -59,6 +60,9 @@ function minimize() {
 }
 function maximize() {
   (window as any).WIN.maximize();
+}
+function reload() {
+  (window as any).WIN.reload();
 }
 
 onMounted(() => {

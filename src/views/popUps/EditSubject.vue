@@ -1,7 +1,9 @@
 <template>
   <div class="flex justify-center">
     <ManageSubject
-      @submit="updateSubject"
+      @submit="updateSelectedSubject"
+      v-if="selectedSubject"
+      :subjectModel="selectedSubject"
       :clearInput="false"
       header="Bestätigen"
     />
@@ -12,18 +14,7 @@
 import ManageSubject from "@/components/ManageSubject.vue";
 import { useSubjects } from "@/store/useSubjects";
 
-const { updateSelectedSubject } = useSubjects();
-
-function updateSubject(
-  name: string,
-  weekDay: string,
-  start: string,
-  end: string,
-  location: string,
-  professor: string
-) {
-  updateSelectedSubject(name, weekDay, start, end, location, professor);
-}
+const { updateSelectedSubject, selectedSubject } = useSubjects();
 </script>
 
 <style scoped></style>

@@ -101,7 +101,7 @@
                     Anzahl:
                     {{
                       getSubmissionCount(
-                        SubmissionType(data.type),
+                        data.type as SubmissionType,
                         sheet.number
                       )
                     }}
@@ -201,7 +201,5 @@ function getSubmissionCount(
 <style scoped>
 .subject-container {
   min-width: 450px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 </style>

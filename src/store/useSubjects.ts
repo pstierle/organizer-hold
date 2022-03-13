@@ -60,33 +60,20 @@ export function useSubjects() {
     subjects.value = JSON.parse(subjectsData);
   };
 
-  const addSubject = async (
-    name: string,
-    weekDay: string,
-    start: string,
-    end: string,
-    location: string,
-    professor: string
-  ) => {
-    const subject: Subject = {
-      id: subjects.value.length + 1,
-      name: name,
-      exerciseSheets: [],
-      folderPath: getSubjectPath(name),
-      weekDay: weekDay,
-      start: start,
-      end: end,
-      length: String(parseFloat(end) - parseFloat(start)),
-      location: location,
-      professor: professor,
-    };
+  const addSubject = async (subject: Subject) => {
+    let subjectToAdd = { ...subject };
+    subjectToAdd.id = subjects.value.length + 1;
+    subjectToAdd.folderPath = getSubjectPath(subject.name);
+    subjectToAdd.length = String(
+      parseFloat(subjectToAdd.end) - parseFloat(subjectToAdd.start)
+    );
 
-    if (duplicate(subject)) {
+    if (duplicate(subjectToAdd)) {
       sendNotification("Dieser Name existiert bereits!");
       return;
     }
-    subjects.value.push(subject);
-    await createSubjectDir(subject);
+    subjects.value.push(subjectToAdd);
+    await createSubjectDir(subjectToAdd);
     openPopUp.value = null;
   };
 
@@ -108,27 +95,19 @@ export function useSubjects() {
     return subjects.value.find((s) => s.name === checking.name) !== undefined;
   };
 
-  const updateSelectedSubject = (
-    name: string,
-    weekDay: string,
-    start: string,
-    end: string,
-    location: string,
-    professor: string
-  ) => {
-    for (let i = 0; i < subjects.value.length; i++) {
-      if (subjects.value[i].id === selectedSubject.value?.id) {
-        updateFolderName(subjects.value[i].folderPath, name);
-        subjects.value[i].folderPath = getSubjectPath(name);
-        subjects.value[i].name = name;
-        subjects.value[i].weekDay = weekDay;
-        subjects.value[i].start = start;
-        subjects.value[i].end = end;
-        subjects.value[i].location = location;
-        subjects.value[i].professor = professor;
-        openPopUp.value = null;
-      }
+  const updateSelectedSubject = (subject: Subject) => {
+    console.log(subject.name);
+
+    if (duplicate(subject)) {
+      sendNotification("Dieser Name existiert bereits!");
+      return;
     }
+    subjects.value.forEach((s) => {
+      if (s.id === subject.id) {
+        updateFolderName(s.folderPath, subject.name);
+        s = subject;
+      }
+    });
   };
 
   const deleteSubmission = (submissionID: number) => {
@@ -175,17 +154,10 @@ export function useSubjects() {
   };
 
   const addNewExerciseSheet = (sheetNumber: number, sheetDueDate: String) => {
-    let sheetExists: boolean = false;
-
-    subjects.value.forEach((subject) => {
-      if (selectedSubject.value?.id === subject.id) {
-        subject.exerciseSheets.forEach((sheet) => {
-          if (sheet.number === sheetNumber) sheetExists = true;
-        });
-      }
-    });
-
-    if (sheetExists) {
+    const exists = selectedSubject.value?.exerciseSheets.find(
+      (s) => s.number === sheetNumber
+    );
+    if (exists) {
       sendNotification("Diese Nummer existiert bereits!");
     } else {
       subjects.value.forEach((subject) => {

@@ -40,7 +40,7 @@ export function useCalender() {
 
         weekDay = helperFunction.formatWeekDay(weekDay);
 
-        addSubject(name, weekDay, start, end, location, professor);
+        //addSubject(name, weekDay, start, end, location, professor);
       }
     });
   };

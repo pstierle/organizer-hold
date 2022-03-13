@@ -1,8 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container bg-gray-600 dark:bg-gray-200">
     <div
       class="
-        text-center
         overflow-y-scroll
         scrollbar-thin
         scrollbar-thumb-darkMode-light
@@ -10,56 +9,16 @@
         scrollbar-track-rounded
       "
     >
-      <ul @mouseenter="focused = true" @mouseleave="focused = false">
-        <li
-          v-for="(subject, index) in subjects"
-          :key="index"
-          class="mt-5 items-center flex justify-center w-full"
-          @click="selectedSubject = subject"
-          @mouseenter="hoveredSubjectID = subject.id"
-          @mouseleave="hoveredSubjectID = null"
-        >
-          <div
-            v-if="hoveredSubjectID === subject.id"
-            class="
-              text-xs
-              absolute
-              ml-56
-              bg-lightMode-accent
-              dark:bg-darkMode-accent
-              rounded
-              p-2
-              w-40
-            "
-            :class="{
-              focusLabel: hoveredSubjectID === subject.id,
-              unfocusLabel: hoveredSubjectID !== subject.id,
-            }"
-          >
-            <p>{{ subject.name }}</p>
-          </div>
-          <div
-            class="
-              flex
-              items-center
-              justify-center
-              w-12
-              h-12
-              circle
-              bg-lightMode-primary
-              dark:bg-darkMode-primary
-            "
-            :class="{
-              'border-b-2 border-lightMode-accent dark:border-darkMode-accent':
-                selectedSubject?.id == subject.id,
-            }"
-          >
-            <p class="truncate">{{ subject.name }}</p>
-          </div>
-        </li>
-      </ul>
+      <div
+        v-for="(subject, index) in subjects"
+        :key="index"
+        @click="selectedSubject = subject"
+        class="px-2 py-1 truncate mt-2 w-full"
+      >
+        {{ subject.name }}
+      </div>
     </div>
-    <div class="flex justify-around settings-container">
+    <div class="flex gap-2 p-2 settings-container">
       <Icon icon="settings" class="w-6" @click="openPopUp = 'Einstellungen'" />
       <Icon icon="plus" class="w-6" @click="openPopUp = 'Fach hinzufügen'" />
     </div>
@@ -71,11 +30,9 @@ import Icon from "@/components/Icon.vue";
 import { ref } from "@vue/runtime-core";
 import { useSettings } from "@/store/useSettings";
 import { useSubjects } from "@/store/useSubjects";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 
 const { selectedSubject, subjects } = useSubjects();
-
-const hoveredSubjectID = ref<number | null>(null);
-const focused = ref(false);
 
 const { openPopUp } = useSettings();
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="window bg-lightMode-secondary dark:bg-darkMode-secondary">
+  <div class="window bg-gray-100 dark:bg-darkMode-secondary">
     <Header class="header" />
     <div class="main">
       <SubjectList class="subject-list" />
@@ -30,8 +30,8 @@ onMounted(async () => {
   await preload();
   const elements = document.querySelectorAll("body *");
   elements.forEach((element) => {
-    element.classList.add("text-lightMode-text");
-    element.classList.add("dark:text-darkMode-text");
+    element.classList.add("text-black");
+    element.classList.add("dark:text-white");
   });
 });
 
@@ -66,7 +66,6 @@ watch(
   grid-template-areas: "header" "main";
   overflow-x: hidden;
   backdrop-filter: blur(5px);
-  border-radius: 10px;
 }
 
 .header {
@@ -76,7 +75,7 @@ watch(
 .main {
   grid-template: main;
   display: grid;
-  grid-template-columns: 70px 1fr 300px;
+  grid-template-columns: 150px 1fr 300px;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: "subject-list subject calender";

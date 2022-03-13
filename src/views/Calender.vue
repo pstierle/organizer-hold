@@ -1,5 +1,5 @@
 <template>
-  <div class="px-2 calender bg-lightMode-medium :dark:bg-darkMode-medium">
+  <div class="px-2 calender">
     <div class="main">
       <div class="flex items-center justify-evenly py-2">
         <DropDown
