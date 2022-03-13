@@ -1,5 +1,7 @@
 <template>
-  <div class="header flex items-center justify-between">
+  <div
+    class="header flex items-center justify-between bg-gray-300 dark:bg-gray-800 rounded"
+  >
     <p
       class="pl-2 dragabble flex items-center w-24"
       :class="{ 'w-full': !getNextEvent() }"
@@ -19,8 +21,8 @@
         class="
           w-1/3
           text-xl text-center
-          hover:bg-lightMode-light
-          dark:hover:bg-darkMode-light
+          hover:bg-gray-200
+          dark:hover:bg-gray-800
         "
         @click="minimize"
       >
@@ -30,8 +32,8 @@
         class="
           w-1/3
           text-xl text-center
-          hover:bg-lightMode-light
-          dark:hover:bg-darkMode-light
+          hover:bg-gray-200
+          dark:hover:bg-gray-800
         "
         @click="maximize"
       >

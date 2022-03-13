@@ -1,13 +1,12 @@
 <template>
   <div
-    class="subject-container p-3 bg-lightMode-primary dark:bg-darkMode-primary"
+    class="subject-container p-3 bg-gray-200 dark:bg-gray-700"
     v-if="selectedSubject"
   >
     <div class="header flex items-center justify-between text-center w-full">
       <p
         class="
-          bg-lightMode-light
-          dark:bg-darkMode-light
+        bg-gray-300 dark:bg-gray-800
           p-2
           rounded
           mt-2
@@ -39,8 +38,8 @@
       <p
         class="
           p-2
-          border-b-2 border-lightMode-accent
-          dark:border-darkMode-accent
+          border-b-2 border-gray-300
+          dark:border-gray-800
         "
       >
         Übungsblätter
@@ -57,7 +56,7 @@
             class="
               overflow-y-auto
               scrollbar-thin
-              scrollbar-thumb-darkMode-light
+              scrollbar-thumb-gray-500
               scrollbar-thumb-rounded
               scrollbar-track-rounded
             "
@@ -66,8 +65,8 @@
               v-for="(sheet, index) in selectedSubject?.exerciseSheets"
               :key="index"
               class="
-                border-b-2 border-lightMode-light
-                dark:border-darkMode-light
+                border-b-2 border-gray-300
+                dark:border-gray-800
                 flex
                 items-center
                 justify-evenly
@@ -91,8 +90,8 @@
                       ) <= 0
                     "
                     class="
-                      text-xs text-lightMode-textDark
-                      dark:text-darkMode-textDark
+                      text-xs text-gray-800
+                      dark:text-gray-200
                     "
                   >
                     Keine Abgabe
@@ -127,8 +126,8 @@
                       px-1
                       rounded
                       w-3/4
-                      text-lightMode-textDark
-                      dark:text-darkMode-textDark
+                      text-gray-800
+                      dark:text-gray-200
                     "
                   >
                     {{ sheet.dueDate }}

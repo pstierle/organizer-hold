@@ -1,13 +1,13 @@
 <template>
   <div class="pop-up z-10" v-if="openPopUp != undefined">
-    <div class="content bg-lightMode-primary dark:bg-darkMode-primary rounded">
+    <div class="content bg-gray-200 dark:bg-gray-700 rounded">
       <div
         class="
           header
           flex
           justify-between
-          bg-lightMode-secondary
-          dark:bg-darkMode-secondary
+          bg-gray-300
+          dark:bg-gray-800
           p-1
           rounded-t
         "

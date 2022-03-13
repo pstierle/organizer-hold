@@ -1,5 +1,5 @@
 <template>
-  <div class="window bg-gray-100 dark:bg-darkMode-secondary">
+  <div class="window bg-gray-200 dark:bg-gray-700 rounded">
     <Header class="header" />
     <div class="main">
       <SubjectList class="subject-list" />

@@ -1,26 +1,23 @@
 <template>
-	<div class="dropdown">
-		<Button @click="openDropDown" :text="getSelectedElement()" />
-		<ul
-			v-if="open"
-			class="absolute bg-lightMode-primary dark:bg-darkMode-primary rounded"
-		>
-			<li
-				class="p-2 text-xs rounded"
-				v-for="(element, index) in elements"
-				:key="index"
-				@click="selectElement(index)"
-				@mouseover="hoveredElement = index"
-				@mouseleave="hoveredElement = null"
-				:class="{
-					'bg-lightMode-accent dark:bg-darkMode-accent':
-						hoveredElement === index || selectedIndex === index
-				}"
-			>
-				{{ element }}
-			</li>
-		</ul>
-	</div>
+  <div class="dropdown">
+    <Button @click="openDropDown" :text="getSelectedElement()" />
+    <ul v-if="open" class="absolute bg-gray-200 dark:bg-gray-700 rounded">
+      <li
+        class="p-2 text-xs rounded"
+        v-for="(element, index) in elements"
+        :key="index"
+        @click="selectElement(index)"
+        @mouseover="hoveredElement = index"
+        @mouseleave="hoveredElement = null"
+        :class="{
+          'bg-gray-300 dark:bg-gray-800':
+            hoveredElement === index || selectedIndex === index,
+        }"
+      >
+        {{ element }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -29,8 +26,8 @@ import { onMounted } from "vue";
 import Button from "@/components/Button.vue";
 
 const props = defineProps<{
-	elements: string[];
-	selected: number;
+  elements: string[];
+  selected: number;
 }>();
 
 const emit = defineEmits(["selectedIndex"]);
@@ -40,42 +37,42 @@ const open = ref<boolean>(false);
 const hoveredElement = ref<number | null>(null);
 
 onMounted(() => {
-	if (props.selected) selectedIndex.value = props.selected;
+  if (props.selected) selectedIndex.value = props.selected;
 });
 
 function selectElement(index: number): void {
-	selectedIndex.value = index;
-	emit("selectedIndex", selectedIndex.value);
+  selectedIndex.value = index;
+  emit("selectedIndex", selectedIndex.value);
 }
 
 function getSelectedElement(): string | undefined {
-	if (!props.elements) return undefined;
-	return props.elements[selectedIndex.value];
+  if (!props.elements) return undefined;
+  return props.elements[selectedIndex.value];
 }
 
 function openDropDown() {
-	document.body.addEventListener("click", checkClick);
-	open.value = true;
-	firstClick = false;
+  document.body.addEventListener("click", checkClick);
+  open.value = true;
+  firstClick = false;
 }
 
 let firstClick = false;
 
 function checkClick(event: MouseEvent) {
-	console.log("checking click");
+  console.log("checking click");
 
-	if (firstClick) {
-		open.value = false;
-		document.body.removeEventListener("click", checkClick);
-		firstClick = false;
-	}
+  if (firstClick) {
+    open.value = false;
+    document.body.removeEventListener("click", checkClick);
+    firstClick = false;
+  }
 
-	firstClick = true;
+  firstClick = true;
 }
 </script>
 
 <style scoped>
 .dropdown {
-	position: relative;
+  position: relative;
 }
 </style>

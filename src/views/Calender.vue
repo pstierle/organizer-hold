@@ -1,5 +1,5 @@
 <template>
-  <div class="px-2 calender">
+  <div class="px-1 calender border-l-2 border-gray-300 dark:border-gray-800">
     <div class="main">
       <div class="flex items-center justify-evenly py-2">
         <DropDown
@@ -9,9 +9,7 @@
         ></DropDown>
         <p class="text-xl text-center">Veranstaltungen</p>
       </div>
-      <ul
-        class="bg-lightMode-primary dark:bg-darkMode-primary rounded p-2 mt-4"
-      >
+      <ul class="bg-gray-200 dark:bg-gray-700 rounded p-2 mt-4">
         <li
           class="text-xs text-center py-2"
           v-for="(event, index) in eventsToday"
@@ -23,9 +21,7 @@
         </li>
       </ul>
       <p class="text-xl text-center mt-6 py-2">Abgaben</p>
-      <ul
-        class="bg-lightMode-primary dark:bg-darkMode-primary rounded p-2 mt-4"
-      >
+      <ul class="bg-gray-200 dark:bg-gray-700 rounded p-2 mt-4">
         <li
           class="text-xs text-center py-2"
           v-for="(sheet, index) in exerciseSheetsToday"

@@ -1,10 +1,12 @@
 <template>
-  <div class="container bg-gray-600 dark:bg-gray-200">
+  <div
+    class="container bg-gray-200 dark:bg-gray-700 border-r-2 border-gray-300 dark:border-gray-800 px-1"
+  >
     <div
       class="
         overflow-y-scroll
         scrollbar-thin
-        scrollbar-thumb-darkMode-light
+        scrollbar-thumb-gray-500
         scrollbar-thumb-rounded
         scrollbar-track-rounded
       "
@@ -13,7 +15,7 @@
         v-for="(subject, index) in subjects"
         :key="index"
         @click="selectedSubject = subject"
-        class="px-2 py-1 truncate mt-2 w-full"
+        class="px-2 py-1 truncate mt-2 w-full bg-gray-300 dark:bg-gray-800 rounded"
       >
         {{ subject.name }}
       </div>
