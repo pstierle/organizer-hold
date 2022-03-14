@@ -1,41 +1,45 @@
 <template>
   <div
-    class="header flex items-center justify-between bg-gray-300 dark:bg-gray-800 rounded"
+    class="flex items-center justify-between bg-gray-300 dark:bg-gray-800 rounded px-2"
   >
-    <p
-      class="pl-2 dragabble flex items-center w-24"
-      :class="!getNextEvent() ? 'w-full' : ''"
-    >
-      Organizer <span class="text-xs pl-2">version(0.0.1)</span>
-    </p>
-    <button @click="openDevTools" v-if="env === 'development'" class="text-xs">
-      devtools
-    </button>
-    <button @click="reload" v-if="env === 'development'" class="text-xs ml-2">
-      reload
-    </button>
-    <p
-      class="text-red-400 text-xs dragabble w-full text-center"
-      v-if="getNextEvent()"
-    >
-      Nächster Termin: {{ getNextEvent().start }} - Fach:
-      {{ getNextEvent().name }}
-    </p>
-    <div class="flex items-center justify-evenly w-24">
+    <div class="dragabble w-full flex items-center">
+      <div class="flex items-end gap-1">
+        <p>Organizer</p>
+        <p class="text-xs">version(0.0.1)</p>
+      </div>
+      <p class="text-red-400 text-xs ml-20" v-if="getNextEvent()">
+        Nächster Termin: {{ getNextEvent().start }} - Fach:
+        {{ getNextEvent().name }}
+      </p>
+    </div>
+
+    <div class="flex items-center justify-evenly gap-2">
+      <div
+        v-if="env === 'development'"
+        class="text-xs flex items-start gap-1 mr-2"
+      >
+        <button @click="openDevTools">devtools</button>
+        <button @click="reload">reload</button>
+      </div>
       <button
-        class="w-1/3 text-xl text-center hover:bg-gray-200 dark:hover:bg-gray-800"
         @click="minimize"
+        class="rounded-full bg-yellow-400 w-5 h-5 flex items-center justify-center border border-yellow-500"
       >
-        -
+        <MinusSmIcon class="w-4 h-4 opacity-0 hover:opacity-100 transition" />
       </button>
       <button
-        class="w-1/3 text-xl text-center hover:bg-gray-200 dark:hover:bg-gray-800"
         @click="maximize"
+        class="rounded-full bg-green-400 w-5 h-5 flex items-center justify-center border border-green-500"
       >
-        □
+        <ArrowsExpandIcon
+          class="w-4 h-4 opacity-0 hover:opacity-100 transition"
+        />
       </button>
-      <button class="w-1/3 text-xl text-center hover:bg-alert" @click="close">
-        x
+      <button
+        @click="close"
+        class="rounded-full bg-red-400 w-5 h-5 flex items-center justify-center border border-red-500"
+      >
+        <XIcon class="w-4 h-4 opacity-0 hover:opacity-100 transition" />
       </button>
     </div>
   </div>
@@ -45,6 +49,7 @@
 import { useCalender } from "@/store/useCalender";
 import { ref, onMounted } from "@vue/runtime-core";
 import { computed } from "vue";
+import { XIcon, ArrowsExpandIcon, MinusSmIcon } from "@heroicons/vue/outline";
 
 const version = ref<String>();
 
