@@ -30,8 +30,8 @@ onMounted(async () => {
   await preload();
   const elements = document.querySelectorAll("body *");
   elements.forEach((element) => {
-    element.classList.add("text-black");
-    element.classList.add("dark:text-white");
+    element.classList.add("text-gray-800");
+    element.classList.add("dark:text-gray-200");
   });
 });
 

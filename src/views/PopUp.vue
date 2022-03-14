@@ -7,11 +7,8 @@
         <p class="text-xl">{{ openPopUp }}</p>
         <Icon
           icon="XCircleIcon"
-          class="w-6"
+          class="w-6 hover:text-red-500"
           @click="close"
-          @mouseover="closeHover = true"
-          @mouseout="closeHover = false"
-          :class="{ 'close-hover': closeHover }"
         />
       </div>
       <div class="main p-2">
@@ -61,10 +58,7 @@ import { useSettings } from "@/store/useSettings";
 
 const { openPopUp } = useSettings();
 
-const closeHover = ref<boolean>(false);
-
 function close() {
-  closeHover.value = false;
   openPopUp.value = null;
 }
 </script>
@@ -86,11 +80,6 @@ function close() {
   to {
     opacity: 100;
   }
-}
-
-.close-hover {
-  filter: invert(32%) sepia(35%) saturate(3969%) hue-rotate(340deg)
-    brightness(100%) contrast(87%);
 }
 
 .content {
