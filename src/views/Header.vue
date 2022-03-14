@@ -15,7 +15,7 @@
       reload
     </button>
     <p
-      class="text-alert text-xs dragabble w-full text-center"
+      class="text-red-400 text-xs dragabble w-full text-center"
       v-if="getNextEvent()"
     >
       Nächster Termin: {{ getNextEvent().start }} - Fach:

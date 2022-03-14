@@ -53,11 +53,11 @@
                         sheet.number
                       ) <= 0
                     "
-              class="text-xs text-gray-800 dark:text-gray-200"
+              class="text-xs text-gray-900 dark:text-gray-400"
             >
               Keine Abgabe
             </p>
-            <p v-else class="text-xs text-textHighlight">
+            <p v-else class="text-xs text-blue-400">
               Anzahl:
               {{
                       getSubmissionCount(
@@ -85,8 +85,8 @@
             >
               {{ sheet.dueDate }}
             </p>
-            <p v-if="sheet.done" class="text-textHighlight">Erledigt</p>
-            <p v-else class="text-alert">Offen</p>
+            <p v-if="sheet.done" class="text-blue-400">Erledigt</p>
+            <p v-else class="text-red-400">Offen</p>
           </div>
           <Button
             @click="toogleDone(sheet.number)"
