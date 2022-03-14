@@ -5,14 +5,14 @@
     <div
       class="overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-thumb-rounded scrollbar-track-rounded"
     >
-      <div
+      <button
         v-for="(subject, index) in subjects"
         :key="index"
         @click="selectedSubject = subject"
         class="px-2 py-1 truncate mt-2 w-full bg-gray-300 dark:bg-gray-800 rounded"
       >
         {{ subject.name }}
-      </div>
+      </button>
     </div>
     <div class="flex gap-2 p-2 settings-container">
       <Icon icon="CogIcon" class="w-6" @click="openModal = 'Einstellungen'" />
@@ -44,10 +44,6 @@ const { openModal } = useSettings();
   grid-template-areas: "list" "settings-container";
 }
 
-li:hover {
-  cursor: pointer;
-}
-
 .list {
   grid-area: "list";
   min-height: 300px;
@@ -55,104 +51,5 @@ li:hover {
 
 .settings-container {
   grid-area: "settings-container";
-}
-
-.focus {
-  animation: fadeIn 200ms forwards;
-}
-
-.unfocus {
-  animation: fadeOut 200ms forwards;
-}
-
-.focusLabel {
-  animation: fadeInLabel 400ms forwards;
-}
-
-.unfocusLabel {
-  animation: fadeOutLabel 400ms forwards;
-}
-
-.rotateRight {
-  animation: rotateRight 250ms forwards;
-}
-
-.rotateLeft {
-  animation: rotateLeft 250ms forwards;
-}
-
-.rotateLeftDark {
-  animation: rotateLeftDark 250ms forwards;
-}
-
-@keyframes rotateRight {
-  from {
-    transform: rotate(-180deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes rotateLeft {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-    filter: invert(79%) sepia(81%) saturate(3254%) hue-rotate(341deg)
-      brightness(109%) contrast(97%);
-  }
-}
-
-@keyframes rotateLeftDark {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-    filter: invert(36%) sepia(47%) saturate(2637%) hue-rotate(238deg)
-      brightness(99%) contrast(95%);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    width: 70px;
-  }
-  to {
-    width: 90px;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    width: 90px;
-  }
-  to {
-    width: 70px;
-  }
-}
-
-@keyframes fadeInLabel {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-
-@keyframes fadeOutLabel {
-  from {
-    opacity: 100;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-.circle {
-  border-radius: 50%;
 }
 </style>
