@@ -15,11 +15,11 @@
       </div>
     </div>
     <div class="flex gap-2 p-2 settings-container">
-      <Icon icon="CogIcon" class="w-6" @click="openPopUp = 'Einstellungen'" />
+      <Icon icon="CogIcon" class="w-6" @click="openModal = 'Einstellungen'" />
       <Icon
         icon="PlusCircleIcon"
         class="w-6"
-        @click="openPopUp = 'Fach hinzufügen'"
+        @click="openModal = 'Fach hinzufügen'"
       />
     </div>
   </div>
@@ -27,14 +27,12 @@
 
 <script lang="ts" setup>
 import Icon from "@/components/Icon.vue";
-import { ref } from "@vue/runtime-core";
 import { useSettings } from "@/store/useSettings";
 import { useSubjects } from "@/store/useSubjects";
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 
 const { selectedSubject, subjects } = useSubjects();
 
-const { openPopUp } = useSettings();
+const { openModal } = useSettings();
 </script>
 
 <style scoped>

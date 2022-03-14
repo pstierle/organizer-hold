@@ -6,7 +6,7 @@
       <Subject class="subject" />
       <Calender class="calender" />
     </div>
-    <PopUp />
+    <Modal />
     <Notifications />
   </div>
 </template>
@@ -16,7 +16,7 @@ import { onMounted, watch } from "vue";
 
 import Header from "@/views/Header.vue";
 import Subject from "@/views/Subject.vue";
-import PopUp from "@/views/PopUp.vue";
+import Modal from "@/views/Modal.vue";
 import Calender from "@/views/Calender.vue";
 import Notifications from "@/views/Notifications.vue";
 import SubjectList from "@/views/SubjectList.vue";

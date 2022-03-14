@@ -36,7 +36,7 @@
       <Icon
         icon="PlusCircleIcon"
         class="w-6"
-        @click="openPopUp = 'Kalender Importieren'"
+        @click="openModal = 'Kalender Importieren'"
       />
     </div>
   </div>
@@ -51,7 +51,7 @@ import { useSettings } from "@/store/useSettings";
 import { useCalender } from "@/store/useCalender";
 
 const weekDays = ref<Array<string>>(WeekDays);
-const { openPopUp } = useSettings();
+const { openModal } = useSettings();
 
 const { selectedDay, eventsToday, exerciseSheetsToday } = useCalender();
 

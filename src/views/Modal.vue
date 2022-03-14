@@ -1,10 +1,10 @@
 <template>
-  <div class="pop-up z-10" v-if="openPopUp != undefined">
+  <div class="pop-up z-10" v-if="openModal != undefined">
     <div class="content bg-gray-200 dark:bg-gray-700 rounded">
       <div
         class="header flex justify-between bg-gray-300 dark:bg-gray-800 p-1 rounded-t"
       >
-        <p class="text-xl">{{ openPopUp }}</p>
+        <p class="text-xl">{{ openModal }}</p>
         <Icon
           icon="XCircleIcon"
           class="w-6 hover:text-red-500"
@@ -12,32 +12,32 @@
         />
       </div>
       <div class="main p-2">
-        <div v-if="openPopUp === 'Einstellungen'">
+        <div v-if="openModal === 'Einstellungen'">
           <Settings />
         </div>
-        <div v-if="openPopUp === 'Fach hinzufügen'">
+        <div v-if="openModal === 'Fach hinzufügen'">
           <AddSubject />
         </div>
-        <div v-if="openPopUp === 'Bearbeiten'">
+        <div v-if="openModal === 'Bearbeiten'">
           <EditSubject />
         </div>
-        <div v-if="openPopUp === 'Löschen'">
+        <div v-if="openModal === 'Löschen'">
           <DeleteSubject />
         </div>
-        <div v-if="openPopUp === 'Übungsblatt hinzufügen'">
+        <div v-if="openModal === 'Übungsblatt hinzufügen'">
           <AddExcerciseSheet />
         </div>
-        <div v-if="openPopUp === 'Kalender Importieren'">
+        <div v-if="openModal === 'Kalender Importieren'">
           <ImportCalender />
         </div>
         <div
           v-if="
-            openPopUp === 'Abgabe' ||
-            openPopUp === 'Lösungen' ||
-            openPopUp === 'Korrektur'
+            openModal === 'Abgabe' ||
+            openModal === 'Lösungen' ||
+            openModal === 'Korrektur'
           "
         >
-          <Submission :submissionType="openPopUp" />
+          <Submission :submissionType="openModal" />
         </div>
       </div>
     </div>
@@ -46,20 +46,20 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import Settings from "@/views/popUps/Settings.vue";
-import AddSubject from "@/views/popUps/AddSubject.vue";
-import DeleteSubject from "@/views/popUps/DeleteSubject.vue";
-import AddExcerciseSheet from "@/views/popUps/AddExcerciseSheet.vue";
-import ImportCalender from "@/views/popUps/ImportCalender.vue";
-import Submission from "@/views/popUps/Submission.vue";
-import EditSubject from "./popUps/EditSubject.vue";
+import Settings from "@/views/modal/Settings.vue";
+import AddSubject from "@/views/modal/AddSubject.vue";
+import DeleteSubject from "@/views/modal/DeleteSubject.vue";
+import AddExcerciseSheet from "@/views/modal/AddExcerciseSheet.vue";
+import ImportCalender from "@/views/modal/ImportCalender.vue";
+import Submission from "@/views/modal/Submission.vue";
+import EditSubject from "./modal/EditSubject.vue";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";
 
-const { openPopUp } = useSettings();
+const { openModal } = useSettings();
 
 function close() {
-  openPopUp.value = null;
+  openModal.value = null;
 }
 </script>
 

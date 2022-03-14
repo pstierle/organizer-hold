@@ -6,7 +6,7 @@ import { ref } from "vue";
 import Subject from "./interfaces/Subject";
 import SubmissionType from "./interfaces/submissions/SubmissionType";
 
-const { selectedSheetNumber, openPopUp } = useSettings();
+const { selectedSheetNumber, openModal } = useSettings();
 const { sendNotification } = useNotifications();
 const {
   folderPath,
@@ -74,7 +74,7 @@ export function useSubjects() {
     }
     subjects.value.push(subjectToAdd);
     await createSubjectDir(subjectToAdd);
-    openPopUp.value = null;
+    openModal.value = null;
   };
 
   const deleteSelectedSubject = () => {
@@ -88,7 +88,7 @@ export function useSubjects() {
 
     deleteSubjectPath(selectedSubject.value);
     selectedSubject.value = undefined;
-    openPopUp.value = null;
+    openModal.value = null;
   };
 
   const duplicate = (checking: Subject) => {

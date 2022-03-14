@@ -11,7 +11,7 @@
         <Button
           class="lg:w-5/12 w-5/6"
           text="Bearbeiten"
-          @click="openPopUp = 'Bearbeiten'"
+          @click="openModal = 'Bearbeiten'"
           icon="PencilAltIcon"
         ></Button>
         <Button
@@ -19,7 +19,7 @@
           type="alert"
           icon="TrashIcon"
           text="Löschen"
-          @click="openPopUp = 'Löschen'"
+          @click="openModal = 'Löschen'"
         ></Button>
       </div>
     </div>
@@ -35,7 +35,7 @@
           <Button
             text="Hinzufügen"
             icon="PlusCircleIcon"
-            @click="openPopUp = 'Übungsblatt hinzufügen'"
+            @click="openModal = 'Übungsblatt hinzufügen'"
           />
           <ul
             class="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-thumb-rounded scrollbar-track-rounded"
@@ -79,7 +79,7 @@
                   class="w-4"
                   @click="
                     () => {
-                      openPopUp = data.type;
+                      openModal = data.type;
                       selectedSheetNumber = sheet.number;
                     }
                   "
@@ -119,15 +119,15 @@ import { ref } from "vue";
 import Button from "@/components/Button.vue";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";
-import PopUps from "@/store/interfaces/PopUps";
+import Modal from "@/store/interfaces/Modal";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
 import { useSubjects } from "@/store/useSubjects";
 
 const { selectedSubject, toogleDone, submissions } = useSubjects();
 
-const { openPopUp, selectedSheetNumber } = useSettings();
+const { openModal, selectedSheetNumber } = useSettings();
 
-const sheetData = ref<{ type: PopUps }[]>([
+const sheetData = ref<{ type: Modal }[]>([
   {
     type: "Korrektur",
   },

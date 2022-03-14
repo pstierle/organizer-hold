@@ -1,11 +1,11 @@
 import { ref } from "vue";
-import PopUps from "./interfaces/PopUps";
+import Modal from "./interfaces/Modal";
 
 const darkMode = ref<boolean>(false);
 const studentID = ref<number>(0);
 const selectedSheetNumber = ref<number>(0);
 const username = ref<string>("");
-const openPopUp = ref<PopUps | null>(null);
+const openModal = ref<Modal | null>(null);
 
 export function useSettings() {
   const toogleDarkMode = () => {
@@ -20,7 +20,7 @@ export function useSettings() {
     darkMode,
     studentID,
     username,
-    openPopUp,
+    openModal,
     selectedSheetNumber,
   };
 }
