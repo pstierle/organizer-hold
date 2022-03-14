@@ -1,6 +1,6 @@
 <template>
   <button
-    class="rounded px-2 py-2 text-xs flex items-center justify-evenly gap-1"
+    class="rounded px-2 py-2 text-xs flex items-center justify-evenly gap-1 transition"
     :class="
       type === 'alert'
         ? 'bg-red-400 hover:bg-red-500'
