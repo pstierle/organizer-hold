@@ -1,12 +1,12 @@
 <template>
   <button
-    class="container rounded outline-none px-2 py-2 text-xs flex items-center justify-evenly gap-1"
+    class="rounded px-2 py-2 text-xs flex items-center justify-evenly gap-1"
     :class="
       type === 'alert'
-        ? 'bg-red-400'
+        ? 'bg-red-400 hover:bg-red-500'
         : type === 'success'
-        ? 'bg-green-500'
-        : 'bg-gray-300 dark:bg-gray-800'
+        ? 'bg-green-500 hover:bg-green-600'
+        : 'bg-gray-300 dark:bg-gray-800 hover:bg-gray-400 dark:hover:bg-gray-900'
     "
   >
     <Icon :icon="icon" class="w-4" v-if="icon" />
@@ -23,14 +23,3 @@ defineProps<{
   icon?: string;
 }>();
 </script>
-
-<style scoped>
-.container:hover {
-  cursor: pointer;
-}
-
-div:hover {
-  transform: scale(1.05);
-  transition-duration: 200ms;
-}
-</style>

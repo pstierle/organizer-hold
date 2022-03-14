@@ -34,8 +34,7 @@
         <div>
           <Button
             text="Hinzufügen"
-            icon="PlusIcon"
-            class="w-24 mt-4"
+            icon="PlusCircleIcon"
             @click="openPopUp = 'Übungsblatt hinzufügen'"
           />
           <ul
