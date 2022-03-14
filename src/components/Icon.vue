@@ -1,19 +1,20 @@
 <template>
-  <img
-    :src="require(`@/assets/img/${icon}.svg`)"
-    :alt="icon"
+  <component
+    :is="(heroIcons as any)[icon]"
     :class="{ 'light-icon': !darkMode, 'dark-icon': darkMode }"
+    class="cursor-pointer"
   />
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { useSettings } from "@/store/useSettings";
+import * as heroIcons from "@heroicons/vue/solid";
+
+const { darkMode } = useSettings();
 
 defineProps<{
   icon: string;
 }>();
-
-const { darkMode } = useSettings();
 </script>
 
 <style scoped>

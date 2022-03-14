@@ -11,7 +11,7 @@
       @click="deleteSelectedSubject"
       class="w-1/5"
       text="LÖSCHEN"
-      icon="bin"
+      icon="TrashIcon"
       type="alert"
     />
   </div>

@@ -8,7 +8,10 @@
     >
       Organizer <span class="text-xs pl-2">version(0.0.1)</span>
     </p>
-    <button @click="reload" v-if="env === 'development'" class="text-xs">
+    <button @click="openDevTools" v-if="env === 'development'" class="text-xs">
+      devtools
+    </button>
+    <button @click="reload" v-if="env === 'development'" class="text-xs ml-2">
       reload
     </button>
     <p
@@ -20,23 +23,13 @@
     </p>
     <div class="flex items-center justify-evenly w-24">
       <button
-        class="
-          w-1/3
-          text-xl text-center
-          hover:bg-gray-200
-          dark:hover:bg-gray-800
-        "
+        class="w-1/3 text-xl text-center hover:bg-gray-200 dark:hover:bg-gray-800"
         @click="minimize"
       >
         -
       </button>
       <button
-        class="
-          w-1/3
-          text-xl text-center
-          hover:bg-gray-200
-          dark:hover:bg-gray-800
-        "
+        class="w-1/3 text-xl text-center hover:bg-gray-200 dark:hover:bg-gray-800"
         @click="maximize"
       >
         □
@@ -68,6 +61,9 @@ function maximize() {
 }
 function reload() {
   (window as any).WIN.reload();
+}
+function openDevTools() {
+  (window as any).WIN.openDevTools();
 }
 
 const env = computed(() => process.env.NODE_ENV);

@@ -21,7 +21,7 @@
       <Button
         class="w-24 mt-6 mb-6"
         text="Hinzufügen"
-        icon="plus"
+        icon="PlusCircleIcon"
         @click="add"
       />
     </div>

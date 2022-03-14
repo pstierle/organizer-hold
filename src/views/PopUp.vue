@@ -2,19 +2,11 @@
   <div class="pop-up z-10" v-if="openPopUp != undefined">
     <div class="content bg-gray-200 dark:bg-gray-700 rounded">
       <div
-        class="
-          header
-          flex
-          justify-between
-          bg-gray-300
-          dark:bg-gray-800
-          p-1
-          rounded-t
-        "
+        class="header flex justify-between bg-gray-300 dark:bg-gray-800 p-1 rounded-t"
       >
         <p class="text-xl">{{ openPopUp }}</p>
         <Icon
-          icon="close"
+          icon="XCircleIcon"
           class="w-6"
           @click="close"
           @mouseover="closeHover = true"
@@ -44,8 +36,8 @@
         <div
           v-if="
             openPopUp === 'Abgabe' ||
-              openPopUp === 'Lösungen' ||
-              openPopUp === 'Korrektur'
+            openPopUp === 'Lösungen' ||
+            openPopUp === 'Korrektur'
           "
         >
           <Submission :submissionType="openPopUp" />

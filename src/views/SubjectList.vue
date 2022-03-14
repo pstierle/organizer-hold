@@ -3,13 +3,7 @@
     class="container bg-gray-200 dark:bg-gray-700 border-r-2 border-gray-300 dark:border-gray-800 px-1"
   >
     <div
-      class="
-        overflow-y-scroll
-        scrollbar-thin
-        scrollbar-thumb-gray-500
-        scrollbar-thumb-rounded
-        scrollbar-track-rounded
-      "
+      class="overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 scrollbar-thumb-rounded scrollbar-track-rounded"
     >
       <div
         v-for="(subject, index) in subjects"
@@ -21,8 +15,12 @@
       </div>
     </div>
     <div class="flex gap-2 p-2 settings-container">
-      <Icon icon="settings" class="w-6" @click="openPopUp = 'Einstellungen'" />
-      <Icon icon="plus" class="w-6" @click="openPopUp = 'Fach hinzufügen'" />
+      <Icon icon="CogIcon" class="w-6" @click="openPopUp = 'Einstellungen'" />
+      <Icon
+        icon="PlusCircleIcon"
+        class="w-6"
+        @click="openPopUp = 'Fach hinzufügen'"
+      />
     </div>
   </div>
 </template>

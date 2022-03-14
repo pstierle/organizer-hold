@@ -34,7 +34,7 @@
     <div class="import-calender flex items-center justify-between">
       <p>Kalender Importieren</p>
       <Icon
-        icon="plus"
+        icon="PlusCircleIcon"
         class="w-6"
         @click="openPopUp = 'Kalender Importieren'"
       />

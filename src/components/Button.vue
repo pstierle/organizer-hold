@@ -1,16 +1,6 @@
 <template>
-  <div
-    class="
-      container
-      rounded
-      outline-none
-      px-2
-      py-2
-      text-xs
-      flex
-      items-center
-      justify-between
-    "
+  <button
+    class="container rounded outline-none px-2 py-2 text-xs flex items-center justify-evenly gap-1"
     :class="
       type === 'alert'
         ? 'bg-red-400'
@@ -19,9 +9,9 @@
         : 'bg-gray-300 dark:bg-gray-800'
     "
   >
-    <Icon :icon="icon" class="w-4 pr-1" v-if="icon" />
-    <p class="text-center select-none w-full" v-if="text">{{ text }}</p>
-  </div>
+    <Icon :icon="icon" class="w-4" v-if="icon" />
+    <p v-if="text">{{ text }}</p>
+  </button>
 </template>
 
 <script lang="ts" setup>

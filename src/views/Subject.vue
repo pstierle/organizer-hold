@@ -4,15 +4,7 @@
     v-if="selectedSubject"
   >
     <div class="header flex items-center justify-between text-center w-full">
-      <p
-        class="
-        bg-gray-300 dark:bg-gray-800
-          p-2
-          rounded
-          mt-2
-          w-7/12
-        "
-      >
+      <p class="bg-gray-300 dark:bg-gray-800 p-2 rounded mt-2 w-7/12">
         {{ selectedSubject?.name }}
       </p>
       <div class="lg:flex-row flex-col flex justify-evenly w-4/12 items-center">
@@ -20,12 +12,12 @@
           class="lg:w-5/12 w-5/6"
           text="Bearbeiten"
           @click="openPopUp = 'Bearbeiten'"
-          icon="edit"
+          icon="PencilAltIcon"
         ></Button>
         <Button
           class="lg:w-5/12 w-5/6"
           type="alert"
-          icon="bin"
+          icon="TrashIcon"
           text="Löschen"
           @click="openPopUp = 'Löschen'"
         ></Button>
@@ -35,44 +27,24 @@
       Proffessor: {{ selectedSubject?.professor }}
     </p>
     <div class="mt-1 main pt-3 pb-3">
-      <p
-        class="
-          p-2
-          border-b-2 border-gray-300
-          dark:border-gray-800
-        "
-      >
+      <p class="p-2 border-b-2 border-gray-300 dark:border-gray-800">
         Übungsblätter
       </p>
       <div>
         <div>
           <Button
             text="Hinzufügen"
-            icon="plus"
+            icon="PlusIcon"
             class="w-24 mt-4"
             @click="openPopUp = 'Übungsblatt hinzufügen'"
           />
           <ul
-            class="
-              overflow-y-auto
-              scrollbar-thin
-              scrollbar-thumb-gray-500
-              scrollbar-thumb-rounded
-              scrollbar-track-rounded
-            "
+            class="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-thumb-rounded scrollbar-track-rounded"
           >
             <li
               v-for="(sheet, index) in selectedSubject?.exerciseSheets"
               :key="index"
-              class="
-                border-b-2 border-gray-300
-                dark:border-gray-800
-                flex
-                items-center
-                justify-evenly
-                mt-2
-                pb-2
-              "
+              class="border-b-2 border-gray-300 dark:border-gray-800 flex items-center justify-evenly mt-2 pb-2"
             >
               <p>Nr.{{ sheet.number }}</p>
               <div
@@ -89,10 +61,7 @@
                         sheet.number
                       ) <= 0
                     "
-                    class="
-                      text-xs text-gray-800
-                      dark:text-gray-200
-                    "
+                    class="text-xs text-gray-800 dark:text-gray-200"
                   >
                     Keine Abgabe
                   </p>
@@ -107,7 +76,7 @@
                   </p>
                 </div>
                 <Icon
-                  icon="magnifying-glass"
+                  icon="SearchIcon"
                   class="w-4"
                   @click="
                     () => {
@@ -120,15 +89,7 @@
               <div class="flex items-center justify-between">
                 <div>
                   <p
-                    class="
-                      text-xs
-                      py-0.5
-                      px-1
-                      rounded
-                      w-3/4
-                      text-gray-800
-                      dark:text-gray-200
-                    "
+                    class="text-xs py-0.5 px-1 rounded w-3/4 text-gray-800 dark:text-gray-200"
                   >
                     {{ sheet.dueDate }}
                   </p>
@@ -137,12 +98,12 @@
                 </div>
                 <Button
                   @click="toogleDone(sheet.number)"
-                  icon="ticked"
+                  icon="CheckCircleIcon"
                   v-if="sheet.done"
                 />
                 <Button
                   @click="toogleDone(sheet.number)"
-                  icon="unticked"
+                  icon="XCircleIcon"
                   v-else
                 />
               </div>

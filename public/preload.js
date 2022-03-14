@@ -23,6 +23,9 @@ contextBridge.exposeInMainWorld(
     },
     reload: () => {
       currentWindow.reload();
+    },
+    openDevTools: () => {
+      currentWindow.webContents.openDevTools();
     }
   }
 )
