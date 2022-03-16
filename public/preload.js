@@ -121,26 +121,25 @@ contextBridge.exposeInMainWorld(
       return fs.existsSync(path);
     },
     mkdirSync: (path) => {
-      return fs.mkdirSync(path)
+      return fs.mkdirSync(path);
     },
     writeFileSync: (path, data) => {
       return fs.writeFileSync(path, data);
     },
     readFileSync: (path) => {
-      const data = fs.readFileSync(path, { encoding: 'utf8', flag: 'r' }, (err, data) => {
-        if (err) throw err;
-      })
-      return data;
+      return fs.readFileSync(path, { encoding: 'utf8', flag: 'r' });
     },
     rmdir: (path) => {
-      fs.rmdir(path, { recursive: true }, (err) => {
-        if (err) throw err;
-      })
+      fs.rmdir(path, { recursive: true });
     },
     rename: (oldPath, newPath) => {
-      fs.rename(oldPath, newPath, (err) => {
-        if (err) throw err;
-      })
+      fs.rename(oldPath, newPath);
+    },
+    deleteFile: (path) => {
+      fs.unlink(path);
+    },
+    copyFile: (filePath, destinationPath) => {
+      fs.copyFile(filePath, destinationPath);
     },
     getFileSize: (path) => {
       const stats = fs.statSync(path)
@@ -148,15 +147,5 @@ contextBridge.exposeInMainWorld(
       const fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
       return fileSizeInMegabytes.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
     },
-    deleteFile: (path) => {
-      fs.unlink(path, (err) => {
-        if (err) throw err;
-      })
-    },
-    copyFile: (filePath, destinationPath) => {
-      fs.copyFile(filePath, destinationPath, (err) => {
-        if (err) throw err;
-      });
-    }
   }
 )

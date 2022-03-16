@@ -1,26 +1,28 @@
 import { computed, ref } from "vue";
 import { helperFunction } from "./helperFunction";
 import WeekDays from "./interfaces/WeekDays";
-import ExcerciseSheet from "./interfaces/ExcerciseSheet";
 import { useSubjects } from "@/store/useSubjects";
 
-const { subjects, addSubject } = useSubjects();
+const { subjects } = useSubjects();
 
 const selectedDay = ref<string>("");
+
 const currentDay = computed(() => {
   return WeekDays[new Date().getDay()];
 });
-const eventsToday = computed(() => {
+
+const subjectsToday = computed(() => {
   return subjects.value.filter(
     (subject) => subject.weekDay == selectedDay.value
   );
 });
 
 const exerciseSheetsToday = computed(() => {
-  let sheets: ExcerciseSheet[] = [];
-
-  return sheets;
+  return subjects.value
+    .flatMap((s) => s.exerciseSheets)
+    .filter((e) => e.dueDate === helperFunction.formatDate(new Date()));
 });
+
 export function useCalender() {
   const importCalender = async (filePath: string) => {
     const data = await window.fs.readFileSync(filePath);
@@ -46,7 +48,7 @@ export function useCalender() {
   };
 
   const getNextEvent = () => {
-    return eventsToday.value.sort(
+    return subjectsToday.value.sort(
       (a, b) => Number(a.start) - Number(b.start)
     )[0];
   };
@@ -59,7 +61,7 @@ export function useCalender() {
     importCalender,
     currentDay,
     exerciseSheetsToday,
-    eventsToday,
+    subjectsToday,
     getNextEvent,
     getDayIndex,
     selectedDay,

@@ -2,34 +2,39 @@
   <div class="px-1 calender border-l-2 border-gray-300 dark:border-gray-800">
     <div class="main">
       <div class="flex items-center justify-evenly py-2">
+        <p class="text-xl text-center">Tag:</p>
         <DropDown
           :selected="new Date().getDay()"
           :elements="weekDays"
           @selectedIndex="handleIndexChange"
         ></DropDown>
-        <p class="text-xl text-center">Veranstaltungen</p>
       </div>
-      <ul class="bg-gray-200 dark:bg-gray-700 rounded p-2 mt-4">
-        <li
-          class="text-xs text-center py-2"
-          v-for="(event, index) in eventsToday"
-          :key="index"
-        >
-          <p>{{ event.start }}-{{ event.end }}</p>
-          <p>{{ event.location }}</p>
-          <p>{{ event.name }}</p>
-        </li>
-      </ul>
-      <p class="text-xl text-center mt-6 py-2">Abgaben</p>
-      <ul class="bg-gray-200 dark:bg-gray-700 rounded p-2 mt-4">
-        <li
-          class="text-xs text-center py-2"
-          v-for="(sheet, index) in exerciseSheetsToday"
-          :key="index"
-        >
-          <p>{{ sheet.subjectName }}</p>
-        </li>
-      </ul>
+      <ExpansionCard title="Vorlesungen">
+        <div class="divide-y-2">
+          <div
+            class="text-xs text-left"
+            v-for="(event, index) in subjectsToday"
+            :key="index"
+          >
+            <p>{{ event.name }}</p>
+            <p>{{ event.start }}-{{ event.end }}</p>
+            <p>Ort: {{ event.location }}</p>
+          </div>
+        </div>
+      </ExpansionCard>
+      <ExpansionCard title="Abgaben" class="mt-2">
+        <div class="divide-y-2">
+          <div
+            class="text-xs text-left"
+            v-for="(sheet, index) in exerciseSheetsToday"
+            :key="index"
+          >
+            <p>Nummer: {{ sheet.number }}</p>
+            <p>Fach: {{ sheet.subjectName }}</p>
+            <p>{{ sheet.done ? "Erledigt" : "Nicht erledigt" }}</p>
+          </div>
+        </div>
+      </ExpansionCard>
     </div>
     <div class="import-calender flex items-center justify-between">
       <p>Kalender Importieren</p>
@@ -49,11 +54,12 @@ import WeekDays from "@/store/interfaces/WeekDays";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";
 import { useCalender } from "@/store/useCalender";
+import ExpansionCard from "@/components/ExpansionCard.vue";
 
 const weekDays = ref<Array<string>>(WeekDays);
 const { openModal } = useSettings();
 
-const { selectedDay, eventsToday, exerciseSheetsToday } = useCalender();
+const { selectedDay, subjectsToday, exerciseSheetsToday } = useCalender();
 
 function handleIndexChange(index: any) {
   selectedDay.value = WeekDays[index];
