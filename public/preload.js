@@ -142,10 +142,10 @@ contextBridge.exposeInMainWorld(
       fs.copyFile(filePath, destinationPath);
     },
     getFileSize: (path) => {
-      const stats = fs.statSync(path)
-      const fileSizeInBytes = stats.size;
-      const fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-      return fileSizeInMegabytes.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
+      const stats = fs.statSync(path);
+      const { size } = stats;
+      const i = Math.floor(Math.log(size) / Math.log(1024));
+      return (size / Math.pow(1024, i)).toFixed(2) * 1 + ' ' + ['B', 'KB', 'MB', 'GB', 'TB'][i];
     },
   }
 )

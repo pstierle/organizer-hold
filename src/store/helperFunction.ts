@@ -12,19 +12,6 @@ class HelperFunction {
     return format;
   }
 
-  getFileSize(filePath: String) {
-    let size = null;
-
-    (window as any).fs.stat(filePath, (err: any, stats: any) => {
-      if (err) {
-        throw err;
-      } else {
-        size = this.formatBytes(stats.size / (1024 * 1024));
-      }
-    });
-    return size;
-  }
-
   formatDate(date: Date): string {
     var d = new Date(date),
       month = "" + (d.getMonth() + 1),

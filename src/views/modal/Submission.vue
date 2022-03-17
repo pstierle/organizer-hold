@@ -33,7 +33,7 @@
           </td>
           <td class="p-2 whitespace-nowrap">{{ submission.fileName }}</td>
           <td class="p-2 whitespace-nowrap">.{{ submission.format }}</td>
-          <td class="p-2 whitespace-nowrap">{{ submission.size }}MB</td>
+          <td class="p-2 whitespace-nowrap">{{ submission.size }}</td>
           <td class="p-2 whitespace-nowrap">
             <Button text="Öffnen" @click="openFile(submission)" />
           </td>
@@ -69,12 +69,8 @@ import { useSettings } from "@/store/useSettings";
 import { useNotifications } from "@/store/useNotifications";
 import { useSubjects } from "@/store/useSubjects";
 
-const {
-  submissions,
-  selectedSubject,
-  addSubmission,
-  deleteSubmission,
-} = useSubjects();
+const { submissions, selectedSubject, addSubmission, deleteSubmission } =
+  useSubjects();
 const { sendNotification } = useNotifications();
 
 const props = defineProps<{
