@@ -10,11 +10,8 @@
         :class="{ ' rotate-90': !open }"
       />
     </button>
-    <div
-      v-if="open"
-      class="bg-gray-300 dark:bg-gray-800 w-full rounded-b p-2 transition-all"
-    >
-      <slot />
+    <div v-if="open" class="bg-gray-300 dark:bg-gray-800 w-full rounded-b">
+      <slot class="transition-all" />
     </div>
   </div>
 </template>

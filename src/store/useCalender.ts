@@ -17,6 +17,14 @@ const subjectsToday = computed(() => {
   );
 });
 
+const nextSubjectToday = computed(() => {
+  return subjects.value
+    .filter(
+      (subject) => subject.weekDay == helperFunction.formatDate(new Date())
+    )
+    .sort((a, b) => Number(a.start) - Number(b.start))[0];
+});
+
 const exerciseSheetsToday = computed(() => {
   return subjects.value
     .flatMap((s) => s.exerciseSheets)
@@ -47,12 +55,6 @@ export function useCalender() {
     });
   };
 
-  const getNextEvent = () => {
-    return subjectsToday.value.sort(
-      (a, b) => Number(a.start) - Number(b.start)
-    )[0];
-  };
-
   const getDayIndex = (day: string) => {
     return WeekDays.indexOf(day);
   };
@@ -62,7 +64,7 @@ export function useCalender() {
     currentDay,
     exerciseSheetsToday,
     subjectsToday,
-    getNextEvent,
+    nextSubjectToday,
     getDayIndex,
     selectedDay,
   };

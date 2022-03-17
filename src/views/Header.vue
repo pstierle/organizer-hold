@@ -7,9 +7,9 @@
         <p>Organizer</p>
         <p class="text-xs">version(0.0.1)</p>
       </div>
-      <p class="text-red-400 text-xs ml-20" v-if="getNextEvent()">
-        Nächster Termin: {{ getNextEvent().start }} - Fach:
-        {{ getNextEvent().name }}
+      <p class="text-red-400 text-xs ml-20" v-if="nextSubjectToday">
+        Nächste Vorlesung: {{ nextSubjectToday.start }} - Fach:
+        {{ nextSubjectToday.name }}
       </p>
     </div>
 
@@ -53,7 +53,7 @@ import { XIcon, ArrowsExpandIcon, MinusSmIcon } from "@heroicons/vue/outline";
 
 const version = ref<String>();
 
-const { getNextEvent } = useCalender();
+const { nextSubjectToday } = useCalender();
 
 function close() {
   (window as any).WIN.close();
