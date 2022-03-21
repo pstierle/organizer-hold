@@ -83,7 +83,7 @@
             <p
               class="text-xs py-0.5 px-1 rounded w-3/4 text-gray-800 dark:text-gray-200"
             >
-              {{ sheet.dueDate }}
+              {{ helperFunction.formatDate(sheet.dueDate) }}
             </p>
             <p v-if="sheet.done" class="text-blue-400">Erledigt</p>
             <p v-else class="text-red-400">Offen</p>
@@ -94,6 +94,7 @@
             v-if="sheet.done"
           />
           <Button @click="toogleDone(sheet.number)" icon="XCircleIcon" v-else />
+          <Button @click="deleteExerciseSheet(sheet)" icon="TrashIcon" />
         </div>
       </div>
     </div>
@@ -108,8 +109,9 @@ import { useSettings } from "@/store/useSettings";
 import Modal from "@/store/interfaces/Modal";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
 import { useSubjects } from "@/store/useSubjects";
-
-const { selectedSubject, toogleDone, submissions } = useSubjects();
+import { helperFunction } from "@/store/helperFunction";
+const { selectedSubject, toogleDone, submissions, deleteExerciseSheet } =
+  useSubjects();
 
 const { openModal, selectedSheetNumber } = useSettings();
 

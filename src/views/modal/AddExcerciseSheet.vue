@@ -31,20 +31,17 @@
 <script lang="ts" setup>
 import Input from "@/components/Input.vue";
 import Button from "@/components/Button.vue";
-import { helperFunction } from "@/store/helperFunction";
 import { ref } from "vue";
 import { useSubjects } from "@/store/useSubjects";
 
 const { addNewExerciseSheet } = useSubjects();
 
 const sheetNumber = ref<number>(0);
-const sheetDueDate = ref<any>();
+const sheetDueDate = ref<string>();
 
 function add() {
-  addNewExerciseSheet(
-    Number(sheetNumber.value),
-    helperFunction.formatDate(sheetDueDate.value)
-  );
+  if (sheetDueDate.value)
+    addNewExerciseSheet(sheetNumber.value, new Date(sheetDueDate.value));
 }
 </script>
 

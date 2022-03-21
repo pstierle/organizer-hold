@@ -36,6 +36,12 @@
           <td class="p-2 whitespace-nowrap">{{ submission.size }}</td>
           <td class="p-2 whitespace-nowrap">
             <Button text="Öffnen" @click="openFile(submission)" />
+            <Button
+              type="alert"
+              icon="TrashIcon"
+              text="Löschen"
+              @click="deleteSubmission(submission)"
+            ></Button>
           </td>
         </tr>
       </tbody>
@@ -49,12 +55,6 @@
         @click="concatToPdf"
         text="Zu PDF zusammen fügen"
         class="w-1/3 mt-2"
-      />
-      <Button
-        @click="deleteSelectedSubjects"
-        text="Löschen"
-        class="w-1/3 mt-2"
-        type="alert"
       />
     </div>
   </div>
@@ -215,12 +215,6 @@ async function concatToPdf() {
       (window as any).fs.getFileSize(destinationPath)
     );
   }
-}
-
-function deleteSelectedSubjects(): void {
-  selectedSubmissions.value.forEach((entry) => {
-    deleteSubmission(entry.submissionID);
-  });
 }
 </script>
 

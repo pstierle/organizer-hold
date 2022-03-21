@@ -28,7 +28,7 @@ const nextSubjectToday = computed(() => {
 const exerciseSheetsToday = computed(() => {
   return subjects.value
     .flatMap((s) => s.exerciseSheets)
-    .filter((e) => e.dueDate === helperFunction.formatDate(new Date()));
+    .filter((e) => e.dueDate === new Date());
 });
 
 export function useCalender() {

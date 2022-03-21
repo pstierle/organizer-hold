@@ -136,10 +136,10 @@ contextBridge.exposeInMainWorld(
       fs.rename(oldPath, newPath);
     },
     deleteFile: (path) => {
-      fs.unlink(path);
+      fs.unlinkSync(path);
     },
     copyFile: (filePath, destinationPath) => {
-      fs.copyFile(filePath, destinationPath);
+      fs.copyFileSync(filePath, destinationPath);
     },
     getFileSize: (path) => {
       const stats = fs.statSync(path);
