@@ -22,17 +22,26 @@ import Notifications from "@/views/Notifications.vue";
 import SubjectList from "@/views/SubjectList.vue";
 import { useSubjects } from "./store/useSubjects";
 import { usePath } from "./store/usePath";
+import { useSettings } from "./store/useSettings";
 
-const { preload, subjects, submissions, loading, loadSaved } = useSubjects();
-const { subjectPath, submissionPath } = usePath();
+const { preload, subjects, submissions, loading } = useSubjects();
+const { subjectPath, submissionPath, settingsPath } = usePath();
+const { darkMode, studentID, loadSettings } = useSettings();
 
 onMounted(async () => {
   await preload();
+  loadSettings();
   const elements = document.querySelectorAll("body *");
   elements.forEach((element) => {
     element.classList.add("text-gray-800");
     element.classList.add("dark:text-gray-200");
   });
+});
+
+watch(darkMode, () => {
+  let appMode = document.querySelector("html")?.classList;
+  if (darkMode.value) appMode?.add("dark");
+  else appMode?.remove("dark");
 });
 
 watch(
@@ -53,6 +62,20 @@ watch(
     deep: true,
   }
 );
+
+watch([darkMode, studentID], async () => {
+  await window.fs.writeFileSync(
+    settingsPath,
+    JSON.stringify(
+      {
+        darkMode: darkMode.value,
+        studentID: studentID.value,
+      },
+      null,
+      4
+    )
+  );
+});
 </script>
 
 <style scoped>

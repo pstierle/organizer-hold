@@ -5,6 +5,7 @@ import SubmissionType from "./interfaces/submissions/SubmissionType";
 const appPath = window.app.getPath();
 const folderPath = window.path.join(appPath, "userdata");
 const subjectPath = window.path.join(appPath, "userdata", "subjects.json");
+const settingsPath = window.path.join(appPath, "userdata", "settings.json");
 const submissionPath = window.path.join(
   appPath,
   "userdata",
@@ -47,6 +48,7 @@ export function usePath() {
     subjectPath,
     submissionPath,
     documentPath,
+    settingsPath,
     getSubjectPath,
     createSubjectDir,
     deleteSubjectPath,
