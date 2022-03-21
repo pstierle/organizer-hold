@@ -1,61 +1,25 @@
 <template>
   <div>
-    <Button class="w-32" text="Datei Hinzufügen" icon="plus" @click="add" />
-    <table class="table-fixed">
-      <thead>
-        <tr>
-          <th class="w-1/4 p-2"></th>
-          <th class="w-1/2 p-2">Name</th>
-          <th class="w-1/4 p-2">Format</th>
-          <th class="w-1/4 p-2">Größe</th>
-          <th class="w-1/4 p-2"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          v-for="(submission, index) in subjectSubmissions"
-          :key="index"
-          class="border-b-2"
-        >
-          <td class="p-2 whitespace-nowrap">
-            <Button
-              v-if="selected(submission)"
-              @click="addToSelected(submission)"
-              icon="ticked"
-              text="Auswählen"
-            />
-            <Button
-              v-if="!selected(submission)"
-              @click="addToSelected(submission)"
-              icon="unticked"
-              text="Auswählen"
-            />
-          </td>
-          <td class="p-2 whitespace-nowrap">{{ submission.fileName }}</td>
-          <td class="p-2 whitespace-nowrap">.{{ submission.format }}</td>
-          <td class="p-2 whitespace-nowrap">{{ submission.size }}</td>
-          <td class="p-2 whitespace-nowrap">
-            <Button text="Öffnen" @click="openFile(submission)" />
-            <Button
-              type="alert"
-              icon="TrashIcon"
-              text="Löschen"
-              @click="deleteSubmission(submission)"
-            ></Button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <Button text="Datei Hinzufügen" icon="plus" @click="add" />
     <div
-      v-if="selectedSubmissions.length"
-      class="flex items-center justify-evenly"
+      v-for="(submission, index) in subjectSubmissions"
+      :key="index"
+      class="border-b-2 flex p-2 my-2 gap-2 items-center justify-between border-gray-300 dark:border-gray-800"
     >
-      <Button
-        v-if="onlyContainsImages"
-        @click="concatToPdf"
-        text="Zu PDF zusammen fügen"
-        class="w-1/3 mt-2"
-      />
+      <div class="flex gap-1 items-center">
+        <span>{{ submission.fileName }}</span>
+        <span>.{{ submission.format }}</span>
+        <span>{{ submission.size }}</span>
+      </div>
+      <div class="flex gap-1">
+        <Button text="Öffnen" @click="openFile(submission)" />
+        <Button
+          type="alert"
+          icon="TrashIcon"
+          text="Löschen"
+          @click="deleteSubmission(submission)"
+        ></Button>
+      </div>
     </div>
   </div>
 </template>
