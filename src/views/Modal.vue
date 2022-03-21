@@ -1,6 +1,7 @@
+import { onClickOutside } from "@vueuse/core";
 <template>
   <div class="pop-up z-10" v-if="openModal != undefined">
-    <div class="content bg-gray-200 dark:bg-gray-700 rounded">
+    <div class="content bg-gray-200 dark:bg-gray-700 rounded" ref="modal">
       <div
         class="header flex justify-between bg-gray-300 dark:bg-gray-800 p-1 rounded-t"
       >
@@ -55,8 +56,14 @@ import Submission from "@/views/modal/Submission.vue";
 import EditSubject from "./modal/EditSubject.vue";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";
+import { onClickOutside } from "@vueuse/core";
 
 const { openModal } = useSettings();
+const modal = ref<HTMLElement>();
+
+onClickOutside(modal, () => {
+  openModal.value = null;
+});
 
 function close() {
   openModal.value = null;
