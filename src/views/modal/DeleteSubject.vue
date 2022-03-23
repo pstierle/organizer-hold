@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center items-center justify-center flex">
+  <div class="text-center items-center justify-center flex gap-2">
     <p v-if="selectedSubject" class="w-2/3">
       Das Fach
       <span class="border-b-2 border-gray-300 dark:border-gray-800">{{
