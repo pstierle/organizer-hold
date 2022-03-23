@@ -1,8 +1,8 @@
 <template>
   <div class="window bg-gray-200 dark:bg-gray-700 rounded">
     <Header class="header" />
-    <div class="main">
-      <SubjectList class="subject-list" />
+    <div class="main flex">
+      <SideBar class="subject-list" />
       <Subject class="subject" />
       <Calender class="calender" />
     </div>
@@ -19,10 +19,10 @@ import Subject from "@/views/Subject.vue";
 import Modal from "@/views/Modal.vue";
 import Calender from "@/views/Calender.vue";
 import Notifications from "@/views/Notifications.vue";
-import SubjectList from "@/views/SubjectList.vue";
 import { useSubjects } from "./store/useSubjects";
 import { usePath } from "./store/usePath";
 import { useSettings } from "./store/useSettings";
+import SideBar from "@/views/SideBar.vue";
 
 const { preload, subjects, submissions, loading } = useSubjects();
 const { subjectPath, submissionPath, settingsPath } = usePath();
@@ -97,12 +97,6 @@ watch([darkMode, studentID], async () => {
 
 .main {
   grid-template: main;
-  display: grid;
-  grid-template-columns: 150px 1fr 250px;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "subject-list subject calender";
-  overflow-x: hidden;
 }
 
 .subject-list {

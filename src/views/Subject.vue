@@ -1,6 +1,6 @@
 <template>
   <div
-    class="subject-container p-2 bg-gray-200 dark:bg-gray-700"
+    class="subject-container p-2 bg-gray-200 dark:bg-gray-700 w-full"
     v-if="selectedSubject"
   >
     <div class="flex items-center gap-2">
