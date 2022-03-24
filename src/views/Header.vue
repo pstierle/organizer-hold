@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center justify-between bg-gray-400 dark:bg-gray-900 rounded px-2"
+    class="flex items-center justify-between bg-gray-400 dark:bg-zinc-900 rounded-t px-2"
   >
     <div class="dragabble w-full flex items-center">
       <div class="flex items-end gap-1">
@@ -23,21 +23,19 @@
       </div>
       <button
         @click="minimize"
-        class="rounded-full bg-yellow-400 w-4 h-4 flex items-center justify-center border border-yellow-500"
+        class="rounded-full bg-yellow-400 w-3 h-3 flex items-center justify-center border border-yellow-500"
       >
-        <MinusSmIcon class="w-3/4 opacity-0 hover:opacity-100 transition" />
+        <MinusSmIcon class="opacity-0 hover:opacity-100 transition" />
       </button>
       <button
         @click="maximize"
-        class="rounded-full bg-green-400 w-4 h-4 flex items-center justify-center border border-green-500"
+        class="rounded-full bg-green-400 w-3 h-3 flex items-center justify-center border border-green-500"
       >
-        <ArrowsExpandIcon
-          class="w-3/4 opacity-0 hover:opacity-100 transition"
-        />
+        <ArrowsExpandIcon class="opacity-0 hover:opacity-100 transition" />
       </button>
       <button
         @click="close"
-        class="rounded-full bg-red-400 w-4 h-4 flex items-center justify-center border border-red-500"
+        class="rounded-full bg-red-400 w-3 h-3 flex items-center justify-center border border-red-500"
       >
         <XIcon class="opacity-0 hover:opacity-100 transition w-3/4" />
       </button>

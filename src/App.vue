@@ -1,5 +1,5 @@
 <template>
-  <div class="window bg-gray-200 dark:bg-gray-700 rounded">
+  <div class="window bg-gray-200 dark:bg-zinc-700 rounded">
     <Header class="header" />
     <div class="main flex">
       <SideBar class="subject-list" />

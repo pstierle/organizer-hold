@@ -1,9 +1,9 @@
 import { onClickOutside } from "@vueuse/core";
 <template>
   <div class="pop-up z-10" v-if="openModal != undefined">
-    <div class="content bg-gray-200 dark:bg-gray-700 rounded" ref="modal">
+    <div class="content bg-gray-200 dark:bg-zinc-700 rounded" ref="modal">
       <div
-        class="header flex justify-between bg-gray-300 dark:bg-gray-800 py-1 px-2 rounded-t"
+        class="header flex justify-between bg-gray-400 dark:bg-zinc-900 py-1 px-2 rounded-t"
       >
         <p class="text-xl">{{ openModal }}</p>
         <Icon

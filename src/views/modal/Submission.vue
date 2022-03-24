@@ -4,7 +4,7 @@
     <div
       v-for="(submission, index) in subjectSubmissions"
       :key="index"
-      class="border-b-2 flex p-2 my-2 gap-2 items-center justify-between border-gray-300 dark:border-gray-800"
+      class="border-b-2 flex p-2 my-2 gap-2 items-center justify-between border-gray-300 dark:border-zinc-800"
     >
       <div class="flex gap-1 items-center">
         <span>{{ submission.fileName }}</span>

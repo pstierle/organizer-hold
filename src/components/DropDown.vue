@@ -1,7 +1,7 @@
 <template>
   <div class="relative" ref="dropDown">
     <Button @click="open = true" :text="getSelectedElement()" />
-    <ul v-if="open" class="absolute bg-gray-300 dark:bg-gray-800 rounded">
+    <ul v-if="open" class="absolute bg-gray-300 dark:bg-zinc-800 rounded">
       <li
         class="p-2 text-xs rounded"
         v-for="(element, index) in elements"
@@ -11,7 +11,7 @@
         @mouseleave="hoveredElement = null"
         :class="
           hoveredElement === index || selectedIndex === index
-            ? 'bg-gray-400 dark:bg-gray-900'
+            ? 'bg-gray-400 dark:bg-zinc-900'
             : ''
         "
       >

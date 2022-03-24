@@ -6,7 +6,7 @@
         ? 'bg-red-400 hover:bg-red-500'
         : type === 'success'
         ? 'bg-green-500 hover:bg-green-600'
-        : 'bg-gray-300 dark:bg-gray-800 hover:bg-gray-400 dark:hover:bg-gray-900'
+        : 'bg-gray-300 dark:bg-zinc-800 hover:bg-gray-400 dark:hover:bg-zinc-900'
     "
   >
     <Icon :icon="icon" class="w-4" v-if="icon" />
