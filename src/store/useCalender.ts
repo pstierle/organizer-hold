@@ -5,15 +5,13 @@ import { useSubjects } from "@/store/useSubjects";
 
 const { subjects } = useSubjects();
 
-const selectedDay = ref<string>("");
-
 const currentDay = computed(() => {
   return WeekDays[new Date().getDay()];
 });
 
 const subjectsToday = computed(() => {
   return subjects.value.filter(
-    (subject) => subject.weekDay == selectedDay.value
+    (subject) => subject.weekDay == currentDay.value
   );
 });
 
@@ -28,7 +26,11 @@ const nextSubjectToday = computed(() => {
 const exerciseSheetsToday = computed(() => {
   return subjects.value
     .flatMap((s) => s.exerciseSheets)
-    .filter((e) => e.dueDate === new Date());
+    .filter(
+      (e) =>
+        helperFunction.formatDate(e.dueDate) ===
+        helperFunction.formatDate(new Date())
+    );
 });
 
 export function useCalender() {
@@ -66,6 +68,5 @@ export function useCalender() {
     subjectsToday,
     nextSubjectToday,
     getDayIndex,
-    selectedDay,
   };
 }

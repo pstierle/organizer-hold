@@ -1,7 +1,7 @@
 <template>
   <div class="subject-container p-2 w-full" v-if="selectedSubject">
     <div class="flex items-center gap-2">
-      <p class="bg-gray-300 dark:bg-zinc-800 p-2 rounded">
+      <p class="bg-gray-300 dark:bg-zinc-800 py-1 px-2 rounded">
         {{ selectedSubject?.name }}
       </p>
       <Button

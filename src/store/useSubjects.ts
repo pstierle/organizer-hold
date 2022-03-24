@@ -70,7 +70,7 @@ export function useSubjects() {
     );
 
     if (duplicate(subjectToAdd)) {
-      sendNotification("Dieser Name existiert bereits!");
+      sendNotification("Dieser Name existiert bereits!", "alert");
       return;
     }
     subjects.value.push(subjectToAdd);
@@ -100,7 +100,7 @@ export function useSubjects() {
     console.log(subject.name);
 
     if (duplicate(subject)) {
-      sendNotification("Dieser Name existiert bereits!");
+      sendNotification("Dieser Name existiert bereits!", "alert");
       return;
     }
     subjects.value.forEach((s) => {
@@ -170,7 +170,7 @@ export function useSubjects() {
       (s) => s.number === sheetNumber
     );
     if (exists) {
-      sendNotification("Diese Nummer existiert bereits!");
+      sendNotification("Diese Nummer existiert bereits!", "alert");
     } else {
       subjects.value.forEach((subject) => {
         if (selectedSubject.value?.id === subject.id) {

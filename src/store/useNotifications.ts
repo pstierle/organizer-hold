@@ -4,8 +4,11 @@ import Notification from "./interfaces/Notification";
 const notifications = ref<Notification[]>([]);
 
 export function useNotifications() {
-  const sendNotification = (text: string, reason?: string) => {
-    notifications.value.push({ text: text, reason });
+  const sendNotification = (
+    text: string,
+    type?: "info" | "warning" | "alert"
+  ) => {
+    notifications.value.push({ text, type });
     setTimeout(() => {
       notifications.value.shift();
     }, 3000);

@@ -23,7 +23,7 @@ async function add() {
   );
 
   if (!filePath) {
-    sendNotification("Keine Datei ausgewählt!");
+    sendNotification("Keine Datei ausgewählt!", "alert");
     return;
   }
 
