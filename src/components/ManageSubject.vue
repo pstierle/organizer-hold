@@ -1,52 +1,25 @@
 <template>
-  <div v-if="subject">
-    <div>
-      <Input
-        class="mt-5"
-        type="text"
-        label="Name"
-        v-model:value="subject.name"
-      />
-      <Input
-        class="mt-5"
-        type="time"
-        label="Start"
-        v-model:value="subject.start"
-      />
-      <Input
-        class="mt-5"
-        type="time"
-        label="Ende"
-        v-model:value="subject.end"
-      />
-      <Input
-        class="mt-5"
-        type="text"
-        label="Ort"
-        v-model:value="subject.location"
-      />
-      <Input
-        class="mt-5"
-        type="text"
-        label="Professor"
-        v-model:value="subject.professor"
-      />
-      <div class="flex items-center justify-evenly mt-3">
-        <DropDown
-          :elements="WeekDays"
-          :selected="0"
-          @selectedIndex="(i: number) => {
+  <div v-if="subject" class="flex flex-col gap-6">
+    <Input class="mt-6" type="text" label="Name" v-model:value="subject.name" />
+    <div class="flex items-center justify-between">
+      <Input type="time" label="Start" v-model:value="subject.start" />
+      <Input type="time" label="Ende" v-model:value="subject.end" />
+    </div>
+    <Input type="text" label="Ort" v-model:value="subject.location" />
+    <Input type="text" label="Professor" v-model:value="subject.professor" />
+    <div
+      class="flex items-center justify-between gap-1 bg-gray-300 dark:bg-zinc-800 py-1 px-2 rounded"
+    >
+      <p>Tag</p>
+      <DropDown
+        :elements="WeekDays"
+        :selected="0"
+        @selectedIndex="(i: number) => {
             subject.weekDay = WeekDays[i]
           }"
-        ></DropDown>
-      </div>
+      ></DropDown>
     </div>
-    <Button
-      class="mt-5"
-      :text="header"
-      type="success"
-      @click="$emit('submit', subject)"
-    />
+    <Button :text="header" type="success" @click="$emit('submit', subject)" />
   </div>
 </template>
 

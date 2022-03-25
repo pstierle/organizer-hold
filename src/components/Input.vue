@@ -3,7 +3,7 @@
     <p
       class="text-xs absolute bg-gray-300 dark:bg-zinc-800 rounded px-1"
       :class="{
-        '-mt-4 ': focused == true || value != '',
+        '-mt-4 ': focused == true || value != '' || value === 0,
         'mt-0': focused == false,
         'ring ring-blue-200': focused == true,
       }"

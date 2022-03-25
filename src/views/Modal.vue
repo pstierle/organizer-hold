@@ -1,4 +1,3 @@
-import { onClickOutside } from "@vueuse/core";
 <template>
   <div class="pop-up z-10" v-if="openModal != undefined">
     <div class="content bg-gray-200 dark:bg-zinc-700 rounded" ref="modal">
