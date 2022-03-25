@@ -11,7 +11,7 @@
       </div>
       <ExpansionCard title="Vorlesungen" class="mt-2">
         <div
-          class="text-xs text-left"
+          class="text-xs text-left my-1"
           v-for="(event, index) in subjectsToday"
           :key="index"
           v-if="subjectsToday.length > 0"
@@ -24,7 +24,7 @@
       </ExpansionCard>
       <ExpansionCard title="Abgaben heute" class="mt-2">
         <div
-          class="text-xs text-left"
+          class="text-xs text-left my-1"
           v-for="(sheet, index) in exerciseSheetsToday"
           :key="index"
           v-if="exerciseSheetsToday.length > 0"

@@ -2,8 +2,7 @@
   <div class="flex justify-center">
     <ManageSubject
       @submit="addSubject"
-      :subjectModel="subjectTemplate"
-      :clearInput="true"
+      :subjectModel="template"
       header="Hinzufügen"
     />
   </div>
@@ -14,7 +13,7 @@ import ManageSubject from "@/components/ManageSubject.vue";
 import Subject from "@/store/interfaces/Subject";
 import { useSubjects } from "@/store/useSubjects";
 
-const subjectTemplate: Subject = {
+const template: Subject = {
   name: "",
   weekDay: "",
   start: "",
@@ -29,5 +28,3 @@ const subjectTemplate: Subject = {
 
 const { addSubject } = useSubjects();
 </script>
-
-<style scoped></style>

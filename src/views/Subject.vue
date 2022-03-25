@@ -1,20 +1,22 @@
 <template>
-  <div class="subject-container p-2 w-full" v-if="selectedSubject">
-    <div class="flex items-center gap-2">
+  <div class="p-2 w-full" v-if="selectedSubject">
+    <div class="flex items-center justify-between">
       <p class="bg-gray-300 dark:bg-zinc-800 py-1 px-2 rounded">
         {{ selectedSubject?.name }}
       </p>
-      <Button
-        text="Bearbeiten"
-        @click="openModal = 'Bearbeiten'"
-        icon="PencilAltIcon"
-      ></Button>
-      <Button
-        type="alert"
-        icon="TrashIcon"
-        text="Löschen"
-        @click="openModal = 'Löschen'"
-      ></Button>
+      <div class="flex items-center gap-2">
+        <Button
+          text="Bearbeiten"
+          @click="openModal = 'Bearbeiten'"
+          icon="PencilAltIcon"
+        ></Button>
+        <Button
+          type="alert"
+          icon="TrashIcon"
+          text="Löschen"
+          @click="openModal = 'Löschen'"
+        ></Button>
+      </div>
     </div>
     <p class="mt-2" v-if="selectedSubject?.professor != ''">
       Proffessor: {{ selectedSubject?.professor }}
@@ -141,9 +143,3 @@ function getSubmissionCount(
   return count;
 }
 </script>
-
-<style scoped>
-.subject-container {
-  min-width: 450px;
-}
-</style>

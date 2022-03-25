@@ -4,7 +4,6 @@
       @submit="updateSelectedSubject"
       v-if="selectedSubject"
       :subjectModel="selectedSubject"
-      :clearInput="false"
       header="Bestätigen"
     />
   </div>
@@ -16,5 +15,3 @@ import { useSubjects } from "@/store/useSubjects";
 
 const { updateSelectedSubject, selectedSubject } = useSubjects();
 </script>
-
-<style scoped></style>

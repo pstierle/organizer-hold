@@ -2,7 +2,7 @@ import { usePath } from "./usePath";
 import { useNotifications } from "./useNotifications";
 import { useSettings } from "./useSettings";
 import Submission from "./interfaces/submissions/Submission";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Subject from "./interfaces/Subject";
 import SubmissionType from "./interfaces/submissions/SubmissionType";
 import ExcerciseSheet from "./interfaces/ExcerciseSheet";
@@ -23,7 +23,11 @@ const {
 const submissions = ref<Submission[]>([]);
 const subjects = ref<Subject[]>([]);
 const loading = ref(false);
-const selectedSubject = ref<Subject>();
+
+const selectedSubjectId = ref<number>();
+const selectedSubject = computed<Subject | undefined>(() => {
+  return subjects.value.find((s) => s.id === selectedSubjectId.value);
+});
 
 export function useSubjects() {
   const preload = async () => {
@@ -79,36 +83,45 @@ export function useSubjects() {
   };
 
   const deleteSelectedSubject = () => {
+    deleteSubjectPath(selectedSubject.value);
+
     subjects.value = subjects.value.filter(
-      (s) => s.id !== selectedSubject.value?.id
+      (s) => s.id !== selectedSubjectId.value
     );
 
     submissions.value = submissions.value.filter(
-      (s) => s.subjectID !== selectedSubject.value?.id
+      (s) => s.subjectID !== selectedSubjectId.value
     );
 
-    deleteSubjectPath(selectedSubject.value);
-    selectedSubject.value = undefined;
+    selectedSubjectId.value = undefined;
     openModal.value = null;
   };
 
   const duplicate = (checking: Subject) => {
-    return subjects.value.find((s) => s.name === checking.name) !== undefined;
+    return (
+      subjects.value
+        .filter((s) => s.id != selectedSubjectId.value)
+        .find((s) => s.name === checking.name) !== undefined
+    );
   };
 
   const updateSelectedSubject = (subject: Subject) => {
-    console.log(subject.name);
-
     if (duplicate(subject)) {
       sendNotification("Dieser Name existiert bereits!", "alert");
       return;
     }
-    subjects.value.forEach((s) => {
-      if (s.id === subject.id) {
-        updateFolderName(s.folderPath, subject.name);
-        s = subject;
-      }
-    });
+    const old = subjects.value.find((s) => s.id === subject.id);
+
+    if (old) {
+      subject.folderPath = getSubjectPath(subject.name);
+      const index = subjects.value.indexOf(old);
+      subjects.value = subjects.value.filter((s) => s.id !== subject.id);
+      subjects.value[index] = subject;
+      if (old.name !== subject.name)
+        updateFolderName(old.folderPath, subject.name);
+    }
+
+    openModal.value = null;
   };
 
   const addSubmission = (
@@ -230,6 +243,7 @@ export function useSubjects() {
     deleteSelectedSubject,
     updateSelectedSubject,
     selectedSubject,
+    selectedSubjectId,
     preload,
     deleteSubmission,
     addSubmission,

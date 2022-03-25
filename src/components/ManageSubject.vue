@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="subject">
     <div>
       <Input
         class="mt-5"
@@ -53,7 +53,7 @@
 <script lang="ts" setup>
 import Button from "@/components/Button.vue";
 import Input from "@/components/Input.vue";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import WeekDays from "@/store/interfaces/WeekDays";
 import Subject from "@/store/interfaces/Subject";
 import DropDown from "./DropDown.vue";
@@ -63,7 +63,6 @@ const { currentDay } = useCalender();
 
 const props = defineProps<{
   header: string;
-  clearInput: boolean;
   subjectModel: Subject;
 }>();
 
@@ -71,5 +70,19 @@ defineEmits<{
   (event: "submit", subject: Subject): void;
 }>();
 
-const subject = ref<Subject>({ ...props.subjectModel });
+const subject = ref<any>();
+
+onMounted(() => {
+  subject.value = createCopy(props.subjectModel);
+});
+
+const createCopy = (s: Subject) => {
+  let objCopy: any = {};
+  let key;
+
+  for (key in s) {
+    objCopy[key] = (s as any)[key];
+  }
+  return objCopy;
+};
 </script>

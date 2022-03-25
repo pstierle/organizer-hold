@@ -130,10 +130,10 @@ contextBridge.exposeInMainWorld(
       return fs.readFileSync(path, { encoding: 'utf8', flag: 'r' });
     },
     rmdir: (path) => {
-      fs.rmdir(path, { recursive: true });
+      fs.rmdirSync(path, { recursive: true });
     },
     rename: (oldPath, newPath) => {
-      fs.rename(oldPath, newPath);
+      fs.renameSync(oldPath, newPath);
     },
     deleteFile: (path) => {
       fs.unlinkSync(path);

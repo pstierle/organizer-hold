@@ -10,7 +10,7 @@
       <button
         v-for="(subject, index) in subjects"
         :key="index"
-        @click="selectedSubject = subject"
+        @click="selectedSubjectId = subject.id"
         class="truncate rounded hover:bg-gray-300 dark:hover:bg-zinc-700 text-xs py-1 px-2"
       >
         {{ subject.name }}
@@ -47,7 +47,7 @@ import { useSubjects } from "@/store/useSubjects";
 import { ref } from "vue";
 import SidebarTile from "@/components/SidebarTile.vue";
 
-const { selectedSubject, subjects } = useSubjects();
+const { selectedSubjectId, subjects } = useSubjects();
 const { openModal } = useSettings();
 
 const hovered = ref(false);
