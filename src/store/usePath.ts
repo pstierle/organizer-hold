@@ -1,4 +1,3 @@
-import { useSubjects } from "./useSubjects";
 import Subject from "./interfaces/Subject";
 import SubmissionType from "./interfaces/submissions/SubmissionType";
 
@@ -11,6 +10,7 @@ const submissionPath = window.path.join(
   "userdata",
   "submissions.json"
 );
+
 const documentPath = window.path.join(appPath, "userdata", "documents");
 
 export function usePath() {

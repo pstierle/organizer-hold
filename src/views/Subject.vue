@@ -18,17 +18,33 @@
         ></Button>
       </div>
     </div>
-    <p class="mt-2" v-if="selectedSubject?.professor != ''">
-      Proffessor: {{ selectedSubject?.professor }}
-    </p>
-    <div class="mt-2 flex items-center gap-2">
-      <p>Übungsblätter</p>
+    <div class="mt-2 w-full flex justify-between">
+      <p v-if="selectedSubject?.professor != ''">
+        Proffessor: {{ selectedSubject?.professor }}
+      </p>
       <Button
-        text="Hinzufügen"
+        text="Blatt Hinzufügen"
         icon="PlusCircleIcon"
         @click="openModal = 'Übungsblatt hinzufügen'"
       />
     </div>
+    <SheetOverview
+      :tabs="selectedSubject?.exerciseSheets"
+      @select="
+        (number) => {
+          selectedSheetNumber = number;
+        }
+      "
+    />
+    <ExcerciseSheet
+      :sheet="
+        selectedSubject.exerciseSheets.find(
+          (e) => e.number === selectedSheetNumber
+        )
+      "
+    />
+
+    <!--
     <div
       class="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-thumb-rounded scrollbar-track-rounded"
     >
@@ -96,7 +112,7 @@
           <Button @click="deleteExerciseSheet(sheet)" icon="TrashIcon" />
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -109,6 +125,9 @@ import Modal from "@/store/interfaces/Modal";
 import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
 import { useSubjects } from "@/store/useSubjects";
 import { helperFunction } from "@/store/helperFunction";
+import SheetOverview from "@/components/SheetOverview.vue";
+import ExcerciseSheet from "@/components/ExcerciseSheet.vue";
+
 const { selectedSubject, toogleDone, submissions, deleteExerciseSheet } =
   useSubjects();
 
