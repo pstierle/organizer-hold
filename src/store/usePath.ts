@@ -1,5 +1,5 @@
-import Subject from "./interfaces/Subject";
-import SubmissionType from "./interfaces/submissions/SubmissionType";
+import ISubject from "./interfaces/ISubject";
+import ISubmissionType from "./interfaces/submissions/ISubmissionType";
 
 const appPath = window.app.getPath();
 const folderPath = window.path.join(appPath, "userdata");
@@ -18,10 +18,10 @@ export function usePath() {
     return window.path.join(documentPath, name);
   };
 
-  const createSubjectDir = async (subject: Subject) => {
-    const submissions: SubmissionType = "Abgabe";
-    const solution: SubmissionType = "Lösungen";
-    const correction: SubmissionType = "Korrektur";
+  const createSubjectDir = async (subject: ISubject) => {
+    const submissions: ISubmissionType = "Abgabe";
+    const solution: ISubmissionType = "Lösungen";
+    const correction: ISubmissionType = "Korrektur";
 
     await window.fs.mkdirSync(getSubjectPath(subject.name));
     await window.fs.mkdirSync(
@@ -35,7 +35,7 @@ export function usePath() {
     );
   };
 
-  const deleteSubjectPath = (subject?: Subject) => {
+  const deleteSubjectPath = (subject?: ISubject) => {
     window.fs.rmdir(subject?.folderPath);
   };
 

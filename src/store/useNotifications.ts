@@ -1,7 +1,7 @@
 import { ref } from "vue";
-import Notification from "./interfaces/Notification";
+import INotification from "./interfaces/INotification";
 
-const notifications = ref<Notification[]>([]);
+const notifications = ref<INotification[]>([]);
 
 export function useNotifications() {
   const sendNotification = (

@@ -12,10 +12,10 @@
     >
       <p>Tag</p>
       <DropDown
-        :elements="WeekDays"
+        :elements="IWeekDays"
         :selected="0"
         @selectedIndex="(i: number) => {
-            subject.weekDay = WeekDays[i]
+            subject.weekDay = IWeekDays[i]
           }"
       ></DropDown>
     </div>
@@ -27,8 +27,8 @@
 import Button from "@/components/Button.vue";
 import Input from "@/components/Input.vue";
 import { onMounted, ref } from "vue";
-import WeekDays from "@/store/interfaces/WeekDays";
-import Subject from "@/store/interfaces/Subject";
+import IWeekDays from "@/store/interfaces/IWeekDays";
+import ISubject from "@/store/interfaces/ISubject";
 import DropDown from "./DropDown.vue";
 import { useCalender } from "@/store/useCalender";
 
@@ -36,11 +36,11 @@ const { currentDay } = useCalender();
 
 const props = defineProps<{
   header: string;
-  subjectModel: Subject;
+  subjectModel: ISubject;
 }>();
 
 defineEmits<{
-  (event: "submit", subject: Subject): void;
+  (event: "submit", subject: ISubject): void;
 }>();
 
 const subject = ref<any>();
@@ -49,7 +49,7 @@ onMounted(() => {
   subject.value = createCopy(props.subjectModel);
 });
 
-const createCopy = (s: Subject) => {
+const createCopy = (s: ISubject) => {
   let objCopy: any = {};
   let key;
 

@@ -27,8 +27,8 @@
 <script lang="ts" setup>
 import { onMounted, ref, watchEffect } from "vue";
 import Button from "@/components/Button.vue";
-import Submission from "@/store/interfaces/submissions/Submission";
-import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
+import ISubmission from "@/store/interfaces/submissions/ISubmission";
+import ISubmissionType from "@/store/interfaces/submissions/ISubmissionType";
 import { useSettings } from "@/store/useSettings";
 import { useNotifications } from "@/store/useNotifications";
 import { useSubjects } from "@/store/useSubjects";
@@ -38,11 +38,11 @@ const { submissions, selectedSubject, addSubmission, deleteSubmission } =
 const { sendNotification } = useNotifications();
 
 const props = defineProps<{
-  submissionType: SubmissionType;
+  submissionType: ISubmissionType;
 }>();
 
-const selectedSubmissions = ref<Array<Submission>>([]);
-const subjectSubmissions = ref<Array<Submission>>([]);
+const selectedSubmissions = ref<Array<ISubmission>>([]);
+const subjectSubmissions = ref<Array<ISubmission>>([]);
 const onlyContainsImages = ref<boolean>(true);
 const { selectedSheetNumber } = useSettings();
 
@@ -102,11 +102,11 @@ async function add() {
   (window as any).fs.copyFile(filePath, destinationPath);
 }
 
-function openFile(submission: Submission): void {
+function openFile(submission: ISubmission): void {
   (window as any).shell.openPath(submission.path);
 }
 
-function selected(submission: Submission): boolean {
+function selected(submission: ISubmission): boolean {
   let contains: boolean = false;
 
   selectedSubmissions.value.forEach((entry) => {
@@ -118,7 +118,7 @@ function selected(submission: Submission): boolean {
   return contains;
 }
 
-function addToSelected(submission: Submission): void {
+function addToSelected(submission: ISubmission): void {
   let contains: boolean = false;
   let foundIndex: number = 0;
 

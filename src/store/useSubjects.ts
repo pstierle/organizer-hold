@@ -1,11 +1,11 @@
 import { usePath } from "./usePath";
 import { useNotifications } from "./useNotifications";
 import { useSettings } from "./useSettings";
-import Submission from "./interfaces/submissions/Submission";
 import { ref, computed } from "vue";
-import Subject from "./interfaces/Subject";
-import SubmissionType from "./interfaces/submissions/SubmissionType";
-import ExcerciseSheet from "./interfaces/ExcerciseSheet";
+import ISubmission from "./interfaces/submissions/ISubmission";
+import ISubject from "./interfaces/ISubject";
+import ISubmissionType from "./interfaces/submissions/ISubmissionType";
+import IExcerciseSheet from "./interfaces/IExcerciseSheet";
 
 const { selectedSheetNumber, openModal } = useSettings();
 const { sendNotification } = useNotifications();
@@ -20,12 +20,12 @@ const {
   updateFolderName,
 } = usePath();
 
-const submissions = ref<Submission[]>([]);
-const subjects = ref<Subject[]>([]);
+const submissions = ref<ISubmission[]>([]);
+const subjects = ref<ISubject[]>([]);
 const loading = ref(false);
 
 const selectedSubjectId = ref<number>();
-const selectedSubject = computed<Subject | undefined>(() => {
+const selectedSubject = computed<ISubject | undefined>(() => {
   return subjects.value.find((s) => s.id === selectedSubjectId.value);
 });
 
@@ -65,7 +65,7 @@ export function useSubjects() {
     subjects.value = JSON.parse(subjectsData);
   };
 
-  const addSubject = async (subject: Subject) => {
+  const addSubject = async (subject: ISubject) => {
     let subjectToAdd = { ...subject };
     subjectToAdd.id = subjects.value.length + 1;
     subjectToAdd.folderPath = getSubjectPath(subject.name);
@@ -97,7 +97,7 @@ export function useSubjects() {
     openModal.value = null;
   };
 
-  const duplicate = (checking: Subject) => {
+  const duplicate = (checking: ISubject) => {
     return (
       subjects.value
         .filter((s) => s.id != selectedSubjectId.value)
@@ -105,7 +105,7 @@ export function useSubjects() {
     );
   };
 
-  const updateSelectedSubject = (subject: Subject) => {
+  const updateSelectedSubject = (subject: ISubject) => {
     if (duplicate(subject)) {
       sendNotification("Dieser Name existiert bereits!", "alert");
       return;
@@ -125,13 +125,13 @@ export function useSubjects() {
   };
 
   const addSubmission = (
-    type: SubmissionType,
+    type: ISubmissionType,
     destinationPath: string,
     name: string,
     format: string,
     size: string
   ) => {
-    const submission: Submission = {
+    const submission: ISubmission = {
       fileName: name,
       type,
       format: format,
@@ -146,7 +146,7 @@ export function useSubjects() {
     submissions.value.push(submission);
   };
 
-  const deleteSubmission = (submission: Submission) => {
+  const deleteSubmission = (submission: ISubmission) => {
     updateSheetTimeStamp();
     submissions.value = submissions.value.filter(
       (s) => s.submissionID !== submission.submissionID
@@ -205,7 +205,7 @@ export function useSubjects() {
     }
   };
 
-  const deleteExerciseSheet = (sheet: ExcerciseSheet) => {
+  const deleteExerciseSheet = (sheet: IExcerciseSheet) => {
     let toDelete: number[] = [];
 
     // delete all files

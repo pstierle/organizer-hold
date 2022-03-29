@@ -1,9 +1,9 @@
-import ExcerciseSheet from "./ExcerciseSheet";
+import IExcerciseSheet from "./IExcerciseSheet";
 
 export default interface Subject extends Object {
   id: number;
   name: string;
-  exerciseSheets: ExcerciseSheet[];
+  exerciseSheets: IExcerciseSheet[];
   folderPath: string;
   weekDay: string;
   start: string;

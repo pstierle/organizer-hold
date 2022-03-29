@@ -1,12 +1,12 @@
 import { ref } from "vue";
-import Modal from "./interfaces/Modal";
+import IModal from "./interfaces/IModal";
 import { usePath } from "./usePath";
 
 const darkMode = ref<boolean>(false);
 const studentID = ref<number>(0);
 const selectedSheetNumber = ref<number>(0);
 const username = ref<string>("");
-const openModal = ref<Modal | null>(null);
+const openModal = ref<IModal | null>(null);
 const { settingsPath } = usePath();
 
 export function useSettings() {

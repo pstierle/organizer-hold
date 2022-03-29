@@ -1,12 +1,12 @@
 import { computed, ref } from "vue";
 import { helperFunction } from "./helperFunction";
-import WeekDays from "./interfaces/WeekDays";
+import IWeekDays from "./interfaces/IWeekDays";
 import { useSubjects } from "@/store/useSubjects";
 
 const { subjects } = useSubjects();
 
 const currentDay = computed(() => {
-  return WeekDays[new Date().getDay()];
+  return IWeekDays[new Date().getDay()];
 });
 
 const subjectsToday = computed(() => {
@@ -58,7 +58,7 @@ export function useCalender() {
   };
 
   const getDayIndex = (day: string) => {
-    return WeekDays.indexOf(day);
+    return IWeekDays.indexOf(day);
   };
 
   return {

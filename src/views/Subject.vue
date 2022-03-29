@@ -121,8 +121,8 @@ import { ref } from "vue";
 import Button from "@/components/Button.vue";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";
-import Modal from "@/store/interfaces/Modal";
-import SubmissionType from "@/store/interfaces/submissions/SubmissionType";
+import IModal from "@/store/interfaces/IModal";
+import ISubmissionType from "@/store/interfaces/submissions/ISubmissionType";
 import { useSubjects } from "@/store/useSubjects";
 import { helperFunction } from "@/store/helperFunction";
 import SheetOverview from "@/components/SheetOverview.vue";
@@ -133,7 +133,7 @@ const { selectedSubject, toogleDone, submissions, deleteExerciseSheet } =
 
 const { openModal, selectedSheetNumber } = useSettings();
 
-const sheetData = ref<{ type: Modal }[]>([
+const sheetData = ref<{ type: IModal }[]>([
   {
     type: "Korrektur",
   },
@@ -146,7 +146,7 @@ const sheetData = ref<{ type: Modal }[]>([
 ]);
 
 function getSubmissionCount(
-  submissionType: SubmissionType,
+  submissionType: ISubmissionType,
   sheetNumber: number
 ): number {
   let count: number = 0;

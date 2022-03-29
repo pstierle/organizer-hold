@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-import ExcerciseSheet from "@/store/interfaces/ExcerciseSheet";
+import IExcerciseSheet from "@/store/interfaces/IExcerciseSheet";
 
 defineProps<{
-  sheet?: ExcerciseSheet;
+  sheet?: IExcerciseSheet;
 }>();
 </script>

@@ -10,10 +10,10 @@
 
 <script lang="ts" setup>
 import ManageSubject from "@/components/ManageSubject.vue";
-import Subject from "@/store/interfaces/Subject";
+import ISubject from "@/store/interfaces/ISubject";
 import { useSubjects } from "@/store/useSubjects";
 
-const template: Subject = {
+const template: ISubject = {
   name: "",
   weekDay: "",
   start: "",
