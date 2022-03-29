@@ -10,7 +10,6 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
-  "main": "background.js",
   "dependencies": {
     "@electron/remote": "^2.0.7",
     "@headlessui/vue": "^1.5.0",

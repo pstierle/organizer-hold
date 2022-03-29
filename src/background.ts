@@ -17,6 +17,11 @@ const preload =
     ? path.resolve(__static, "..", "public", "preload.js")
     : path.resolve(__static, "preload.js");
 
+const icon =
+  process.env.NODE_ENV === "development"
+    ? path.resolve(__static, "..", "public", "icon.png")
+    : path.resolve(__static, "icon.png");
+
 protocol.registerSchemesAsPrivileged([
   { scheme: "app", privileges: { secure: true, standard: true } },
 ]);
@@ -33,6 +38,8 @@ const createWindow = async () => {
       nodeIntegration: true,
     },
   });
+
+  win.setIcon(icon);
 
   enable(win.webContents);
 
