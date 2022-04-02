@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2 w-full" v-if="selectedSubject">
+  <div class="p-2" v-if="selectedSubject">
     <div class="flex items-center justify-between">
       <p class="bg-gray-300 dark:bg-zinc-800 py-1 px-2 rounded">
         {{ selectedSubject?.name }}
@@ -30,6 +30,7 @@
     </div>
     <SheetOverview
       :tabs="selectedSubject?.exerciseSheets"
+      :selectedSheetNumber="Number(selectedSheetNumber)"
       @select="
         (number) => {
           selectedSheetNumber = number;
@@ -43,7 +44,6 @@
         )
       "
     />
-
     <!--
     <div
       class="overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-thumb-rounded scrollbar-track-rounded"
@@ -132,18 +132,6 @@ const { selectedSubject, toogleDone, submissions, deleteExerciseSheet } =
   useSubjects();
 
 const { openModal, selectedSheetNumber } = useSettings();
-
-const sheetData = ref<{ type: IModal }[]>([
-  {
-    type: "Korrektur",
-  },
-  {
-    type: "Lösungen",
-  },
-  {
-    type: "Abgabe",
-  },
-]);
 
 function getSubmissionCount(
   submissionType: ISubmissionType,

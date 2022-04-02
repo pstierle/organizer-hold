@@ -1,10 +1,11 @@
 <template>
-  <div class="window bg-gray-200 dark:bg-zinc-700 rounded">
-    <Header class="header" />
-    <div class="main flex">
-      <SideBar class="subject-list" />
-      <Subject class="subject" />
-      <Calender class="calender" />
+  <div class="bg-gray-200 dark:bg-zinc-700 rounded flex flex-col min-h-screen">
+    <Header />
+    <div class="flex items-stretch flex-1 overflow-auto">
+      <SideBar class="" />
+      <Subject class="flex-1" v-if="selectedSubject" />
+      <NoContent class="flex-1" v-else />
+      <Calender />
     </div>
     <Modal />
     <Notifications />
@@ -13,7 +14,6 @@
 
 <script lang="ts" setup>
 import { onMounted, watch } from "vue";
-
 import Header from "@/views/Header.vue";
 import Subject from "@/views/Subject.vue";
 import Modal from "@/views/Modal.vue";
@@ -23,8 +23,10 @@ import { useSubjects } from "./store/useSubjects";
 import { usePath } from "./store/usePath";
 import { useSettings } from "./store/useSettings";
 import SideBar from "@/views/SideBar.vue";
+import NoContent from "./views/NoContent.vue";
 
-const { preload, subjects, submissions, loading } = useSubjects();
+const { preload, subjects, submissions, loading, selectedSubject } =
+  useSubjects();
 const { subjectPath, submissionPath, settingsPath } = usePath();
 const { darkMode, studentID, loadSettings } = useSettings();
 
@@ -78,42 +80,8 @@ watch([darkMode, studentID], async () => {
 });
 </script>
 
-<style scoped>
-.window {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 30px 1fr;
-  grid-template-areas: "header" "main";
-  overflow-x: hidden;
-  backdrop-filter: blur(5px);
-}
-
-.header {
-  grid-template: header;
-}
-
-.main {
-  grid-template: main;
-}
-
-.subject-list {
-  grid-area: subject-list;
-  height: 100%;
-  overflow: scroll;
-}
-
-*::-webkit-scrollbar {
-  display: none;
-}
-
-.subject {
-  grid-area: subject;
-}
-
-.calender {
-  grid-area: calender;
+<style>
+body {
+  overflow: hidden;
 }
 </style>

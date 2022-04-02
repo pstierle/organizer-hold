@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center justify-between bg-gray-400 dark:bg-zinc-900 rounded-t px-2"
+    class="flex items-center justify-between bg-gray-400 dark:bg-zinc-900 rounded-t px-2 py-1"
   >
     <div class="dragabble w-full flex items-center">
       <div class="flex items-end gap-1">
