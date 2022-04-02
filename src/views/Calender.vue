@@ -23,12 +23,12 @@
           @click="selectedSubjectId = sheet.subjectID"
           :key="index"
         >
-          <div class="flex justify-between">
+          <div class="flex justify-between font-bold">
             <p>Blatt: {{ sheet.number }}</p>
             <p v-if="sheet.done" class="text-blue-400">Erledigt</p>
             <p v-else class="text-red-400">Offen</p>
           </div>
-          <p>Fach: {{ sheet.subjectName }}</p>
+          <p>{{ sheet.subjectName }}</p>
         </li>
       </ul>
       <p class="text-xs" v-else>Keine Abgaben heute</p>

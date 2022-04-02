@@ -2,7 +2,7 @@
   <div>
     <button
       @click="open = !open"
-      class="flex justify-between items-center bg-gray-400 dark:bg-zinc-900 w-full rounded-t py-1 px-2"
+      class="flex justify-between items-center bg-gray-400 dark:bg-zinc-900 w-full rounded-t py-1 px-2 font-bold"
     >
       <span>{{ title }}</span>
       <button

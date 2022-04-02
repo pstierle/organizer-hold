@@ -1,12 +1,21 @@
 @font-face {
-  font-family: "bold";
-  src: url("../font/SFProDisplay-Bold.ttf");
+  font-family: Mulish;
+  src: url("./fonts/Mulish-VariableFont_wght.ttf");
+  font-weight: 200 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Mulish;
+  src: url("./fonts/Mulish-Italic-VariableFont_wght.ttf");
+  font-weight: 200 900;
+  font-style: italic;
 }
 
 * {
+  font-family: Mulish;
   padding: 0;
   margin: 0;
-  font-family: bold;
 }
 
 button {

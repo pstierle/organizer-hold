@@ -1,7 +1,7 @@
 <template>
   <div class="p-2" v-if="selectedSubject">
     <div class="flex items-center justify-between">
-      <p class="bg-gray-300 dark:bg-zinc-800 py-1 px-2 rounded">
+      <p class="bg-gray-300 dark:bg-zinc-800 py-1 px-2 rounded font-bold">
         {{ selectedSubject?.name }}
       </p>
       <div class="flex items-center gap-2">

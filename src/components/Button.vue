@@ -3,7 +3,7 @@
     class="rounded px-2 py-2 text-xs flex items-center justify-evenly gap-1 transition"
     :class="
       type === 'alert'
-        ? 'bg-red-400 hover:bg-red-500'
+        ? 'bg-red-500 hover:bg-red-600'
         : type === 'success'
         ? 'bg-green-500 hover:bg-green-600'
         : 'bg-gray-300 dark:bg-zinc-800 hover:bg-gray-400 dark:hover:bg-zinc-900'

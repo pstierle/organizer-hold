@@ -6,7 +6,7 @@
     :class="hovered ? 'w-52' : ' w-20'"
   >
     <div class="flex flex-col gap-2 w-full justify-center">
-      <p class="text-xs text-center">Fächer</p>
+      <p class="text-xs text-center font-bold">Fächer</p>
       <button
         v-for="(subject, index) in subjects"
         :key="index"
