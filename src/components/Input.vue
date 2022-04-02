@@ -1,7 +1,7 @@
 <template>
   <div style="position: relative">
     <p
-      class="text-xs absolute bg-gray-300 dark:bg-zinc-800 rounded px-1"
+      class="text-xs absolute bg-gray-300 dark:bg-zinc-800 rounded px-1 font-bold"
       :class="{
         '-mt-4 ': focused == true || value != '' || value === 0,
         'mt-0': focused == false,

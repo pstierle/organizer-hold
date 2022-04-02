@@ -13,7 +13,7 @@
       <p>Tag</p>
       <DropDown
         :elements="IWeekDays"
-        :selected="0"
+        :selected="IWeekDays.indexOf(subjectModel.weekDay) ?? 0"
         @selectedIndex="(i: number) => {
             subject.weekDay = IWeekDays[i]
           }"
