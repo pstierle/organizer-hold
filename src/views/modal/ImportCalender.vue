@@ -18,9 +18,7 @@ const options = {
 };
 
 async function add() {
-  const filePath: string = await (window as any).dialog.getSelectedFilePath(
-    options
-  );
+  const filePath: string = await window.dialog.getSelectedFilePath(options);
 
   if (!filePath) {
     sendNotification("Keine Datei ausgewählt!", "alert");

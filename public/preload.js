@@ -1,12 +1,23 @@
 const { contextBridge } = require('electron');
 const { shell, dialog, app, getCurrentWindow } = require('@electron/remote');
+const axios = require("axios");
 const currentWindow = getCurrentWindow();
 const path = require("path")
 const fs = require("fs");
 var PDFDocument = require('pdfkit');
 
 contextBridge.exposeInMainWorld(
-  'WIN',
+  'axios',
+  {
+    get: async (req) => {
+      const { data } = await axios.get(req);
+      return data;
+    }
+  }
+)
+
+contextBridge.exposeInMainWorld(
+  'browserWindow',
   {
     close: () => {
       currentWindow.close();
@@ -75,6 +86,7 @@ contextBridge.exposeInMainWorld(
   {
     getSelectedFilePath: async (options) => {
       let filePath = "";
+
       await dialog.showOpenDialog(options).then(async (response) => {
         if (!response.canceled) {
           filePath = response.filePaths[0];
@@ -121,10 +133,10 @@ contextBridge.exposeInMainWorld(
       return fs.existsSync(path);
     },
     mkdirSync: (path) => {
-      return fs.mkdirSync(path);
+      fs.mkdirSync(path);
     },
     writeFileSync: (path, data) => {
-      return fs.writeFileSync(path, data);
+      fs.writeFileSync(path, data);
     },
     readFileSync: (path) => {
       return fs.readFileSync(path, { encoding: 'utf8', flag: 'r' });

@@ -68,9 +68,7 @@ watchEffect(() => {
 });
 
 async function add() {
-  const filePath: string = await (window as any).dialog.getSelectedFilePath(
-    options
-  );
+  const filePath: string = await window.dialog.getSelectedFilePath(options);
 
   if (filePath === "") {
     sendNotification("Keine Datei ausgewählt!", "alert");
@@ -85,7 +83,7 @@ async function add() {
 
   let fileType: string = filePath.split(".").pop() || "";
 
-  const destinationPath = (window as any).path.join(
+  const destinationPath = window.path.join(
     selectedSubject.value?.folderPath,
     props.submissionType,
     `${fileName}.${fileType}`
@@ -96,14 +94,14 @@ async function add() {
     destinationPath,
     fileName,
     fileType,
-    (window as any).fs.getFileSize(filePath)
+    window.fs.getFileSize(filePath)
   );
 
-  (window as any).fs.copyFile(filePath, destinationPath);
+  window.fs.copyFile(filePath, destinationPath);
 }
 
 function openFile(submission: ISubmission): void {
-  (window as any).shell.openPath(submission.path);
+  window.shell.openPath(submission.path);
 }
 
 function selected(submission: ISubmission): boolean {
@@ -150,36 +148,36 @@ function imageCheck(): boolean {
   return true;
 }
 
-async function concatToPdf() {
-  const name = "test";
-  const type = "pdf";
+// async function concatToPdf() {
+//   const name = "test";
+//   const type = "pdf";
 
-  let pathArray: any[] = [];
+//   let pathArray: any[] = [];
 
-  const destinationPath = (window as any).path.join(
-    selectedSubject.value?.folderPath,
-    props.submissionType,
-    `${name}.${type}`
-  );
+//   const destinationPath = window.path.join(
+//     selectedSubject.value?.folderPath,
+//     props.submissionType,
+//     `${name}.${type}`
+//   );
 
-  selectedSubmissions.value.forEach((entry) => {
-    pathArray.push(entry.path);
-  });
+//   selectedSubmissions.value.forEach((entry) => {
+//     pathArray.push(entry.path);
+//   });
 
-  const result = await (window as any).pdf.create(pathArray, destinationPath);
+//   const result = await (window as any).pdf.create(pathArray, destinationPath);
 
-  if (!result) {
-    console.log("failed!");
-  } else {
-    addSubmission(
-      props.submissionType,
-      destinationPath,
-      name,
-      type,
-      (window as any).fs.getFileSize(destinationPath)
-    );
-  }
-}
+//   if (!result) {
+//     console.log("failed!");
+//   } else {
+//     addSubmission(
+//       props.submissionType,
+//       destinationPath,
+//       name,
+//       type,
+//       (window as any).fs.getFileSize(destinationPath)
+//     );
+//   }
+// }
 </script>
 
 <style scoped></style>

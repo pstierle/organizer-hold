@@ -36,7 +36,7 @@ export function usePath() {
   };
 
   const deleteSubjectPath = (subject?: ISubject) => {
-    window.fs.rmdir(subject?.folderPath);
+    if (subject?.folderPath) window.fs.rmdir(subject?.folderPath);
   };
 
   const updateFolderName = (oldPath: string, newName: string) => {

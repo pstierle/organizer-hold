@@ -20,7 +20,12 @@
         <li
           class="text-xs text-left my-1 hover:bg-gray-300 dark:hover:bg-zinc-700 p-1 rounded cursor-pointer"
           v-for="(sheet, index) in exerciseSheetsToday"
-          @click="selectedSubjectId = sheet.subjectID"
+          @click="
+            () => {
+              selectedSubjectId = Number(sheet.subjectID);
+              selectedSheetNumber = Number(sheet.number);
+            }
+          "
           :key="index"
         >
           <div class="flex justify-between font-bold">
@@ -54,6 +59,6 @@ import ExpansionCard from "@/components/ExpansionCard.vue";
 import { useSubjects } from "@/store/useSubjects";
 
 const { openModal } = useSettings();
-const { selectedSubjectId } = useSubjects();
+const { selectedSubjectId, selectedSheetNumber } = useSubjects();
 const { subjectsToday, exerciseSheetsToday, currentDay } = useCalender();
 </script>

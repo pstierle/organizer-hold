@@ -54,25 +54,25 @@ const version = ref<String>();
 const { nextSubjectToday } = useCalender();
 
 function close() {
-  (window as any).WIN.close();
+  window.browserWindow.close();
 }
 function minimize() {
-  (window as any).WIN.minimize();
+  window.browserWindow.minimize();
 }
 function maximize() {
-  (window as any).WIN.maximize();
+  window.browserWindow.maximize();
 }
 function reload() {
-  (window as any).WIN.reload();
+  window.browserWindow.reload();
 }
 function openDevTools() {
-  (window as any).WIN.openDevTools();
+  window.browserWindow.openDevTools();
 }
 
 const env = computed(() => process.env.NODE_ENV);
 
 onMounted(() => {
-  version.value = (window as any).app.getVersion();
+  version.value = window.app.getVersion();
 });
 </script>
 

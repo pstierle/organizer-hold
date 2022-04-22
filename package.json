@@ -20,6 +20,7 @@
     "@vue-hero-icons/solid": "^1.7.2",
     "@vueuse/core": "^8.0.0",
     "autoprefixer": "^10.4.2",
+    "axios": "^0.26.1",
     "pdfkit": "^0.13.0",
     "postcss": "^8.4.8",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
