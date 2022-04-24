@@ -30,6 +30,15 @@ const { preload, subjects, submissions, loading, selectedSubject } =
 const { subjectPath, submissionPath, settingsPath } = usePath();
 const { darkMode, studentID, loadSettings } = useSettings();
 
+// const test = async () => {
+//   const data = await window.axios.post("http://localhost:3000/api/register", {
+//     name: "PaulStierle",
+//     email: "p.stierle@web.de",
+//     password: "qwertz",
+//   });
+//   console.log(data);
+// };
+
 onMounted(async () => {
   await preload();
   loadSettings();

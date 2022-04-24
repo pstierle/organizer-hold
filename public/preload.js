@@ -9,8 +9,16 @@ var PDFDocument = require('pdfkit');
 contextBridge.exposeInMainWorld(
   'axios',
   {
-    get: async (req) => {
-      const { data } = await axios.get(req);
+    get: async (req, data) => {
+      const { data } = await axios.get(req, {
+        data: data
+      });
+      return data;
+    },
+    post: async (req, data) => {
+      const { data } = await axios.post(req, {
+        data: data
+      });
       return data;
     }
   }

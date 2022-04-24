@@ -4,9 +4,9 @@ export default interface Submission extends Object {
   submissionID: number;
   subjectID: number;
   exerciseSheetNumber: number;
-  path: String;
-  format: String;
+  path: string;
+  format: string;
   type: ISubmissionType;
-  fileName: String;
-  size: String;
+  fileName: string;
+  size: string;
 }

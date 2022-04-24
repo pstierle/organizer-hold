@@ -58,7 +58,7 @@ import { useCalender } from "@/store/useCalender";
 import ExpansionCard from "@/components/ExpansionCard.vue";
 import { useSubjects } from "@/store/useSubjects";
 
-const { openModal } = useSettings();
-const { selectedSubjectId, selectedSheetNumber } = useSubjects();
+const { openModal, selectedSheetNumber } = useSettings();
+const { selectedSubjectId } = useSubjects();
 const { subjectsToday, exerciseSheetsToday, currentDay } = useCalender();
 </script>

@@ -132,21 +132,4 @@ const { selectedSubject, toogleDone, submissions, deleteExerciseSheet } =
   useSubjects();
 
 const { openModal, selectedSheetNumber } = useSettings();
-
-function getSubmissionCount(
-  submissionType: ISubmissionType,
-  sheetNumber: number
-): number {
-  let count: number = 0;
-  submissions.value.forEach((submission) => {
-    if (
-      submission.type === submissionType &&
-      submission.subjectID === selectedSubject.value?.id &&
-      submission.exerciseSheetNumber === sheetNumber
-    ) {
-      count++;
-    }
-  });
-  return count;
-}
 </script>

@@ -29,7 +29,8 @@ export declare global {
       openDevTools: () => void;
     };
     axios: {
-      get: <T>(req: string) => T;
+      get: <T>(req: string, options: any) => T;
+      post: <T>(req: string, options: any) => T;
     };
     dialog: {
       getSelectedFilePath: (options: any) => Promise<string>;

@@ -49,7 +49,7 @@ import { ref, onMounted } from "@vue/runtime-core";
 import { computed } from "vue";
 import { XIcon, ArrowsExpandIcon, MinusSmIcon } from "@heroicons/vue/outline";
 
-const version = ref<String>();
+const version = ref<string>();
 
 const { nextSubjectToday } = useCalender();
 
