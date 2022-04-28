@@ -1,25 +1,15 @@
 <template>
   <div
-    class="flex items-center p-2 border-t border-gray-300 dark:border-zinc-800 bg-gray-300 dark:bg-zinc-800 rounded justify-evenly"
+    class="flex items-start p-2 border-t border-gray-300 dark:border-zinc-800 bg-gray-300 dark:bg-zinc-800 rounded justify-between"
   >
     <div v-for="(submissionType, index) in submissionTypes" :key="index">
-      <div class="flex gap-1 items-center">
+      <div
+        class="flex gap-1 items-center justify-between border-b border-gray-300 dark:zinc-gray-800"
+      >
         <p>
           {{ submissionType }}
-          {{
-            submissions.filter(
-              (s) =>
-                s.exerciseSheetNumber === sheet?.number &&
-                s.subjectID === sheet.subjectID &&
-                s.type === submissionType
-            ).length
-          }}
         </p>
-        <Button
-          text="Datei Hinzufügen"
-          icon="plus"
-          @click="add(submissionType)"
-        />
+        <Icon icon="DocumentAddIcon" class="w-5" @click="add(submissionType)" />
       </div>
       <div
         v-for="(submission, index) in submissions.filter(
@@ -28,21 +18,19 @@
             s.subjectID === sheet.subjectID &&
             s.type === submissionType
         )"
-        class=""
+        :key="index"
+        class="flex items-center mt-1"
       >
         <div class="flex gap-1 items-center">
-          <span>{{ submission.fileName }}</span>
-          <span>.{{ submission.format }}</span>
+          <span>{{ submission.fileName }}.{{ submission.format }}</span>
           <span>{{ submission.size }}</span>
         </div>
-
-        <Button text="Öffnen" @click="openFile(submission)" />
-        <Button
-          type="alert"
+        <Icon
           icon="TrashIcon"
-          text="Löschen"
+          class="w-5 text-red-500"
           @click="deleteSubmission(submission)"
-        ></Button>
+        />
+        <Icon icon="EyeIcon" class="w-5" @click="openFile(submission)" />
       </div>
     </div>
   </div>
@@ -55,6 +43,7 @@ import { useSubjects } from "@/store/useSubjects";
 import { computed, ref } from "vue";
 import Button from "@/components/Button.vue";
 import ISubmission from "@/store/interfaces/submissions/ISubmission";
+import Icon from "@/components/Icon.vue";
 
 defineProps<{
   sheet?: IExcerciseSheet;

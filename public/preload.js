@@ -1,28 +1,9 @@
 const { contextBridge } = require('electron');
 const { shell, dialog, app, getCurrentWindow } = require('@electron/remote');
-const axios = require("axios");
 const currentWindow = getCurrentWindow();
 const path = require("path")
 const fs = require("fs");
 var PDFDocument = require('pdfkit');
-
-contextBridge.exposeInMainWorld(
-  'axios',
-  {
-    get: async (req, data) => {
-      const { data } = await axios.get(req, {
-        data: data
-      });
-      return data;
-    },
-    post: async (req, data) => {
-      const { data } = await axios.post(req, {
-        data: data
-      });
-      return data;
-    }
-  }
-)
 
 contextBridge.exposeInMainWorld(
   'browserWindow',
