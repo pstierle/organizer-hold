@@ -1,29 +1,30 @@
 <template>
   <div class="flex mb-4 justify-between items-center flex-wrap">
     <label v-if="!file" for="file-upload">
-      <p class="p-2 rounded hover:cursor-pointer bg-gray-100">{{ label }}</p>
+      <p class="p-2 rounded hover:cursor-pointer bg-gray-300 dark:bg-zinc-800">
+        {{ label }}
+      </p>
       <span v-if="typeRestrictions" class="px-2 text-sm">
         Erlaubte formate: {{ typeRestrictions.join(", ") }}
       </span>
     </label>
     <div v-else>
       <span class="text-gray-700 text-sm">Ausgewählte Datei</span>
-      <div class="p-2 bg-gray-100 rounded flex items-center justify-between">
+      <div
+        class="p-2 bg-gray-300 dark:bg-zinc-800 rounded flex items-center justify-between"
+      >
         <Button type="alert" icon="XIcon" @click="removeFile"></Button>
         <p>{{ file.name }} ({{ fileSize }})</p>
       </div>
     </div>
-    <ScaleTransition>
-      <span v-if="error" class="text-maroon-flush text-sm px-2">
-        {{ typeof error === "string" ? error : error[0] }}
-      </span>
-    </ScaleTransition>
+    <span v-if="error" class="text-maroon-flush text-sm px-2">
+      {{ typeof error === "string" ? error : error[0] }}
+    </span>
     <input id="file-upload" type="file" @change="handleFileChange" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import ScaleTransition from "@/transitions/ScaleTransition.vue";
 import { ref } from "vue";
 import Button from "./Button.vue";
 

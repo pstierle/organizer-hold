@@ -1,5 +1,11 @@
 <template>
   <div class="flex items-start gap-2">
+    <FileUpload
+      class="mt-1"
+      label="Hinzufügen"
+      :typeRestrictions="['jpeg', 'png']"
+      @update:file="handleFileUpload"
+    />
     <div
       v-for="(submission, index) in submissions.filter(
         (s) =>
@@ -35,6 +41,7 @@ import { computed, ref } from "vue";
 import Button from "@/components/Button.vue";
 import ISubmission from "@/store/interfaces/submissions/ISubmission";
 import Icon from "@/components/Icon.vue";
+import FileUpload from "@/components/FileUpload.vue";
 
 defineProps<{
   sheet?: IExcerciseSheet;
@@ -53,6 +60,11 @@ const options = {
   title: "Datei hinzufügen",
   properties: ["openFile"],
   buttonLabel: "Ablegen",
+};
+
+const handleFileUpload = (file?: File) => {
+  console.log(file);
+  
 };
 
 async function add(submissionType: ISubmissionType) {
