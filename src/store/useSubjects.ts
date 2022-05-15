@@ -25,7 +25,7 @@ const subjects = ref<ISubject[]>([]);
 const loading = ref(false);
 
 const selectedSubjectId = ref<number>();
-const selectedSubject = computed<ISubject | undefined>(() => {
+const selectedSubject = computed<any>(() => {
   return subjects.value.find((s) => s.id === selectedSubjectId.value);
 });
 
@@ -180,7 +180,7 @@ export function useSubjects() {
 
   const addNewExerciseSheet = (sheetNumber: number, sheetDueDate: Date) => {
     const exists = selectedSubject.value?.exerciseSheets.find(
-      (s) => s.number === sheetNumber
+      (s: any) => s.number === sheetNumber
     );
     if (exists) {
       sendNotification("Diese Nummer existiert bereits!", "alert");

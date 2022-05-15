@@ -30,15 +30,6 @@
         <div v-if="openModal === 'Kalender Importieren'">
           <ImportCalender />
         </div>
-        <div
-          v-if="
-            openModal === 'Abgabe' ||
-            openModal === 'Lösungen' ||
-            openModal === 'Korrektur'
-          "
-        >
-          <Submission :submissionType="openModal" />
-        </div>
       </div>
     </div>
   </div>
@@ -51,7 +42,6 @@ import AddSubject from "@/views/modal/AddSubject.vue";
 import DeleteSubject from "@/views/modal/DeleteSubject.vue";
 import AddExcerciseSheet from "@/views/modal/AddExcerciseSheet.vue";
 import ImportCalender from "@/views/modal/ImportCalender.vue";
-import Submission from "@/views/modal/Submission.vue";
 import EditSubject from "./modal/EditSubject.vue";
 import Icon from "@/components/Icon.vue";
 import { useSettings } from "@/store/useSettings";

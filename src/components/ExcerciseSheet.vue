@@ -1,41 +1,26 @@
 <template>
-  <div
-    class="flex items-start p-2 border-t border-gray-300 dark:border-zinc-800 bg-gray-300 dark:bg-zinc-800 rounded justify-between gap-2"
-  >
+  <div class="flex items-start gap-2">
     <div
-      v-for="(submissionType, index) in submissionTypes"
+      v-for="(submission, index) in submissions.filter(
+        (s) =>
+          s.exerciseSheetNumber === sheet?.number &&
+          s.subjectID === sheet.subjectID
+      )"
       :key="index"
-      class="w-full"
+      class="bg-gray-300 dark:bg-zinc-800 p-2 rounded mt-1"
     >
-      <div
-        class="flex gap-1 items-center justify-between border-b border-gray-300 dark:zinc-gray-800 p-1"
-      >
-        <p class="font-bold">
-          {{ submissionType }}
-        </p>
-        <Icon icon="DocumentAddIcon" class="w-5" @click="add(submissionType)" />
-      </div>
-      <div
-        v-for="(submission, index) in submissions.filter(
-          (s) =>
-            s.exerciseSheetNumber === sheet?.number &&
-            s.subjectID === sheet.subjectID &&
-            s.type === submissionType
-        )"
-        :key="index"
-        class="flex items-center mt-1 justify-between"
-      >
-        <div class="flex gap-1 items-center">
+      <p class="text-sm border-b">{{ submission.type }}</p>
+      <div class="flex gap-1 items-center pt-1">
+        <button class="flex gap-1 items-center" @click="openFile(submission)">
           <span>{{ submission.fileName }}.{{ submission.format }}</span>
-          <span>{{ submission.size }}</span>
-        </div>
+          <span>{{ submission.size }} {{ submission.type }}</span>
+        </button>
         <div>
           <Icon
             icon="TrashIcon"
             class="w-5 text-red-500"
             @click="deleteSubmission(submission)"
           />
-          <Icon icon="EyeIcon" class="w-5" @click="openFile(submission)" />
         </div>
       </div>
     </div>

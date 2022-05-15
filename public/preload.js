@@ -3,7 +3,6 @@ const { shell, dialog, app, getCurrentWindow } = require('@electron/remote');
 const currentWindow = getCurrentWindow();
 const path = require("path")
 const fs = require("fs");
-var PDFDocument = require('pdfkit');
 
 contextBridge.exposeInMainWorld(
   'browserWindow',
@@ -35,37 +34,6 @@ contextBridge.exposeInMainWorld(
   {
     openPath: (path) => {
       shell.openPath(path);
-    }
-  }
-)
-
-contextBridge.exposeInMainWorld(
-  'pdf',
-  {
-    create: async (pathArray, destinationPath) => {
-      var doc = new PDFDocument();
-
-      for (let i = 0; i < pathArray.length; i++) {
-        const stats = fs.statSync(pathArray[i])
-        const width = stats.size.width;
-        const height = stats.size.height;
-
-        doc.image(pathArray[i], {
-          fit: [width, height],
-          x: 0,
-          y: 0
-        });
-
-        doc.page.width = width;
-        doc.page.height = height;
-
-        if (pathArray.length - i > 1) doc.addPage();
-      }
-
-      doc.pipe(fs.createWriteStream(destinationPath));
-      doc.end();
-
-      return true;
     }
   }
 )

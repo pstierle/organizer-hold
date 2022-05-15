@@ -28,7 +28,7 @@ const exerciseSheetsToday = computed(() => {
     .flatMap((s) => s.exerciseSheets)
     .filter(
       (e) =>
-        helperFunction.formatDate(e.dueDate) ===
+        helperFunction.formatDate(e.dueDate as any) ===
         helperFunction.formatDate(new Date())
     );
 });

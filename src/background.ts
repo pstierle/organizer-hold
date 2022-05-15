@@ -26,7 +26,7 @@ protocol.registerSchemesAsPrivileged([
   { scheme: "app", privileges: { secure: true, standard: true } },
 ]);
 
-const createWindow = async () => {
+async function createWindow() {
   const win = new BrowserWindow({
     width: 1000,
     height: 600,
@@ -43,13 +43,15 @@ const createWindow = async () => {
 
   enable(win.webContents);
 
+  win.webContents.openDevTools();
+
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);
   } else {
     createProtocol("app");
     win.loadURL("app://./index.html");
   }
-};
+}
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {

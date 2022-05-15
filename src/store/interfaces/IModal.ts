@@ -1,8 +1,5 @@
 type Modal =
   | "Bearbeiten"
-  | "Abgabe"
-  | "Korrektur"
-  | "Lösungen"
   | "Einstellungen"
   | "Löschen"
   | "Fach hinzufügen"
